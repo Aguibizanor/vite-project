@@ -1,8 +1,345 @@
-.display-lists{
-    display: flex;
-}
+body {
 
-.img-controler{
-    width: 20px;
-    margin: 5px;
-}
+    margin: 1px;
+  
+    font-family: Arial, sans-serif;
+  
+    background: linear-gradient(to bottom,#90017F, #6a11cb, #2575fc);
+  
+    width: 100%;  height:100vh;
+  
+  }
+  
+  .app {
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    height: 100vh; /* Garantir que a altura ocupe toda a visualização da tela */
+  
+  }
+  
+  .header {
+  
+    display: flex;
+  
+    justify-content: space-between;
+  
+    align-items: center;
+  
+    background: rgb(160, 50, 145);
+  
+    padding: 10px;
+  
+    color: #fff;
+  
+    z-index: 1000;
+  
+    border-bottom: solid
+  
+  }
+  
+  main {
+  
+    display: flex;
+  
+    justify-content: space-between;
+  
+  }
+  
+  .D {
+  
+    width: 20%;
+  
+    padding: 10px;
+  
+    background-color: #fff;
+  
+  }
+  
+  .D p {
+  
+    display: flex;
+  
+    align-items: center;
+  
+    margin: 5px 0;
+  
+  }
+  
+  .D p i {
+  
+    margin-right: 2px; /* Espaçamento entre o ícone e o texto */
+  
+  }
+  
+  .D h1 {
+  
+    cursor: pointer;
+  
+    display: flex;
+  
+    align-items: center; 
+  
+    background: linear-gradient(to right, #5563DC, #2E3576);
+  
+    width: 212px;
+  
+    margin-left: -10px;
+  
+    color: #fff ;
+  
+  }
+  
+  .triangle {
+  
+    width: 0;
+  
+    height: 0;
+  
+    border-left: 6px solid transparent;
+  
+    border-right: 6px solid transparent;
+  
+    border-top: 10px solid black;
+  
+    margin-left: 10px;
+  
+    margin-right: 12px;
+  
+    transition: transform 0.3s ease;
+  
+  }
+  
+  .triangle.open {
+  
+    transform: rotate(180deg);
+  
+  }
+  
+  p {
+  
+    margin: 0;
+  
+  }
+  
+  .D p{
+  
+    background-color:#fff;
+  
+    padding: 10px;
+  
+  }
+  
+  .games-section {
+  
+    display: flex;
+  
+    flex-wrap: wrap;
+  
+    gap: 20px;
+  
+    width: 70%;
+  
+    padding: 14px;
+  
+    margin: 20px;
+  
+    margin-top: 20px;
+  
+  }
+  
+  .games-section p {
+  
+    color: #fff;
+  
+  }
+  
+  .games-section1 {
+  
+    display: flex;
+  
+    flex-wrap: wrap;
+  
+    gap: 20px;
+  
+    padding: px;
+  
+    margin-top: 45px
+  
+  }
+  
+  .S {
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    align-items: center;
+  
+    width: 250px; /* ajuste conforme necessário */
+  
+    text-align: center;
+  
+  }
+  
+  .S img {
+  
+    width: 100%;
+  
+    height: auto;
+  
+  }
+  
+  .logo {
+  
+    font-size: 1.5rem;
+  
+    font-weight: bold;
+  
+  }
+  
+  .nav a {
+  
+    margin: 0 15px;
+  
+    text-decoration: none;
+  
+    color: #fff;
+  
+    font-size: 1rem;
+  
+    margin-left:90px;
+  
+  }
+  
+  .search {
+  
+    display: flex;
+  
+    align-items: center;
+  
+  }
+  
+  .search input {
+  
+    padding: 5px;
+  
+    border-radius: 50px;
+  
+    border: none;
+  
+  }
+  
+  .login-btn {
+  
+    background-color: #00bfa5;
+  
+    color: white;
+  
+    border: none;
+  
+    padding: 8px 12px;
+  
+    margin-left: 10px;
+  
+    border-radius: 5px;
+  
+    cursor: pointer;
+  
+  }
+  
+  .intro {
+  
+    text-align: right;
+  
+    display: flex;
+  
+    align-items: flex-end; /* Alinha o conteúdo ao canto direito */
+  
+    margin-left: -320px;
+  
+    padding: 20px;
+  
+    flex-direction: column;
+  
+  }
+  
+  .intro h1 {
+  
+    font-size: 3rem;
+  
+    color: #fff;
+  
+    margin-bottom: 10px;
+  
+  }
+  
+  .intro p {
+  
+    font-size: 2rem;
+  
+    color: #cfcfcf;
+  
+    margin-bottom: 20px;
+  
+  }
+  
+  .cta-button {
+  
+    background-color: #8e24aa;
+  
+    color: white;
+  
+    border: none;
+  
+    padding: 10px 20px;
+  
+    margin-top: 20px;
+  
+    border-radius: 50px;
+  
+    cursor: pointer;
+  
+    font-size: 1.5em;
+  
+  }
+  
+  }
+  
+  .A {
+  
+    width: 10px;
+  
+    padding: 1px 5px; /* Aumenta o espaçamento interno do botão */
+  
+    font-size: 1.2em; /* Aumenta o tamanho da fonte */
+  
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  
+    display: flex;
+  
+    align-items: center; /* Alinha o ícone verticalmente */
+  
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+  
+  }
+  
+  .C{
+  
+    width: 10px;
+  
+    padding: 5px 10px; /* Aumenta o espaçamento interno do botão */
+  
+    font-size: 1.2em; /* Aumenta o tamanho da fonte */
+  
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  
+    display: flex;
+  
+    align-items: center; /* Alinha o ícone verticalmente */
+  
+    border-radius: 5px;
+  
+  }
