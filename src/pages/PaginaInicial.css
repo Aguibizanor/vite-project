@@ -1,0 +1,8 @@
+.display-lists{
+    display: flex;
+}
+
+.img-controler{
+    width: 20px;
+    margin: 5px;
+}
