@@ -1,8 +1,6 @@
 import React from "react";
 import "./PaginaInicial.css"
 import { useState } from 'react';
-import Controler from "../assets/Controler.svg"
-import Windows from "../assets/windows.svg"
  
 const PaginaInicial = () => {
   const [isOpen, setIsOpen] = useState({
@@ -17,7 +15,7 @@ const PaginaInicial = () => {
   return (
 <div className="app">
 <head>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+
 </head>
 <header className="header">
 <div className="logo"><img src="https://via.placeholder.com/20"/></div>

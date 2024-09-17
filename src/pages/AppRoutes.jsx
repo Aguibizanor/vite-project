@@ -7,7 +7,6 @@ const AppRoutes = () => {
     <Router>
       <Routes>
         <Route path="/" element={<PaginaInicial />} />
-        <Route path="/" element={<PaginaInicial />} />
       </Routes>
     </Router>
   );
