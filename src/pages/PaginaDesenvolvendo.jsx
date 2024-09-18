@@ -3,7 +3,7 @@ import "./PaginaInicial.css"
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const PaginaInicial = () => {
+const PaginaDesenvolvendo = () => {
         const [isOpen, setIsOpen] = useState({
                 genero: true,
                 plataformas: true,
@@ -115,4 +115,4 @@ const PaginaInicial = () => {
                         </main></div>
         );
 };
-export default PaginaInicial;
+export default PaginaDesenvolvendo;
