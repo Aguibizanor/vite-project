@@ -1,6 +1,12 @@
 import React from "react";
 import "./PaginaInicial.css"
 import { useState } from 'react';
+import siriguela from '../assets/siriguela.png';
+import roma from '../assets/roma.png';
+import pera from '../assets/pera.png';
+import mamao from '../assets/mamao.png';
+import manga from '../assets/manga.png';
+import morango from '../assets/morango.png';
 import { Link } from 'react-router-dom';
 
 const PaginaEsporte = () => {
@@ -85,30 +91,30 @@ const PaginaEsporte = () => {
                                         </div>
                                 </section>
                                 <section className="games-section">
-                                        <div className="S">
-                                                <img src="" alt="Pumpkin Panic" />
-                                                <a href="">Pumpkin Panic</a>
+                                <div className="S">
+                                                <img src={siriguela} alt="Wheelchair Basktball" />
+                                                <a href="">Wheelchair Basktball</a>
                                         </div>
                                         <div className="S">
-                                                <img src="" alt="Lumiterra" />
-                                                <a href="">Lumiterra</a>
+                                                <img src={roma} alt="Cage fight" />
+                                                <a href="">Cage fight</a>
                                         </div>
                                         <div className="S">
-                                                <img src="" alt="Madison" />
-                                                <a href="">Madison</a>
+                                                <img src={pera} alt="College Slam" />
+                                                <a href="">College Slam</a>
                                         </div>
                                         <section className="games-section1">
                                                 <div className="S">
-                                                        <img src="" alt="Shadow over normath" />
-                                                        <a href="">Shadow over normath</a>
+                                                        <img src={mamao} alt="Football Drama" />
+                                                        <a href="">Football Drama</a>
                                                 </div>
                                                 <div className="S">
-                                                        <img src="" alt="My rusty submarine" />
-                                                        <a href="">My rusty submarine</a>
+                                                        <img src={manga} alt="Skatebird" />
+                                                        <a href="">Skatebird</a>
                                                 </div>
                                                 <div className="S">
-                                                        <img src="" alt="Lil tribals" />
-                                                        <a href="">Lil tribals</a>
+                                                        <img src={morango} alt="Super video Golf" />
+                                                        <a href="">Super video Golf</a>
                                                 </div>
                                         </section>
                                 </section>

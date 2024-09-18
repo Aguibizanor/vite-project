@@ -91,7 +91,7 @@ const PaginaCartas = () => {
                                         </div>
                                 </section>
                                 <section className="games-section">
-                                        <div className="S">
+                                <div className="S">
                                                 <img src={Imagem01} alt="Gamblers" />
                                                 <a href="">Gamblers</a>
                                         </div>
@@ -105,16 +105,16 @@ const PaginaCartas = () => {
                                         </div>
                                         <section className="games-section1">
                                                 <div className="S">
-                                                        <img src={Imagem04} alt="Shadow over normath" />
-                                                        <a href="">Shadow over normath</a>
+                                                        <img src={Imagem04} alt="Beecarbonize" />
+                                                        <a href="">Beecarbonize</a>
                                                 </div>
                                                 <div className="S">
-                                                        <img src={Imagem05} alt="My rusty submarine" />
-                                                        <a href="">My rusty submarine</a>
+                                                        <img src={Imagem05} alt="Tuggowar" />
+                                                        <a href="">Tuggowar</a>
                                                 </div>
                                                 <div className="S">
-                                                        <img src={Imagem06} alt="Lil tribals" />
-                                                        <a href="">Lil tribals</a>
+                                                        <img src={Imagem06} alt="Face Down" />
+                                                        <a href="">Face Down</a>
                                                 </div>
                                         </section>
                                 </section>

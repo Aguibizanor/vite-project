@@ -1,6 +1,12 @@
 import React from "react";
 import "./PaginaInicial.css"
 import { useState } from 'react';
+import tomate from '../assets/tomate.png';
+import melancia from '../assets/melancia.png';
+import uva from '../assets/uva.png';
+import salada from '../assets/salada.png';
+import tangerina from '../assets/tangerina.png';
+import tamara from '../assets/tamara.png';
 import { Link } from 'react-router-dom';
 
 const PaginaTerror = () => {
@@ -85,30 +91,30 @@ const PaginaTerror = () => {
                                         </div>
                                 </section>
                                 <section className="games-section">
+                                <div className="S">
+                                                <img src={tomate} alt="Elevator Hitch" />
+                                                <a href="">"Elevator Hitch</a>
+                                        </div>
                                         <div className="S">
-                                                <img src="" alt="Pumpkin Panic" />
+                                                <img src={melancia} alt="Elevated Dread" />
+                                                <a href="">Elevated Dread</a>
+                                        </div>
+                                        <div className="S">
+                                                <img src={uva} alt="Pumpkin Panic" />
                                                 <a href="">Pumpkin Panic</a>
-                                        </div>
-                                        <div className="S">
-                                                <img src="" alt="Lumiterra" />
-                                                <a href="">Lumiterra</a>
-                                        </div>
-                                        <div className="S">
-                                                <img src="" alt="Madison" />
-                                                <a href="">Madison</a>
                                         </div>
                                         <section className="games-section1">
                                                 <div className="S">
-                                                        <img src="" alt="Shadow over normath" />
-                                                        <a href="">Shadow over normath</a>
+                                                        <img src={salada} alt="They are here" />
+                                                        <a href="">They are here</a>
                                                 </div>
                                                 <div className="S">
-                                                        <img src="" alt="My rusty submarine" />
-                                                        <a href="">My rusty submarine</a>
+                                                        <img src={tangerina} alt="The Vale" />
+                                                        <a href="">The Vale</a>
                                                 </div>
                                                 <div className="S">
-                                                        <img src="" alt="Lil tribals" />
-                                                        <a href="">Lil tribals</a>
+                                                        <img src={tamara} alt="Clap Clap" />
+                                                        <a href="">Clap Clap</a>
                                                 </div>
                                         </section>
                                 </section>

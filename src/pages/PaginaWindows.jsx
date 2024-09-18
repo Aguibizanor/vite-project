@@ -3,11 +3,11 @@ import "./PaginaInicial.css"
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ImgI from '../assets/imagem_interativa.png';
-import Imagem4 from '../assets/img4.png';
-import Imagem5 from '../assets/img5.png';
-import Imagem6 from '../assets/img6.png';
-import Imagem01 from '../assets/img01.png';
-import Imagem02 from '../assets/img02.png';
+import pombo from '../assets/pombo.png';
+import limao from '../assets/limao.png';
+import goiaba from '../assets/goiaba.png';
+import diaba from '../assets/diaba.png';
+import marquin from '../assets/marquin.png';
 
 const PaginaWindows = () => {
         const [isOpen, setIsOpen] = useState({
@@ -91,30 +91,30 @@ const PaginaWindows = () => {
                                         </div>
                                 </section>
                                 <section className="games-section">
-                                        <div className="S">
+                                <div className="S">
                                                 <img src={ImgI} alt="Happy Cat Tavern" />
                                                 <a href="">Happy Cat Tavern</a>
                                         </div>
                                         <div className="S">
-                                                <img src={Imagem01} alt="Lumiterra" />
-                                                <a href="">Lumiterra</a>
+                                                <img src={pombo} alt="Subida de pomba" />
+                                                <a href="">Subida de pomba</a>
                                         </div>
                                         <div className="S">
-                                                <img src={Imagem02} alt="Madison" />
-                                                <a href="">Madison</a>
+                                                <img src={limao} alt="Hero's Hour" />
+                                                <a href="">Hero's Hour</a>
                                         </div>
                                         <section className="games-section1">
                                                 <div className="S">
-                                                        <img src={Imagem4} alt="Shadow over normath" />
-                                                        <a href="">Shadow over normath</a>
+                                                        <img src={goiaba} alt="Bug Fables" />
+                                                        <a href="">Bug Fables</a>
                                                 </div>
                                                 <div className="S">
-                                                        <img src={Imagem5} alt="My rusty submarine" />
-                                                        <a href="">My rusty submarine</a>
+                                                        <img src={diaba} alt="Hedon Bloodrite" />
+                                                        <a href="">Hedon Bloodrite</a>
                                                 </div>
                                                 <div className="S">
-                                                        <img src={Imagem6} alt="Lil tribals" />
-                                                        <a href="">Lil tribals</a>
+                                                        <img src={marquin} alt="Buck up and drive" />
+                                                        <a href="">Buck up and drive</a>
                                                 </div>
                                         </section>
                                 </section>
