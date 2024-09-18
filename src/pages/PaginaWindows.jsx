@@ -2,8 +2,14 @@ import React from "react";
 import "./PaginaInicial.css"
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import ImgI from '../assets/imagem_interativa.png';
+import Imagem4 from '../assets/img4.png';
+import Imagem5 from '../assets/img5.png';
+import Imagem6 from '../assets/img6.png';
+import Imagem01 from '../assets/img01.png';
+import Imagem02 from '../assets/img02.png';
 
-const PaginaInicial = () => {
+const PaginaWindows = () => {
         const [isOpen, setIsOpen] = useState({
                 genero: true,
                 plataformas: true,
@@ -87,28 +93,28 @@ const PaginaInicial = () => {
                                 </section>
                                 <section className="games-section">
                                         <div className="S">
-                                                <img src="" alt="Pumpkin Panic" />
-                                                <a href="">Pumpkin Panic</a>
+                                                <img src={ImgI} alt="Happy Cat Tavern" />
+                                                <a href="">Happy Cat Tavern</a>
                                         </div>
                                         <div className="S">
-                                                <img src="" alt="Lumiterra" />
+                                                <img src={Imagem01} alt="Lumiterra" />
                                                 <a href="">Lumiterra</a>
                                         </div>
                                         <div className="S">
-                                                <img src="" alt="Madison" />
+                                                <img src={Imagem02} alt="Madison" />
                                                 <a href="">Madison</a>
                                         </div>
                                         <section className="games-section1">
                                                 <div className="S">
-                                                        <img src="" alt="Shadow over normath" />
+                                                        <img src={Imagem4} alt="Shadow over normath" />
                                                         <a href="">Shadow over normath</a>
                                                 </div>
                                                 <div className="S">
-                                                        <img src="" alt="My rusty submarine" />
+                                                        <img src={Imagem5} alt="My rusty submarine" />
                                                         <a href="">My rusty submarine</a>
                                                 </div>
                                                 <div className="S">
-                                                        <img src="" alt="Lil tribals" />
+                                                        <img src={Imagem6} alt="Lil tribals" />
                                                         <a href="">Lil tribals</a>
                                                 </div>
                                         </section>
@@ -116,4 +122,4 @@ const PaginaInicial = () => {
                         </main></div>
         );
 };
-export default PaginaInicial;
+export default PaginaWindows;

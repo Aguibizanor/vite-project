@@ -1,9 +1,15 @@
 import React from "react";
 import "./PaginaInicial.css"
 import { useState } from 'react';
+import Imagem01 from '../assets/img01.png';
+import Imagem02 from '../assets/img02.png';
+import Imagem03 from '../assets/img03.png';
+import Imagem04 from '../assets/img04.png';
+import Imagem05 from '../assets/img05.png';
+import Imagem06 from '../assets/img06.png';
 import { Link } from 'react-router-dom';
 
-const PaginaInicial = () => {
+const PaginaCartas = () => {
         const [isOpen, setIsOpen] = useState({
                 genero: true,
                 plataformas: true,
@@ -27,7 +33,7 @@ const PaginaInicial = () => {
                                 </nav>
                                 <div className="search"><i className="fas fa-search"></i>
                                         <input type="text" placeholder="Search..." />
-                                        <Link to={'/Login'}><button className="login-btn"><i className="fas fa-user-circle"></i>Log In</button></Link>
+                                        <button className="login-btn"><i className="fas fa-user-circle"></i>Log In</button>
                                 </div>
                         </header>
 
@@ -41,7 +47,6 @@ const PaginaInicial = () => {
                                                 </h1>
                                                 {isOpen.genero && (
                                                         <>
-
                                                                 <a href="" style={{ margin: '3px 10px', padding: '0' }}><i className="fas fa-gamepad"></i>Terror</a>
                                                                 <a href="" style={{ margin: '3px 10px', padding: '0' }}><i className="fas fa-gamepad"></i>Esporte</a>
                                                                 <a href="" style={{ margin: '3px 10px', padding: '0' }}><i className="fas fa-gamepad"></i>Aventura</a>
@@ -87,28 +92,28 @@ const PaginaInicial = () => {
                                 </section>
                                 <section className="games-section">
                                         <div className="S">
-                                                <img src="" alt="Pumpkin Panic" />
-                                                <a href="">Pumpkin Panic</a>
+                                                <img src={Imagem01} alt="Gamblers" />
+                                                <a href="">Gamblers</a>
                                         </div>
                                         <div className="S">
-                                                <img src="" alt="Lumiterra" />
-                                                <a href="">Lumiterra</a>
+                                                <img src={Imagem02} alt="Pocket Crystal League" />
+                                                <a href="">Pocket Crystal League</a>
                                         </div>
                                         <div className="S">
-                                                <img src="" alt="Madison" />
-                                                <a href="">Madison</a>
+                                                <img src={Imagem03} alt="Dungeon Drafters" />
+                                                <a href="">Dungeon Drafters</a>
                                         </div>
                                         <section className="games-section1">
                                                 <div className="S">
-                                                        <img src="" alt="Shadow over normath" />
+                                                        <img src={Imagem04} alt="Shadow over normath" />
                                                         <a href="">Shadow over normath</a>
                                                 </div>
                                                 <div className="S">
-                                                        <img src="" alt="My rusty submarine" />
+                                                        <img src={Imagem05} alt="My rusty submarine" />
                                                         <a href="">My rusty submarine</a>
                                                 </div>
                                                 <div className="S">
-                                                        <img src="" alt="Lil tribals" />
+                                                        <img src={Imagem06} alt="Lil tribals" />
                                                         <a href="">Lil tribals</a>
                                                 </div>
                                         </section>
@@ -116,4 +121,4 @@ const PaginaInicial = () => {
                         </main></div>
         );
 };
-export default PaginaInicial;
+export default PaginaCartas;

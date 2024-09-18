@@ -26,8 +26,8 @@ function PaginaLogin() {
                 </div>
             </form>
             <div className="text-center mt-4">
-                <p className="text-gray-500 text-sm">Ainda não tem conta? <a href="#" className="text-blue-500">Cadastre-se</a></p>
-            </div>
+                <p className="text-gray-500 text-sm">Ainda não tem conta? <Link to={'/Cadastro'}><a href="#" className="text-blue-500">Cadastre-se</a></Link></p>
+            </div> 
             <div className="flex justify-between mt-6">
                 <img src="https://placehold.co/50x50" alt="Pixel art character" className="w-12 h-12" />
                 <img src="https://placehold.co/50x50" alt="Pixel art character" className="w-12 h-12" />
