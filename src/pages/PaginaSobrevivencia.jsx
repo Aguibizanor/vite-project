@@ -1,9 +1,8 @@
 import React from "react";
 import "./PaginaInicial.css"
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
  
-const PaginaInicial = () => {
+const PaginaSobrevivencia = () => {
         const [isOpen, setIsOpen] = useState({
           genero: true,
           plataformas: true,
@@ -28,7 +27,7 @@ const PaginaInicial = () => {
       <div className="search"><i className="fas fa-search
       "></i>
       <input type="text" placeholder="Search..." />
-      <Link to={'/Login'}><button className="login-btn"><i className="fas fa-user-circle"></i>Log In</button></Link>
+      <button className="login-btn"><i className="fas fa-user-circle"></i>Log In</button>
       </div>
       </header>
       
@@ -42,7 +41,7 @@ const PaginaInicial = () => {
       </h1>
               {isOpen.genero && (
       <>
-      <Link to={"/Sobrevivencia"}><a href="" style={{ margin: '3px 10px', padding: '0' }}><i className="fas fa-gamepad"></i>Terror</a></Link>
+      <a href="" style={{ margin: '3px 10px', padding: '0' }}><i className="fas fa-gamepad"></i>Terror</a>
       <a href="" style={{ margin: '3px 10px', padding: '0' }}><i className="fas fa-gamepad"></i>Esporte</a>
       <a href="" style={{ margin: '3px 10px', padding: '0' }}><i className="fas fa-gamepad"></i>Aventura</a>
       <a href="" style={{ margin: '3px 10px', padding: '0' }}><i className="fas fa-gamepad"></i>Educacional</a>
@@ -101,7 +100,7 @@ const PaginaInicial = () => {
       <section className="games-section1">
       <div className="S">
       <img src="https://via.placeholder.com/20" alt="They are Here" />
-      <a href="">They are Here</a>
+      <a href="">IZABELLY</a>
       </div>
       <div className="S">
       <img src="https://via.placeholder.com/20" alt="The Vale" />
@@ -116,4 +115,4 @@ const PaginaInicial = () => {
       </main></div>
         );
       };
-      export default PaginaInicial;
+      export default PaginaSobrevivencia;
