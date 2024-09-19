@@ -2,6 +2,13 @@ import React from "react";
 import "./PaginaInicial.css"
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Logo from "../assets/logo.site.tcc.png";
+import valley from '../assets/valley.jpg';
+import demon from '../assets/demon.jpg';
+import cato from '../assets/cato.png';
+import necro from '../assets/necro.jpg';
+import role from '../assets/role.jpg';
+import galinha from '../assets/galinha.jpg';
 
 const PaginaAndroid = () => {
         const [isOpen, setIsOpen] = useState({
@@ -19,15 +26,15 @@ const PaginaAndroid = () => {
                                 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
                         </head>
                         <header className="header">
-                                <div className="logo"><img src="https://via.placeholder.com/20" /></div>
+                                <div className="logo"><img src={Logo} /></div>
                                 <nav className="nav">
-                                        <a href="#home" style={{ fontSize: '40px' }}>Início</a>
-                                        <a href="#games" style={{ fontSize: '40px' }}>Games</a>
-                                        <a href="#support" style={{ fontSize: '40px' }}>Suporte</a>
+                                        <Link to={'/Index'}><a href="" style={{ fontSize: '40px' }}>Início</a></Link>
+                                        <a href="" style={{ fontSize: '40px' }}>Games</a>
+                                        <a href="" style={{ fontSize: '40px' }}>Suporte</a>
                                 </nav>
                                 <div className="search"><i className="fas fa-search"></i>
                                         <input type="text" placeholder="Search..." />
-                                        <Link to={'/Login'}><button className="login-btn"><i className="fas fa-user-circle"></i>Log In</button></Link>
+                                        <Link to={'/Login'}><button className="login-btn"><i className="fas fa-user-circle"></i>Log in</button></Link>
                                 </div>
                         </header>
 
@@ -85,30 +92,30 @@ const PaginaAndroid = () => {
                                         </div>
                                 </section>
                                 <section className="games-section">
-                                        <div className="S">
-                                                <img src="" alt="Pumpkin Panic" />
-                                                <a href="">Pumpkin Panic</a>
+                                <div className="S">
+                                                <img src={valley} alt="Sprout Valley" />
+                                                <a href="">Sprout Valley</a>
                                         </div>
                                         <div className="S">
-                                                <img src="" alt="Lumiterra" />
-                                                <a href="">Lumiterra</a>
+                                                <img src={demon} alt="Where the demon lurks" />
+                                                <a href="">Where the demon lurks</a>
                                         </div>
                                         <div className="S">
-                                                <img src="" alt="Madison" />
-                                                <a href="">Madison</a>
+                                                <img src={cato} alt="Cato" />
+                                                <a href="">Cato</a>
                                         </div>
                                         <section className="games-section1">
                                                 <div className="S">
-                                                        <img src="" alt="Shadow over normath" />
-                                                        <a href="">Shadow over normath</a>
+                                                        <img src={necro} alt="Necro Chess" />
+                                                        <a href="">Necro Chess</a>
                                                 </div>
                                                 <div className="S">
-                                                        <img src="" alt="My rusty submarine" />
-                                                        <a href="">My rusty submarine</a>
+                                                        <img src={role} alt="Um papel a desempenhar" />
+                                                        <a href="">Um papel a desempenhar</a>
                                                 </div>
                                                 <div className="S">
-                                                        <img src="" alt="Lil tribals" />
-                                                        <a href="">Lil tribals</a>
+                                                        <img src={galinha} alt="Cheeky chooks" />
+                                                        <a href="">Cheeky chooks</a>
                                                 </div>
                                         </section>
                                 </section>

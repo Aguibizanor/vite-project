@@ -2,6 +2,13 @@ import React from "react";
 import "./PaginaInicial.css"
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Logo from "../assets/logo.site.tcc.png";
+import celeste from "../assets/celeste.png";
+import insetin from "../assets/insetin.png";
+import kamaeru from "../assets/kamaeru.png";
+import loom from "../assets/loom.png";
+import vale from "../assets/vale.png";
+import endless from "../assets/endless.png";
 
 const PaginaDesenvolvendo = () => {
         const [isOpen, setIsOpen] = useState({
@@ -19,11 +26,11 @@ const PaginaDesenvolvendo = () => {
                                 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
                         </head>
                         <header className="header">
-                                <div className="logo"><img src="https://via.placeholder.com/20" /></div>
+                                <div className="logo"><img src={Logo} /></div>
                                 <nav className="nav">
-                                        <a href="#home" style={{ fontSize: '40px' }}>Início</a>
-                                        <a href="#games" style={{ fontSize: '40px' }}>Games</a>
-                                        <a href="#support" style={{ fontSize: '40px' }}>Suporte</a>
+                                        <Link to={'/Index'}><a href="" style={{ fontSize: '40px' }}>Início</a></Link>
+                                        <a href="" style={{ fontSize: '40px' }}>Games</a>
+                                        <a href="" style={{ fontSize: '40px' }}>Suporte</a>
                                 </nav>
                                 <div className="search"><i className="fas fa-search"></i>
                                         <input type="text" placeholder="Search..." />
@@ -86,29 +93,29 @@ const PaginaDesenvolvendo = () => {
                                 </section>
                                 <section className="games-section">
                                         <div className="S">
-                                                <img src="" alt="Pumpkin Panic" />
-                                                <a href="">Pumpkin Panic</a>
+                                                <img src={insetin} alt="Bug Fables" />
+                                                <a href="">Bug Fables</a>
                                         </div>
                                         <div className="S">
-                                                <img src="" alt="Lumiterra" />
-                                                <a href="">Lumiterra</a>
+                                                <img src={loom} alt="Crescent Loom" />
+                                                <a href="">Crescent Loom</a>
                                         </div>
                                         <div className="S">
-                                                <img src="" alt="Madison" />
-                                                <a href="">Madison</a>
+                                                <img src={endless} alt="Endless Blue" />
+                                                <a href="">Endless Blue</a>
                                         </div>
                                         <section className="games-section1">
                                                 <div className="S">
-                                                        <img src="" alt="Shadow over normath" />
-                                                        <a href="">Shadow over normath</a>
+                                                        <img src={kamaeru} alt="Kamaeru" />
+                                                        <a href="">Kamaeru</a>
                                                 </div>
                                                 <div className="S">
-                                                        <img src="" alt="My rusty submarine" />
-                                                        <a href="">My rusty submarine</a>
+                                                        <img src={vale} alt="The Vale" />
+                                                        <a href="">The Vale</a>
                                                 </div>
                                                 <div className="S">
-                                                        <img src="" alt="Lil tribals" />
-                                                        <a href="">Lil tribals</a>
+                                                        <img src={celeste} alt="Celeste" />
+                                                        <a href="">Celeste</a>
                                                 </div>
                                         </section>
                                 </section>

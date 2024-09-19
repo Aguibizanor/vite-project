@@ -2,12 +2,13 @@ import React from "react";
 import "./PaginaLogin.css"
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Logo from "../assets/logo.site.tcc.png";
 
 function PaginaLogin() {
     return (
         <div className="w-full max-w-md mx-auto bg-white rounded-lg shadow-lg p-8 align-items">
             <div className="text-center mb-6">
-                <img src="https://placehold.co/100x100" alt="Logo with text 'GL Game Legends'" className="mx-auto mb-4" />
+            <img src={Logo} alt="Logo with text 'GL Game Legends'" className="mx-auto mb-4" />
                 <h1 className="text-2xl font-bold text-transparent bg-clip-text gradient-button">LOGIN</h1>
             </div>
             <form>

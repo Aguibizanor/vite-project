@@ -2,6 +2,13 @@ import React from "react";
 import "./PaginaInicial.css"
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Logo from "../assets/logo.site.tcc.png";
+import phenomenom from "../assets/phenomenom.png"
+import wolf from "../assets/wolf.png"
+import coracao from "../assets/coracao.png"
+import lily from "../assets/lily.png"
+import mirror from "../assets/mirror.png"
+import oneshot from "../assets/oneshot.png"
 
 const PaginaEssemes = () => {
         const [isOpen, setIsOpen] = useState({
@@ -19,11 +26,11 @@ const PaginaEssemes = () => {
                                 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
                         </head>
                         <header className="header">
-                                <div className="logo"><img src="https://via.placeholder.com/20" /></div>
+                                <div className="logo"><img src={Logo} /></div>
                                 <nav className="nav">
-                                        <a href="#home" style={{ fontSize: '40px' }}>Início</a>
-                                        <a href="#games" style={{ fontSize: '40px' }}>Games</a>
-                                        <a href="#support" style={{ fontSize: '40px' }}>Suporte</a>
+                                        <Link to={'/Index'}><a href="" style={{ fontSize: '40px' }}>Início</a></Link>
+                                        <a href="" style={{ fontSize: '40px' }}>Games</a>
+                                        <a href="" style={{ fontSize: '40px' }}>Suporte</a>
                                 </nav>
                                 <div className="search"><i className="fas fa-search"></i>
                                         <input type="text" placeholder="Search..." />
@@ -86,29 +93,29 @@ const PaginaEssemes = () => {
                                 </section>
                                 <section className="games-section">
                                         <div className="S">
-                                                <img src="" alt="Pumpkin Panic" />
-                                                <a href="">Pumpkin Panic</a>
+                                                <img src={lily} alt="Paper Lily" />
+                                                <a href="">Paper Lily</a>
                                         </div>
                                         <div className="S">
-                                                <img src="" alt="Lumiterra" />
-                                                <a href="">Lumiterra</a>
+                                                <img src={mirror} alt="Pocket Mirror" />
+                                                <a href="">Pocket Mirror</a>
                                         </div>
                                         <div className="S">
-                                                <img src="" alt="Madison" />
-                                                <a href="">Madison</a>
+                                                <img src={phenomenom} alt="Cinderella Phenomenom" />
+                                                <a href="">Cinderella Phenomenom</a>
                                         </div>
                                         <section className="games-section1">
                                                 <div className="S">
-                                                        <img src="" alt="Shadow over normath" />
-                                                        <a href="">Shadow over normath</a>
+                                                        <img src={wolf} alt="Lonely Wolf Treat" />
+                                                        <a href="">Lonely Wolf Treat</a>
                                                 </div>
                                                 <div className="S">
-                                                        <img src="" alt="My rusty submarine" />
-                                                        <a href="">My rusty submarine</a>
+                                                        <img src={oneshot} alt="OneShot" />
+                                                        <a href="">OneShot</a>
                                                 </div>
                                                 <div className="S">
-                                                        <img src="" alt="Lil tribals" />
-                                                        <a href="">Lil tribals</a>
+                                                        <img src={coracao} alt="Com o Coração" />
+                                                        <a href="">Com o Coração</a>
                                                 </div>
                                         </section>
                                 </section>

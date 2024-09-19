@@ -2,6 +2,7 @@ import React from "react";
 import "./PaginaInicial.css"
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Logo from "../assets/logo.site.tcc.png";
 
 const PaginaAventura = () => {
         const [isOpen, setIsOpen] = useState({
@@ -19,11 +20,11 @@ const PaginaAventura = () => {
                                 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
                         </head>
                         <header className="header">
-                                <div className="logo"><img src="https://via.placeholder.com/20" /></div>
+                                <div className="logo"><img src={Logo} /></div>
                                 <nav className="nav">
-                                        <a href="#home" style={{ fontSize: '40px' }}>Início</a>
-                                        <a href="#games" style={{ fontSize: '40px' }}>Games</a>
-                                        <a href="#support" style={{ fontSize: '40px' }}>Suporte</a>
+                                        <Link to={'/Index'}><a href="" style={{ fontSize: '40px' }}>Início</a></Link>
+                                        <a href="" style={{ fontSize: '40px' }}>Games</a>
+                                        <a href="" style={{ fontSize: '40px' }}>Suporte</a>
                                 </nav>
                                 <div className="search"><i className="fas fa-search"></i>
                                         <input type="text" placeholder="Search..." />

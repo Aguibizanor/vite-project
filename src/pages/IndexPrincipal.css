@@ -1,0 +1,132 @@
+body {
+    margin: 1px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom,#90017F, #6a11cb, #2575fc);
+  }
+  .app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Garantir que a altura ocupe toda a visualização da tela */
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(160, 50, 145);
+    padding: 10px;
+    color: #fff;
+    z-index: 1000;
+   
+  }
+   
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .B{
+    height: 100px;
+  }
+   
+  .nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    margin-left:90px;
+  }
+   
+  .search {
+    display: flex;
+    align-items: center;
+    height: 10px;
+  }
+   
+  .search input {
+    padding: 5px;
+    border-radius: 50px;
+    border: none;
+  }
+   
+  .login-btn {
+    background-color: #00bfa5;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+  }
+   
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+  }
+   
+  .intro {
+    text-align: left;
+    display: flex;
+    align-items: flex-end; /* Alinha o conteúdo ao canto direito */
+    margin: 20px;
+    padding: 20px;
+    flex-direction: column;
+  }
+   
+  .intro h1 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 10px;
+   
+   
+  }
+   
+  .intro p {
+    font-size: 2rem;
+    color: #cfcfcf;
+    margin-bottom: 20px;
+   
+  }
+   
+  .cta-button {
+    background-color: #8e24aa;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.5em;
+  }
+   
+  .carousel {
+    width: 12%;
+   
+   
+  }
+  .carousel-container {
+    display: flex; /* Usar flexbox para alinhamento */
+    justify-content: flex-end; /* Alinhar o carrossel à direita */
+    overflow: hidden; /* Evita que o carrossel ultrapasse o contêiner */
+    width: 100%; /* Ajuste a largura conforme necessário */
+    display: flex;
+  }
+  .A {
+    width: 10px;
+    padding: 1px 5px; /* Aumenta o espaçamento interno do botão */
+    font-size: 1.2em; /* Aumenta o tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    display: flex;
+    align-items: center; /* Alinha o ícone verticalmente */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+  }
+  .C{
+    width: 10px;
+    padding: 5px 10px; /* Aumenta o espaçamento interno do botão */
+    font-size: 1.2em; /* Aumenta o tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    display: flex;
+    align-items: center; /* Alinha o ícone verticalmente */
+    border-radius: 5px;
+  }

@@ -18,6 +18,7 @@ import PaginaEssasemana from "./PaginaEssasemana";
 import PaginaEssemes from "./PaginaEssemes";
 import PaginaDesenvolvido from "./PaginaDesenvolvido";
 import PaginaDesenvolvendo from "./PaginaDesenvolvendo";
+import IndexPrincipal from "./IndexPrincipal";
 
 
 const AppRoutes = () => {
@@ -42,6 +43,7 @@ const AppRoutes = () => {
         <Route path="/Essemes" element={<PaginaEssemes/>} />
         <Route path="/Desenvolvido" element={<PaginaDesenvolvido/>} />
         <Route path="/Desenvolvendo" element={<PaginaDesenvolvendo/>} />
+        <Route path="/Index" element={<IndexPrincipal/>} />
       </Routes>
     </Router>
   );
