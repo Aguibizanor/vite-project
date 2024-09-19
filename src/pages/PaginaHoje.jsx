@@ -3,6 +3,10 @@ import "./PaginaInicial.css"
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from "../assets/logo.site.tcc.png";
+import gold from '../assets/gold.png';
+import self from '../assets/self.png';
+import kiddo from '../assets/kiddo.png';
+import kama from '../assets/kama.png';
 
 const PaginaHoje = () => {
         const [isOpen, setIsOpen] = useState({
@@ -86,30 +90,22 @@ const PaginaHoje = () => {
                                         </div>
                                 </section>
                                 <section className="games-section">
-                                        <div className="S">
-                                                <img src="" alt="Pumpkin Panic" />
-                                                <a href="">Pumpkin Panic</a>
+                                <div className="S">
+                                                <img src={gold} alt="Gold of skils" />
+                                                <a href="">Gold of skils</a>
                                         </div>
                                         <div className="S">
-                                                <img src="" alt="Lumiterra" />
-                                                <a href="">Lumiterra</a>
+                                                <img src={self} alt="Self Redemption of mental" />
+                                                <a href="">Self Redemption of mental</a>
                                         </div>
                                         <div className="S">
-                                                <img src="" alt="Madison" />
-                                                <a href="">Madison</a>
+                                                <img src={kiddo} alt="Kiddo" />
+                                                <a href="">Kiddo</a>
                                         </div>
                                         <section className="games-section1">
                                                 <div className="S">
-                                                        <img src="" alt="Shadow over normath" />
-                                                        <a href="">Shadow over normath</a>
-                                                </div>
-                                                <div className="S">
-                                                        <img src="" alt="My rusty submarine" />
-                                                        <a href="">My rusty submarine</a>
-                                                </div>
-                                                <div className="S">
-                                                        <img src="" alt="Lil tribals" />
-                                                        <a href="">Lil tribals</a>
+                                                        <img src={kama} alt="Kamaeru" />
+                                                        <a href="">Kamaeru</a>
                                                 </div>
                                         </section>
                                 </section>
