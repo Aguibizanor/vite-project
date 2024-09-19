@@ -19,6 +19,9 @@ import PaginaEssemes from "./PaginaEssemes";
 import PaginaDesenvolvido from "./PaginaDesenvolvido";
 import PaginaDesenvolvendo from "./PaginaDesenvolvendo";
 import IndexPrincipal from "./IndexPrincipal";
+import PaginaSuporte from "./PaginaSuporte";
+import PaginaMandarEmail from "./PaginaMandarEmail";
+import PaginaOpcoes from "./PaginaOpcoes";
 
 
 const AppRoutes = () => {
@@ -44,6 +47,9 @@ const AppRoutes = () => {
         <Route path="/Desenvolvido" element={<PaginaDesenvolvido/>} />
         <Route path="/Desenvolvendo" element={<PaginaDesenvolvendo/>} />
         <Route path="/Index" element={<IndexPrincipal/>} />
+        <Route path="/Suporte" element={<PaginaSuporte/>} />
+        <Route path="/MandarEmail" element={<PaginaMandarEmail/>} />
+        <Route path="/Opcoes" element={<PaginaOpcoes/>} />
       </Routes>
     </Router>
   );

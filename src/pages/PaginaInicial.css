@@ -44,7 +44,7 @@ main {
   display: flex;
   align-items: center; 
   background: linear-gradient(to right, #5563DC, #2E3576);
-  width: 212px;
+  width: 286px;
   margin-left: -10px;
   color: #fff ;
 }
@@ -79,7 +79,12 @@ p {
 }
 .games-section a {
   text-decoration: none;
-  color: #fff;
+  color: #000;
+}
+.games-section div {
+  text-decoration: none;
+  background-color: #fff;
+  height: 220px;
 }
 .games-section1 {
   display: flex;
@@ -96,8 +101,9 @@ p {
   text-align: center;
 }
 .S img {
-  width: 100%;
+  width: 90%;
   height: auto;
+  margin-top: 15px;
 }
 .logo {
   font-size: 1.5rem;

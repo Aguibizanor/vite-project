@@ -51,7 +51,7 @@ body {
     background-color: #00bfa5;
     color: white;
     border: none;
-    padding: 8px 12px;
+    padding: px px;
     margin-left: 10px;
     border-radius: 5px;
     cursor: pointer;
@@ -72,21 +72,20 @@ body {
     margin: 20px;
     padding: 20px;
     flex-direction: column;
+    margin-left: -1114px;
   }
    
   .intro h1 {
     font-size: 3rem;
     color: #fff;
     margin-bottom: 10px;
-   
-   
+    border-left: solid;
   }
    
   .intro p {
     font-size: 2rem;
     color: #cfcfcf;
     margin-bottom: 20px;
-   
   }
    
   .cta-button {

@@ -3,6 +3,7 @@ import "./PaginaLogin.css"
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from "../assets/logo.site.tcc.png";
+import stardew from "../assets/stardew.png";
 
 function PaginaLogin() {
     return (
@@ -28,10 +29,11 @@ function PaginaLogin() {
             </form>
             <div className="text-center mt-4">
                 <p className="text-gray-500 text-sm">Ainda não tem conta? <Link to={'/Cadastro'}><a href="#" className="text-blue-500">Cadastre-se</a></Link></p>
+                <p>Esqueceu a senha?<Link to={'/MandarEmail'}><a>Redefinir senha</a></Link></p>
             </div> 
             <div className="flex justify-between mt-6">
-                <img src="https://placehold.co/50x50" alt="Pixel art character" className="w-12 h-12" />
-                <img src="https://placehold.co/50x50" alt="Pixel art character" className="w-12 h-12" />
+                <img src={stardew} alt="Pixel art character" className="w-12 h-12" />
+                <img src={stardew} alt="Pixel art character" className="w-12 h-12" />
             </div>
         </div>
     );

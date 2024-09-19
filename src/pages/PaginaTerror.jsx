@@ -29,8 +29,8 @@ const PaginaTerror = () => {
                                 <div className="logo"><img src={Logo} /></div>
                                 <nav className="nav">
                                         <Link to={'/Index'}><a href="" style={{ fontSize: '40px' }}>Início</a></Link>
-                                        <a href="" style={{ fontSize: '40px' }}>Games</a>
-                                        <a href="" style={{ fontSize: '40px' }}>Suporte</a>
+                                        <Link to={'/'}><a href="" style={{ fontSize: '40px', marginLeft: '50px' }}>Games</a></Link>
+                                        <Link to={'/Suporte'}><a href="" style={{ fontSize: '40px', marginLeft: '10px'  }}>Suporte</a></Link>
                                 </nav>
                                 <div className="search"><i className="fas fa-search"></i>
                                         <input type="text" placeholder="Search..." />
@@ -94,7 +94,7 @@ const PaginaTerror = () => {
                                 <section className="games-section">
                                 <div className="S">
                                                 <img src={tomate} alt="Elevator Hitch" />
-                                                <a href="">"Elevator Hitch</a>
+                                                <a href="">Elevator Hitch</a>
                                         </div>
                                         <div className="S">
                                                 <img src={melancia} alt="Elevated Dread" />
