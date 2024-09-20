@@ -43,7 +43,7 @@ const IndexPrincipal = () => { //carrosel
 <div className="search"><i className="fas fa-search"></i>
           <input type="text" placeholder="Search..." className="search-input"/>
           <button className="login-btn1">
-          <Link to={'/Opcao'}><button className="login-btn"><i className="fas fa-user-circle"></i> Log in</button></Link>
+          <Link to={'/Opcoes'}><button className="login-btn"><i className="fas fa-user-circle"></i> Log in</button></Link>
           </button>
         </div>
 </header>

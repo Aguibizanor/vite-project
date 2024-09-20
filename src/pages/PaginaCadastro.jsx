@@ -42,7 +42,7 @@ function PaginaCadastro() {
                         <Link to={'/'}><button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 px-4 rounded button-color">CADASTRE-SE</button></Link>
                     </div>
                     <div className="text-center mt-4">
-                        <span>Já tem uma conta? Faça login: <Link to={'/Opcao'}><a href="#" className="text-blue-500">Login</a></Link></span>
+                        <span>Já tem uma conta? Faça login: <Link to={'/Opcoes'}><a href="#" className="text-blue-500">Login</a></Link></span>
                     </div>
                 </div>
             </div>
