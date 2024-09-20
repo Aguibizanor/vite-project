@@ -18,7 +18,89 @@ body {
     z-index: 1000;
    
   }
-   
+  .carrossel{
+    margin-left: 500px;
+    width: 100px
+  }
+  .carrossel .carousel{
+    display:flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 270px;
+    height: 570px;
+  }
+  .carrossel .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .carrossel .carousel .item {
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    flex: none;
+    border: solid;
+    border-color: lightgray;
+    border-width: 6px;
+  }
+  .carrossel .carousel .item .imag img{
+    max-height: 200px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }  
+  .carrossel .buttons {
+    width: 100%;
+    align-items: center;
+    margin-top: -400px;
+  }
+  .carrossel .buttons button {
+    background-color: #8e24aa;
+    border: solid;
+    border-width: 1px;
+    border-color:#fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+
+  }
+  .carrossel .buttons button:first-child{
+    margin-left: -82px;
+    margin-top: 80px;
+  }
+  .carrossel .buttons button{
+    margin-left: 437px;
+    margin-top: -48px;
+  }
+  .carrossel .carousel .item .info {
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .carrossel .carousel .item .info span{
+    display:block;
+    text-align: center;
+    color: #1e1e1e;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  .carrossel .carousel .item .info .name{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0
+  }
+  .carrossel .carousel .item .info .texto{
+    font-size: 1.2rem;
+    flex-grow: 1;
+  }
+  .carrossel .carousel .item .info .butao{
+    font-size: 1.55rem;
+    flex-grow: 1;
+    background-color: #8e24aa;
+    border-radius: 22px;
+    color: #fff;
+    margin-top: 8px;
+  }
   .logo {
     font-size: 1.5rem;
     font-weight: bold;
@@ -47,7 +129,7 @@ body {
     border: none;
   }
    
-  .login-btn {
+  .login-btn1 {
     background-color: #00bfa5;
     color: white;
     border: none;
@@ -56,6 +138,8 @@ body {
     border-radius: 5px;
     cursor: pointer;
     display: flex;
+    padding: -6px;
+
   }
    
   .main {
@@ -72,7 +156,7 @@ body {
     margin: 20px;
     padding: 20px;
     flex-direction: column;
-    margin-left: -1114px;
+    margin-left: -270px;
   }
    
   .intro h1 {

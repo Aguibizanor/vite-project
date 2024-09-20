@@ -40,13 +40,13 @@ const PaginaSuporte = () => {
     },
   ];
   return (
-<div className="faq-container">
+<div>
 <head>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
 </head>
 <header className="header">
 <div className="logo">
-<img src="https://via.placeholder.com/50" alt="Logo" />
+<img src={Logo} alt="Logo" />
 </div>
 <nav className="nav">
                                         <Link to={'/Index'}><a href="" style={{ fontSize: '40px' }}>Início</a></Link>
@@ -61,12 +61,14 @@ const PaginaSuporte = () => {
 </button>
 </div>
 </header>
+<div className="faq-container">
 <div className="faq-content">
 <h1>Respostas para suas perguntas</h1>
 <div className="faq-list">
           {faqData.map((faq, index) => (
 <FAQItem key={index} question={faq.question} answer={faq.answer} />
           ))}
+</div>
 </div>
 </div>
 </div>

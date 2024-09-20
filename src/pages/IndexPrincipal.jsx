@@ -1,19 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './IndexPrincipal.css';
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from "../assets/logo.site.tcc.png";
+import left from "../assets/left.png";
+import right from "../assets/right.png";
  
 const IndexPrincipal = () => { //carrosel
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
+  const [data, setData] = useState([]); // Define o estado para armazenar os dados
+  const carousel = useRef(null); // Ref para o carrossel
+
+  useEffect(() => {
+    fetch('/Carrossel.json') // Caminho corrigido
+      .then((response) => response.json())
+      .then(setData)
+      .catch((error) => console.error('Erro ao carregar os dados:', error));
+  }, []);
+
+  const handleLeftClick = (e) => {
+    e.preventDefault();
+    carousel.current.scrollLeft -= carousel.current.offsetWidth + 45;
   };
- 
+
+  const handleRightClick = (e) => {
+    e.preventDefault();
+    carousel.current.scrollLeft += carousel.current.offsetWidth + 45;
+  };
+
+  if (!data || !data.length) return null;
+
   return (
 <div className="app">
                         <head>
@@ -28,8 +42,8 @@ const IndexPrincipal = () => { //carrosel
                                 </nav>
 <div className="search"><i className="fas fa-search"></i>
           <input type="text" placeholder="Search..." className="search-input"/>
-          <button className="login-btn">
-          <Link to={'/Login'}><button className="login-btn"><i className="fas fa-user-circle"></i>Log in</button></Link>
+          <button className="login-btn1">
+          <Link to={'/Login'}><button className="login-btn"><i className="fas fa-user-circle"></i> Log in</button></Link>
           </button>
         </div>
 </header>
@@ -43,7 +57,32 @@ const IndexPrincipal = () => { //carrosel
  nossa plataforma <br />onde você poderá <br />encontrar.</p>
 <Link to={'/Opcoes'}><button className="cta-button">Conheça</button></Link>
 </section>
- 
+ <section>
+  <div className="carrossel">
+    <div className="carousel" ref={carousel}>
+    {data.map((item) => {
+          const {id, name, descricao, imagem} = item;
+          return (
+      <div class="item" key={id}>
+        <div className="imag">
+          <img src={imagem} alt={name}/>
+        </div>
+        <div className="info">
+          <span className="name">{name}</span>
+          <span className="texto">{descricao}</span>
+          <Link to={'/'}><span className="butao">Veja Mais <i className="fas fa-arrow-circle-right"></i></span></Link>
+          
+        </div>
+      </div>
+        );
+    })};
+    </div>
+    <div className="buttons">
+      <button onClick={handleLeftClick}><img src={left} alt="esquerda" /></button>
+      <button onClick={handleRightClick}><img src={right} alt="direita" /></button>
+    </div>
+  </div>
+ </section>
  
  
 </main>

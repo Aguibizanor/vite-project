@@ -2,6 +2,7 @@ import React from 'react';
 import './PaginaMandarEmail.css';
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.site.tcc.png";
+import viva from "../assets/viva.png";
 
 const PaginaMandarEmail = () => {
   return (

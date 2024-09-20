@@ -28,7 +28,7 @@ const PaginaAventura = () => {
                                 </nav>
                                 <div className="search"><i className="fas fa-search"></i>
                                         <input type="text" placeholder="Search..." />
-                                        <Link to={'/Login'}><button className="login-btn"><i className="fas fa-user-circle"></i>Log In</button></Link>
+                                        <Link to={'/Login'}><button className="login-btn"><i className="fas fa-user-circle"></i> Log In</button></Link>
                                 </div>
                         </header>
 
