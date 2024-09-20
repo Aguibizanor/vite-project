@@ -12,7 +12,7 @@ const PaginaMandarEmail = () => {
 <form>
 <label>Email:</label>
 <input type="email" required />
-<button type="submit" className="mandar_email">MANDE EMAIL</button>
+<Link to={'/MandarCodin'}><button type="submit" className="mandar_email">MANDE EMAIL</button></Link>
 </form>
 <p>
         Lembrou a senha? <Link to={'/Login'}><a href="">Faça login</a></Link>

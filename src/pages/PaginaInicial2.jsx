@@ -1,16 +1,16 @@
 import React from "react";
 import "./PaginaInicial.css"
 import { useState } from 'react';
-import tomate from '../assets/tomate.png';
-import melancia from '../assets/melancia.png';
-import uva from '../assets/uva.png';
-import salada from '../assets/salada.png';
-import tangerina from '../assets/tangerina.png';
-import tamara from '../assets/tamara.png';
 import { Link } from 'react-router-dom';
 import Logo from "../assets/logo.site.tcc.png";
+import our from "../assets/our.png";
+import theyare from "../assets/theyare.png";
+import hitch from "../assets/hitch.png";
+import heros from "../assets/heros.png";
+import happy from "../assets/happy.png";
+import drive from "../assets/drive.png";
 
-const PaginaTerror = () => {
+const PaginaInicial2 = () => {
         const [isOpen, setIsOpen] = useState({
                 genero: true,
                 plataformas: true,
@@ -34,7 +34,7 @@ const PaginaTerror = () => {
                                 </nav>
                                 <div className="search"><i className="fas fa-search"></i>
                                         <input type="text" placeholder="Search..." />
-                                        <Link to={'/Opcao'}><button className="login-btn"><i className="fas fa-user-circle"></i> Log In</button></Link>
+                                        <Link to={'/Perfil1'}><button className="login-btn"><i className="fas fa-user-circle"></i> Perfil</button></Link>
                                 </div>
                         </header>
 
@@ -92,34 +92,34 @@ const PaginaTerror = () => {
                                         </div>
                                 </section>
                                 <section className="games-section">
-                                <div className="S">
-                                                <img src={tomate} alt="Elevator Hitch" />
-                                                <a href="">Elevator Hitch</a>
+                                        <div className="S">
+                                                <img src={happy} alt="Happy Cat Tavern" />
+                                                <a href="">Happy Cat Tavern</a>
                                         </div>
                                         <div className="S">
-                                                <img src={melancia} alt="Elevated Dread" />
-                                                <a href="">Elevated Dread</a>
+                                                <img src={drive} alt="Buck Up and Drive" />
+                                                <a href="">Buck Up and Drive</a>
                                         </div>
                                         <div className="S">
-                                                <img src={uva} alt="Pumpkin Panic" />
-                                                <a href="">Pumpkin Panic</a>
+                                                <img src={heros} alt="Hero's Hour" />
+                                                <a href="">Hero's Hour</a>
                                         </div>
                                         <section className="games-section1">
                                                 <div className="S">
-                                                        <img src={salada} alt="They are here" />
-                                                        <a href="">They are here</a>
+                                                        <img src={hitch} alt="Elevator Hitch" />
+                                                        <a href="">Elevator Hitch</a>
                                                 </div>
                                                 <div className="S">
-                                                        <img src={tangerina} alt="The Vale" />
-                                                        <a href="">The Vale</a>
+                                                        <img src={our} alt="Our Life" />
+                                                        <a href="">Our Life</a>
                                                 </div>
                                                 <div className="S">
-                                                        <img src={tamara} alt="Clap Clap" />
-                                                        <a href="">Clap Clap</a>
+                                                        <img src={theyare} alt="They Are Here" />
+                                                        <a href="">They Are Here</a>
                                                 </div>
                                         </section>
                                 </section>
                         </main></div>
         );
 };
-export default PaginaTerror;
+export default PaginaInicial2;

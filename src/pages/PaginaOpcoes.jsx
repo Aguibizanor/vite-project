@@ -7,21 +7,21 @@ import tails from "../assets/tails.png";
 const PaginaOpcoes = () => {
   return (
 <div className="App">
-      <header className="App-header">
+      <div className="App-div">
         <img src={tails} alt="Tails Pixel Art" className="pixel-art" />
-        <h1>ENTRE COM</h1>
+        <h1 className='ENTRE'>ENTRE COM</h1>
         <div className="buttons">
           <Link to={'/Login'}>
             <button onClick={() => alert('Cliente login')}>Sou Cliente</button>
           </Link>
-          <Link to={'/Login'}>
+          <Link to={'/Login1'}>
             <button onClick={() => alert('Desenvolvedor login')}>Sou Desenvolvedor</button>
           </Link>
-          <Link to={'/Login'}>
+          <Link to={'/Login2'}>
             <button onClick={() => alert('Administrador login')}>Sou Administrador</button>
           </Link>
         </div>
-      </header>
+      </div>
     </div>
   );
 };

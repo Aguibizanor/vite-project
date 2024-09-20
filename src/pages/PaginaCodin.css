@@ -1,0 +1,90 @@
+.container {
+    text-align: center;
+    background: #fff;
+    height: 690px;
+    width: 1000px;
+    display: flex;
+    margin-left: 290px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+    border-radius: 15px;
+  }
+  h2 {
+    color: #fff;
+  }
+  .code-inputs input {
+    width: 30px;  /* Ajuste aqui para controlar a largura */
+    height: 30px; /* Ajuste aqui para controlar a altura */
+    font-size: 10px; 
+    text-align: center;
+    margin-right: 9px; 
+    margin-left: 9px;
+    margin-top: 12px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .code-inputs input:focus {
+    border-color: #007bff;
+    outline: none;
+  }            
+  .confirmar {
+    background: linear-gradient(to left, #90017f, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom,#90017F, #6a11cb, #2575fc);
+  } 
+  /* Inputs do código */
+  .code-inputs input {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    margin: 0 5px;
+  }
+  /* Mensagem de confirmação */
+  .confirmation-message {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  /* Balão de mensagem */
+  .message-bubble {
+    background-color: #f0f0f0;
+    border-radius: 80px;
+    padding: 120px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: -40px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+  /* Botões no balão */
+  .message-bubble button {
+    margin: 50px;
+  }
+.botãoconfirmar {
+  background: linear-gradient(to left, #90017f, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  padding: 4px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 2rem;
+}
+.reset-password-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px; /* Ajuste o valor conforme necessário */
+}

@@ -1,5 +1,7 @@
 import React from "react";
 import PaginaInicial from "./PaginaInicial";
+import PaginaInicial1 from "./PaginaInicial1";
+import PaginaInicial2 from "./PaginaInicial2";
 import PaginaSobrevivencia from "./PaginaSobrevivencia";
 import PaginaLogin from "./PaginaLogin";
 import PaginaCartas from "./PaginaCartas";
@@ -22,6 +24,13 @@ import IndexPrincipal from "./IndexPrincipal";
 import PaginaSuporte from "./PaginaSuporte";
 import PaginaMandarEmail from "./PaginaMandarEmail";
 import PaginaOpcoes from "./PaginaOpcoes";
+import PaginaCodin from "./PaginaCodin";
+import PaginaRedefinirSenha from "./PaginaRedefinirSenha";
+import PaginaPerfil from "./PaginaPerfil";
+import PaginaLogin1 from "./PaginaLogin1";
+import PaginaLogin2 from "./PaginaLogin2";
+import PaginaPerfDesenvolvedor from "./PaginaPerfDesenvolvedor";
+import PaginaCriarProjeto from "./PaginaCriarProjeto";
 
 
 const AppRoutes = () => {
@@ -29,8 +38,12 @@ const AppRoutes = () => {
     <Router>
       <Routes>
         <Route path="/" element={<PaginaInicial />} />
+        <Route path="/1" element={<PaginaInicial1 />} />
+        <Route path="/2" element={<PaginaInicial2 />} />
         <Route path="/Sobrevivencia" element={<PaginaSobrevivencia />} />
         <Route path="/Login" element={<PaginaLogin />} />
+        <Route path="/Login1" element={<PaginaLogin1 />} />
+        <Route path="/Login2" element={<PaginaLogin2 />} />
         <Route path="/Cartas" element={<PaginaCartas />} />
         <Route path="/Cadastro" element={<PaginaCadastro />} />
         <Route path="/Windows" element={<PaginaWindows />} />
@@ -50,6 +63,11 @@ const AppRoutes = () => {
         <Route path="/Suporte" element={<PaginaSuporte/>} />
         <Route path="/MandarEmail" element={<PaginaMandarEmail/>} />
         <Route path="/Opcoes" element={<PaginaOpcoes/>} />
+        <Route path="/MandarCodin" element={<PaginaCodin/>} />
+        <Route path="/RedefinirSenha" element={<PaginaRedefinirSenha/>} />
+        <Route path="/Perfil" element={<PaginaPerfil/>} />
+        <Route path="/Perfil1" element={<PaginaPerfDesenvolvedor/>} />
+        <Route path="/Criar" element={<PaginaCriarProjeto/>} />
       </Routes>
     </Router>
   );

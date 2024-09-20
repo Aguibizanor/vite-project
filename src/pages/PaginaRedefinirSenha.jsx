@@ -14,7 +14,7 @@ const PaginaRedefinirSenha = () => {
 <input type="password" required />
 <label>Confirme senha:</label>
 <input type="password" required />
-<button type="submit">CONFIRMAR</button>
+<Link to={'/Login'}><button type="submit">CONFIRMAR</button></Link>
 </form>
 <p>
         Lembrou a senha? <Link to={'/Login'}><a href="">Faça login</a></Link>

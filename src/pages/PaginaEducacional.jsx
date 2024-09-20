@@ -3,6 +3,12 @@ import "./PaginaInicial.css"
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from "../assets/logo.site.tcc.png";
+import carambola from '../assets/carambola.png';
+import amora from '../assets/amora.png';
+import ameixa from '../assets/ameixa.png';
+import maca from '../assets/maca.png';
+import banana from '../assets/banana.png';
+import foto from '../assets/foto.png';
 
 const PaginaEducacional = () => {
         const [isOpen, setIsOpen] = useState({
@@ -28,7 +34,7 @@ const PaginaEducacional = () => {
                                 </nav>
                                 <div className="search"><i className="fas fa-search"></i>
                                         <input type="text" placeholder="Search..." />
-                                        <Link to={'/Login'}><button className="login-btn"><i className="fas fa-user-circle"></i> Log In</button></Link>
+                                        <Link to={'/Opcao'}><button className="login-btn"><i className="fas fa-user-circle"></i> Log In</button></Link>
                                 </div>
                         </header>
 
@@ -86,30 +92,30 @@ const PaginaEducacional = () => {
                                         </div>
                                 </section>
                                 <section className="games-section">
-                                        <div className="S">
-                                                <img src="" alt="Pumpkin Panic" />
-                                                <a href="">Pumpkin Panic</a>
+                                <div className="S">
+                                                <img src={carambola} alt="Digital Logic Sim" />
+                                                <a href="">Digital Logic Sim</a>
                                         </div>
                                         <div className="S">
-                                                <img src="" alt="Lumiterra" />
-                                                <a href="">Lumiterra</a>
+                                                <img src={amora} alt="Crescent Loom" />
+                                                <a href="">Crescent Loom</a>
                                         </div>
                                         <div className="S">
-                                                <img src="" alt="Madison" />
-                                                <a href="">Madison</a>
+                                                <img src={ameixa} alt="Fallacy Quiz" />
+                                                <a href="">Fallacy Quiz</a>
                                         </div>
                                         <section className="games-section1">
                                                 <div className="S">
-                                                        <img src="" alt="Shadow over normath" />
-                                                        <a href="">Shadow over normath</a>
+                                                        <img src={maca} alt="20 words, 20 seconds" />
+                                                        <a href="">20 words, 20 seconds</a>
                                                 </div>
                                                 <div className="S">
-                                                        <img src="" alt="My rusty submarine" />
-                                                        <a href="">My rusty submarine</a>
+                                                        <img src={banana} alt="Prose e Codes" />
+                                                        <a href="">Prose e Codes</a>
                                                 </div>
                                                 <div className="S">
-                                                        <img src="" alt="Lil tribals" />
-                                                        <a href="">Lil tribals</a>
+                                                        <img src={foto} alt="After Party Chemistry" />
+                                                        <a href="">After Party Chemistry</a>
                                                 </div>
                                         </section>
                                 </section>

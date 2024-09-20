@@ -9,7 +9,7 @@ function PaginaCadastro() {
                     <img src={Logo} alt="Logo of Game Legends" className="logo"/>
             </div>
             <div className="formulario">
-                <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-4xl">
+                <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-4xl" style={{ marginLeft: '270px', marginTop: '60px' }}>
                     <h2 className="text-center text-2xl font-bold text-gradient mb-6 titulo ">CRIAR CONTA</h2>
                     <div className="grid grid-cols-2 gap-4">
                         <div className="input-single">
@@ -42,7 +42,7 @@ function PaginaCadastro() {
                         <Link to={'/'}><button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 px-4 rounded button-color">CADASTRE-SE</button></Link>
                     </div>
                     <div className="text-center mt-4">
-                        <span>Já tem uma conta? Faça login: <Link to={'/Login'}><a href="#" className="text-blue-500">Login</a></Link></span>
+                        <span>Já tem uma conta? Faça login: <Link to={'/Opcao'}><a href="#" className="text-blue-500">Login</a></Link></span>
                     </div>
                 </div>
             </div>

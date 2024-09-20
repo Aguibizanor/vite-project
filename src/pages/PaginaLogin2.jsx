@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Logo from "../assets/logo.site.tcc.png";
 import stardew from "../assets/stardew.png";
 
-function PaginaLogin() {
+function PaginaLogin2() {
   return (
     <div className="login-container">
       {/* Logo no canto superior esquerdo */}
@@ -15,8 +15,8 @@ function PaginaLogin() {
       {/* Formulário centralizado */}
       <div className="form-container">
         <div className="header text-center mb-6">
-          <h1 className="titulo text-2xl font-bold text-transparent bg-clip-text gradient-button" style={{marginLeft: '78px'}}>
-            Login Cliente
+          <h1 className="titulo text-2xl font-bold text-transparent bg-clip-text gradient-button" style={{marginLeft: '81px'}}>
+            Login ADM
           </h1>
         </div>
         <form>
@@ -43,7 +43,7 @@ function PaginaLogin() {
             />
           </div>
           <div className="flex items-center justify-between">
-          <Link to={'/1'}><button className="login-button" type="button">
+          <Link to={'/'}><button className="login-button" type="button">
               LOGIN
             </button></Link>
           </div>
@@ -75,4 +75,4 @@ function PaginaLogin() {
   );
 }
 
-export default PaginaLogin;
+export default PaginaLogin2;

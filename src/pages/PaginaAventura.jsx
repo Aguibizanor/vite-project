@@ -3,6 +3,12 @@ import "./PaginaInicial.css"
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from "../assets/logo.site.tcc.png";
+import laranja from '../assets/laranja.png';
+import limao from '../assets/limao.png';
+import jaca from '../assets/jaca.png';
+import goiaba from '../assets/goiaba.png';
+import framboesa from '../assets/framboesa.png';
+import damasco from '../assets/damasco.png';
 
 const PaginaAventura = () => {
         const [isOpen, setIsOpen] = useState({
@@ -28,7 +34,7 @@ const PaginaAventura = () => {
                                 </nav>
                                 <div className="search"><i className="fas fa-search"></i>
                                         <input type="text" placeholder="Search..." />
-                                        <Link to={'/Login'}><button className="login-btn"><i className="fas fa-user-circle"></i> Log In</button></Link>
+                                        <Link to={'/Opcao'}><button className="login-btn"><i className="fas fa-user-circle"></i> Log In</button></Link>
                                 </div>
                         </header>
 
@@ -87,29 +93,29 @@ const PaginaAventura = () => {
                                 </section>
                                 <section className="games-section">
                                         <div className="S">
-                                                <img src="" alt="Pumpkin Panic" />
-                                                <a href="">Pumpkin Panic</a>
+                                                <img src={laranja} alt="Coop Catacombs" />
+                                                <a href="">Coop Catacombs</a>
                                         </div>
                                         <div className="S">
-                                                <img src="" alt="Lumiterra" />
-                                                <a href="">Lumiterra</a>
+                                                <img src={limao} alt="Hero's Hour" />
+                                                <a href="">Hero's Hour</a>
                                         </div>
                                         <div className="S">
-                                                <img src="" alt="Madison" />
-                                                <a href="">Madison</a>
+                                                <img src={jaca} alt="The Vale" />
+                                                <a href="">The Vale</a>
                                         </div>
                                         <section className="games-section1">
                                                 <div className="S">
-                                                        <img src="" alt="Shadow over normath" />
-                                                        <a href="">Shadow over normath</a>
+                                                        <img src={goiaba} alt="Bug Fables" />
+                                                        <a href="">Bug Fables</a>
                                                 </div>
                                                 <div className="S">
-                                                        <img src="" alt="My rusty submarine" />
-                                                        <a href="">My rusty submarine</a>
+                                                        <img src={framboesa} alt="Billie Bust up" />
+                                                        <a href="">Billie Bust up</a>
                                                 </div>
                                                 <div className="S">
-                                                        <img src="" alt="Lil tribals" />
-                                                        <a href="">Lil tribals</a>
+                                                        <img src={damasco} alt="Endless Blue" />
+                                                        <a href="">Endless Blue</a>
                                                 </div>
                                         </section>
                                 </section>
