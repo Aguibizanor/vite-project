@@ -113,10 +113,10 @@ const PaginaTerror = () => {
                                                         <img src={tangerina} alt="The Vale" />
                                                         <a href="">The Vale</a>
                                                 </div>
-                                                <div className="S">
+                                                <Link to={'/Descricao1'}><div className="S">
                                                         <img src={tamara} alt="Clap Clap" />
                                                         <a href="">Clap Clap</a>
-                                                </div>
+                                                </div></Link>
                                         </section>
                                 </section>
                         </main></div>

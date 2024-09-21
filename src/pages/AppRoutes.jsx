@@ -31,6 +31,9 @@ import PaginaLogin1 from "./PaginaLogin1";
 import PaginaLogin2 from "./PaginaLogin2";
 import PaginaPerfDesenvolvedor from "./PaginaPerfDesenvolvedor";
 import PaginaCriarProjeto from "./PaginaCriarProjeto";
+import PaginaDescricao from "./PaginaDescricao";
+import PaginaDescricao1 from "./PaginaDescricao1";
+import PaginaDescricao2 from "./PaginaDescricao2";
 
 
 const AppRoutes = () => {
@@ -68,6 +71,9 @@ const AppRoutes = () => {
         <Route path="/Perfil" element={<PaginaPerfil/>} />
         <Route path="/Perfil1" element={<PaginaPerfDesenvolvedor/>} />
         <Route path="/Criar" element={<PaginaCriarProjeto/>} />
+        <Route path="/Descricao" element={<PaginaDescricao/>} />
+        <Route path="/Descricao1" element={<PaginaDescricao1/>} />
+        <Route path="/Descricao2" element={<PaginaDescricao2/>} />
       </Routes>
     </Router>
   );

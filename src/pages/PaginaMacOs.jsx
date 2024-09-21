@@ -92,10 +92,10 @@ const PaginaMacOs = () => {
                                         </div>
                                 </section>
                                 <section className="games-section">
-                                <div className="S">
+                                <Link to={'/Descricao2'}><div className="S">
                                                 <img src={ourlife} alt="Our Life" />
                                                 <a href="">Our Life</a>
-                                        </div>
+                                        </div></Link>
                                         <div className="S">
                                                 <img src={futebol} alt="Football Drama" />
                                                 <a href="">Football Drama</a>

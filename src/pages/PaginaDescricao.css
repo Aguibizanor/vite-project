@@ -1,0 +1,109 @@
+/* Container principal */
+.game-profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: -600px;
+  }
+  
+  /* Header com o perfil do desenvolvedor */
+  .game-profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .developer-profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .developer-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  /* Conteúdo principal */
+  .game-profile-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .main-content {
+    width: 70%;
+  }
+  
+  .main-game-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    margin-top: 10px;
+  }
+  .description h1 {
+    font-size: 30px;
+    margin-left: 155px;
+  }
+  .description p {
+    font-size: 20px;
+  }
+  
+  .credits {
+    margin-top: 20px;
+  }
+  
+  .credits a {
+    color: #6b47dc;
+    text-decoration: none;
+  }
+  
+  .credits a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Imagens extras de descrição */
+  .extra-images {
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    height: 437px;
+    background-color: lightgray;
+    border-radius: 10px;
+  }
+  
+  .desc1-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  .desc1-img:first-child{
+    margin-bottom: 65px;
+  }
+  
+  /* Rodapé com os botões */
+  .game-profile-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .Download-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .Download-btn {
+    background-color: #6b47dc;
+  }
+  

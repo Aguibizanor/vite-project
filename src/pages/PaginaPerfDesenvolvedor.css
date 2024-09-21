@@ -1,0 +1,116 @@
+.pagina-perfil-container {
+    max-width: 8000px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(to bottom, #90017F, #6a11cb, #2575fc);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pagina-perfil-title {
+    text-align: center;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  
+  .pagina-perfil-form {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    margin-top: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pagina-perfil-field {
+    margin-bottom: 20px;
+  }
+  
+  .pagina-perfil-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #000;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .pagina-perfil-button {
+    padding: 10px;
+    background: #6b47dc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .pagina-perfil-error {
+    color: red;
+    font-size: 12px;
+    margin-top: -10px;
+  }
+  
+  .pagina-perfil-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(160, 50, 145);
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .pagina-perfil-logo img {
+    width: 140px;
+    height: auto;
+  }
+  
+  .pagina-perfil-nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  
+  .pagina-perfil-search {
+    display: flex;
+    align-items: center;
+  }
+  
+  .pagina-perfil-search input {
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: none;
+    margin-right: 10px;
+  }
+  
+  .pagina-perfil-login-btn {
+    background-color: #00bfa5;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .pagina-perfil-footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    border-top: 0px solid #fff;
+  }
+  
+  .pagina-perfil-footer button {
+    background: #fff;
+    border: none;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: #6a00ff;
+    cursor: pointer;
+  }
+  
+  .pagina-perfil-footer button:hover {
+    background: #ccc;
+  }
+  

@@ -92,10 +92,10 @@ const PaginaInicial = () => {
                                         </div>
                                 </section>
                                 <section className="games-section">
-                                        <div className="S">
+                                        <Link to={'/Descricao'}><div className="S">
                                                 <img src={happy} alt="Happy Cat Tavern" />
                                                 <a href="">Happy Cat Tavern</a>
-                                        </div>
+                                        </div></Link>
                                         <div className="S">
                                                 <img src={drive} alt="Buck Up and Drive" />
                                                 <a href="">Buck Up and Drive</a>
@@ -109,10 +109,10 @@ const PaginaInicial = () => {
                                                         <img src={hitch} alt="Elevator Hitch" />
                                                         <a href="">Elevator Hitch</a>
                                                 </div>
-                                                <div className="S">
+                                                <Link to={'/Descricao2'}><div className="S">
                                                         <img src={our} alt="Our Life" />
                                                         <a href="">Our Life</a>
-                                                </div>
+                                                </div></Link>
                                                 <div className="S">
                                                         <img src={theyare} alt="They Are Here" />
                                                         <a href="">They Are Here</a>

@@ -92,10 +92,10 @@ const PaginaWindows = () => {
                                         </div>
                                 </section>
                                 <section className="games-section">
-                                <div className="S">
+                                <Link to={'/Descricao'}><div className="S">
                                                 <img src={ImgI} alt="Happy Cat Tavern" />
                                                 <a href="">Happy Cat Tavern</a>
-                                        </div>
+                                        </div></Link>
                                         <div className="S">
                                                 <img src={pombo} alt="Subida de pomba" />
                                                 <a href="">Subida de pomba</a>
