@@ -135,7 +135,6 @@ const PaginaPerfDesenvolvedor = () => {
         </form>
         <footer className="pagina-perfil-footer">
           <Link to={'/Criar'}><button>➕</button></Link>
-          <button>💬</button>
         </footer>
       </div>
     </div>
