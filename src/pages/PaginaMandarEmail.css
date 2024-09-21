@@ -1,47 +1,129 @@
-.container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    margin: 80px auto;
-    text-align: center;
-  }
-  .W {
-    color: #fff;
-  }
-  .container {
-    text-align: center;
-    padding: 20px;
-  }
-   
-  .code-inputs input {
-    width: 30px;  /* Ajuste aqui para controlar a largura */
-    height: 30px; /* Ajuste aqui para controlar a altura */
-    font-size: 10px; 
-    text-align: center;
-    margin-right: 9px; 
-    margin-left: 9px;
-    margin-top: 12px; 
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-   
-  .code-inputs .Q:focus {
-    border-color: #007bff;
-    outline: none;
-  }
-  .mandar_email {
-    background: linear-gradient(to left, #90017f, #6a11cb, #2575fc);
-    color: white;
-    border: none;
-    padding: 7px 15px;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 2rem;
-  }
-  body {
-    margin: 1px;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom,#90017F, #6a11cb, #2575fc);
-  }
+ .container {
+  text-align: center;
+  background: #fff;
+  height: 590px;
+  width: 100px;
+  display: flex;
+  margin-left: 290px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  border-radius: 15px;
+}
+.logo-container2 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.logo1 {
+  width: 150px;
+}
+.AAA1{
+  width: 1070px;
+  margin-left: 185px;
+}
+.container .LOLO {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 9px;
+    border: 1px solid #6d6a6a;
+    width: 380px;
+    margin-bottom: 50px;
+}
+.container .KI{
+  color:#000
+}
+.container .KI a{
+  color: #2575fc
+}
+.confirmar {
+  background: linear-gradient(to left, #90017f, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 2rem;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom,#90017F, #6a11cb, #2575fc);
+}
+/* Inputs do código */
+.For input {
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+}
+.bottom-left-character2, .bottom-right-character2 {
+  position: absolute;
+  bottom: 20px;
+}
+
+.bottom-left-character2 {
+  left: 160px;
+  margin-bottom: 150px;
+}
+
+.bottom-right-character2 {
+  right: 160px;
+  margin-bottom: 150px;
+}
+.character-icon2 {
+  width: 340px;
+}
+/* Mensagem de confirmação */
+.confirmation-message {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+/* Balão de mensagem */
+.message-bubble {
+  background-color: #f0f0f0;
+  border-radius: 80px;
+  padding: 120px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: -40px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+.mandar_email {
+background: linear-gradient(to left, #90017f, #6a11cb, #2575fc);
+color: white;
+border: none;
+padding: 4px 15px;
+border-radius: 10px;
+cursor: pointer;
+font-size: 2rem;
+}
+.reset-password-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 50px; /* Ajuste o valor conforme necessário */
+}
+.required {
+width:  40px;  /* Ajuste aqui para controlar a largura */
+height: 50px; /* Ajuste aqui para controlar a altura */  
+}
+.W {
+  color: #000;
+  font-size: 40px;
+  margin-bottom: 500px;
+  position: absolute;
+}
+.container .Redef {
+  color:#000;
+  font-size: 22px;
+  margin-bottom: 70px;
+}

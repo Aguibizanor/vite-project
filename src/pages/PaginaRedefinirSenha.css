@@ -1,61 +1,124 @@
+/* Mantendo o CSS fornecido */
 .container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    margin: 80px auto;
-    text-align: center;
-  }
-  h2 {
-    color: #fff;
-  }
-  .container {
-    text-align: center;
-    padding: 20px;
-  }
-   
-  .code-inputs input {
-    width: 30px;  /* Ajuste aqui para controlar a largura */
-    height: 30px; /* Ajuste aqui para controlar a altura */
-    font-size: 10px; 
-    text-align: center;
-    margin-right: 9px; 
-    margin-left: 9px;
-    margin-top: 12px; 
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-   
-  .code-inputs input:focus {
-    border-color: #007bff;
-    outline: none;
-  }
-  .confirmar {
-    background: linear-gradient(to left, #90017f, #6a11cb, #2575fc);
-    color: white;
-    border: none;
-    padding: 7px 15px;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 2rem;
-  }
-  body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom,#90017F, #6a11cb, #2575fc);
-  }
-  .container p {
-    color: #007bff; /* Cor da mensagem */
-    font-size: 1rem;
-    margin-top: 10px;
-  }
-   
-  .confirmar {
-    background: linear-gradient(to left, #90017f, #6a11cb, #2575fc);
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 1rem;
-  }
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 80px auto;
+  text-align: center;
+}
+
+.logo-container3 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.logo2 {
+  width: 150px;
+}
+
+.AAA2 {
+  width: 1070px;
+  margin-left: 185px;
+}
+
+.container .MUMU {
+  color: #000;
+  font-size: 22px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.container .LOLO {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 9px;
+  border: 1px solid #6d6a6a;
+  width: 380px;
+  margin-bottom: 50px;
+}
+
+.container .BABA {
+  color: #000;
+}
+
+.container .BABA a {
+  color: #2575fc;
+}
+
+.KAKA {
+  display: flex;
+  flex-direction: column; /* Empilhando os inputs verticalmente */
+  align-items: center;
+  gap: 20px; /* Espaçamento entre os inputs */
+}
+
+.KAKA input {
+  font-size: 16px; /* Aumentando o tamanho da fonte */
+  margin-right: 9px;
+  margin-left: 9px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: inline-block;
+  max-width: 300px;
+  width: 100%; /* Tornando os inputs do mesmo tamanho do formulário */
+  padding: 10px; /* Espaçamento interno maior */
+}
+
+.FRUFRU {
+  background: linear-gradient(to left, #90017f, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 2rem;
+  width: 100%; /* O botão vai ocupar 100% da largura */
+  max-width: 300px; /* Max largura do botão */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #90017F, #6a11cb, #2575fc);
+}
+
+.bottom-left-character3, .bottom-right-character3 {
+  position: absolute;
+  bottom: 20px;
+}
+
+.bottom-left-character3 {
+  left: 160px;
+  margin-bottom: 150px;
+}
+
+.bottom-right-character3 {
+  right: 160px;
+  margin-bottom: 150px;
+}
+
+.character-icon3 {
+  width: 340px;
+}
+
+.H {
+  color: #000;
+  font-size: 40px;
+  margin-bottom: 500px;
+  position: absolute;
+}
+
+.container .VIVI {
+  color: #000;
+  font-size: 22px;
+  margin-bottom: 70px;
+}
