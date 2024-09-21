@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './PaginaPerfil.css'; // Importando o CSS
 import { Link } from 'react-router-dom';
 import Logo from "../assets/logo.site.tcc.png";
-function ProfileForm() {
+function PaginaPerfil() {
   const [formData, setFormData] = useState({
     nome: "",
     cpf: "",
@@ -144,4 +144,4 @@ function ProfileForm() {
 </div>
   );
 }
-export default ProfileForm;
+export default PaginaPerfil;

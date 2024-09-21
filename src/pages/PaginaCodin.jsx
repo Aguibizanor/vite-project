@@ -17,7 +17,7 @@ const PaginaCodin = () => {
           <input type="text" maxLength="1" required />
           <input type="text" maxLength="1" required />
         </div>
-        <Link to={'/RedefinirSenha'}><button type="submit">CONFIRMAR</button></Link>
+        <Link to={'/RedefinirSenha'}><button type="submit" className='E'>CONFIRMAR</button></Link>
       </form>
       <Link to={'/Login'}><p>
         Lembrou a senha? <a href="">Faça login</a>

@@ -7,11 +7,11 @@ import viva from "../assets/viva.png";
 const PaginaMandarEmail = () => {
   return (
 <div className="container">
-<h1>Redefinir Senha</h1>
+<h1 className="W">Redefinir Senha</h1>
 <p>Para redefinir sua senha, coloque seu Email:</p>
 <form>
 <label>Email:</label>
-<input type="email" required />
+<input type="email" required className='Q'/>
 <Link to={'/MandarCodin'}><button type="submit" className="mandar_email">MANDE EMAIL</button></Link>
 </form>
 <p>
