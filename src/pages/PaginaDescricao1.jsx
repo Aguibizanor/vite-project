@@ -5,6 +5,7 @@ import Logo from "../assets/logo.site.tcc.png";
 import clap from "../assets/clap.png";
 import hum from "../assets/hum.png";
 import casin from "../assets/casin.png";
+import esquerda from "../assets/esquerda.png"
 
 const PaginaDescricao1 = () => {
   return (
@@ -93,6 +94,7 @@ const PaginaDescricao1 = () => {
         <button className="Download-btn">Download</button>
       </div>
     </div>
+    <Link to={'/Terror'}><img src={esquerda} alt="Seta" style={{position: 'absolute', left:'5.8%', marginTop: '-125px'}}/></Link>
     </div>
   );
 };

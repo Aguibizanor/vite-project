@@ -8,8 +8,9 @@
   
   .pagina-perfil-title {
     text-align: center;
-    color: #000;
+    color: #fff;
     margin-bottom: 20px;
+    font-size: 1.4rem;
   }
   
   .pagina-perfil-form {
@@ -47,7 +48,6 @@
   .pagina-perfil-error {
     color: red;
     font-size: 12px;
-    margin-top: -10px;
   }
   
   .pagina-perfil-header {

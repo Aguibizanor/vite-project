@@ -28,8 +28,9 @@ main {
 }
 .D {
   width: 20%;
-  padding: 10px;
+  padding: 5px;
   background-color: #fff;
+  margin-top: -5px;
 }
 .D a {
   display: flex;
@@ -45,7 +46,7 @@ main {
   align-items: center; 
   background: linear-gradient(to right, #5563DC, #2E3576);
   width: 286px;
-  margin-left: -10px;
+  margin-left: -6px;
   color: #fff ;
 }
 .triangle {

@@ -13,6 +13,11 @@
   margin-top: -60px;
   margin-left: -710px;
 }
+.App .SetaOp{
+  position: absolute;
+  left:13.4%;
+  margin-top: 10px;
+}
 .App-div {
   display: flex;
   flex-direction: column;

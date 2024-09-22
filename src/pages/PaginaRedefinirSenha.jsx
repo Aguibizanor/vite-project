@@ -3,6 +3,7 @@ import './PaginaRedefinirSenha.css';
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.site.tcc.png";
 import mario from "../assets/mario.png";
+import esquerda from "../assets/esquerda.png";
 
 const PaginaRedefinirSenha = () => {
   return (
@@ -29,6 +30,7 @@ const PaginaRedefinirSenha = () => {
       <div className="bottom-right-character3">
         <img src={mario} alt="Pixel art character" className="character-icon3" />
       </div>
+      <Link to={'/MandarCodin'}><img src={esquerda} alt="Seta" className="SetaLog" style={{position: 'absolute', left:'11%', marginTop: '-60px'}}/></Link>
 </div>
 </div>
   );

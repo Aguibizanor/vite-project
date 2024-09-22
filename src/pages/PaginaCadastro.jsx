@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "../assets/logo.site.tcc.png";
 import { Link } from 'react-router-dom';
+import esquerda from "../assets/esquerda.png";
 
 function PaginaCadastro() {
     return (
@@ -45,6 +46,7 @@ function PaginaCadastro() {
                         <span>Já tem uma conta? Faça login: <Link to={'/Opcoes'}><a href="#" className="text-blue-500">Login</a></Link></span>
                     </div>
                 </div>
+                <Link to={'/Login'}><img src={esquerda} alt="Seta" className="SetaLog" style={{position: 'absolute', left:'16.8%', marginTop: '-120px'}}/></Link>
             </div>
             <br />
         </div>

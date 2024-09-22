@@ -1,4 +1,5 @@
 import React from "react";
+import IndexPrincipal from "./IndexPrincipal";
 import PaginaInicial from "./PaginaInicial";
 import PaginaInicial1 from "./PaginaInicial1";
 import PaginaInicial2 from "./PaginaInicial2";
@@ -20,7 +21,6 @@ import PaginaEssasemana from "./PaginaEssasemana";
 import PaginaEssemes from "./PaginaEssemes";
 import PaginaDesenvolvido from "./PaginaDesenvolvido";
 import PaginaDesenvolvendo from "./PaginaDesenvolvendo";
-import IndexPrincipal from "./IndexPrincipal";
 import PaginaSuporte from "./PaginaSuporte";
 import PaginaMandarEmail from "./PaginaMandarEmail";
 import PaginaOpcoes from "./PaginaOpcoes";
@@ -40,6 +40,7 @@ const AppRoutes = () => {
   return (
     <Router>
       <Routes>
+        <Route path="/Index" element={<IndexPrincipal/>} />
         <Route path="/" element={<PaginaInicial />} />
         <Route path="/1" element={<PaginaInicial1 />} />
         <Route path="/2" element={<PaginaInicial2 />} />
@@ -62,7 +63,6 @@ const AppRoutes = () => {
         <Route path="/Essemes" element={<PaginaEssemes/>} />
         <Route path="/Desenvolvido" element={<PaginaDesenvolvido/>} />
         <Route path="/Desenvolvendo" element={<PaginaDesenvolvendo/>} />
-        <Route path="/Index" element={<IndexPrincipal/>} />
         <Route path="/Suporte" element={<PaginaSuporte/>} />
         <Route path="/MandarEmail" element={<PaginaMandarEmail/>} />
         <Route path="/Opcoes" element={<PaginaOpcoes/>} />

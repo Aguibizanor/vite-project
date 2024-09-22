@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import './PaginaCriarProjeto.css'; // Importa o arquivo CSS
 import { Link } from 'react-router-dom';
 import Logo from "../assets/logo.site.tcc.png";
+import esquerda from "../assets/esquerda.png";
 
 function PaginaCriarProjeto() {
   const [nomeProjeto, setNomeProjeto] = useState("");
@@ -25,6 +26,9 @@ function PaginaCriarProjeto() {
 
   return (
     <div>
+      <head>
+                                <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+                        </head>
       <header className="pagina-criar-projeto-header">
         <div className="logo">
           <img src={Logo} alt="Logo" />
@@ -82,9 +86,10 @@ function PaginaCriarProjeto() {
             />
           </div>
           {error && <div className="pagina-criar-projeto-error">{error}</div>}
-          <Link to={'/'}><button type="submit" className="pagina-criar-projeto-button">Criar Projeto</button></Link>
+         <button type="submit" className="pagina-criar-projeto-button">Criar Projeto</button>
         </form>
       </div>
+      <Link to={'/Perfil1'}><img src={esquerda} alt="Seta" style={{position: 'absolute', left:'19.8%', marginTop: '-130px'}}/></Link>
     </div>
   );
 }

@@ -3,6 +3,7 @@ import './PaginaOpcoes.css'; // Import custom CSS for styling
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.site.tcc.png";
 import tails from "../assets/tails.png";
+import esquerda from "../assets/esquerda.png";
  
 const PaginaOpcoes = () => {
   return (
@@ -22,6 +23,7 @@ const PaginaOpcoes = () => {
             <button onClick={() => alert('Administrador login')} className='OI'>Sou Administrador</button>
           </Link>
         </div>
+        <Link to={'/Index'}><img src={esquerda} alt="Seta" className="SetaOp" /></Link>
       </div>
     </div>
   );

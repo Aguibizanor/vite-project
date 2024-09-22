@@ -19,8 +19,9 @@
   
   .pagina-criar-projeto-title {
     text-align: center;
-    color: #000;
+    color: #fff;
     margin-bottom: 30px;
+    font-size: 1.4rem;
   }
   
   .pagina-criar-projeto-form {
@@ -54,4 +55,8 @@
     font-size: 1.2rem;
     margin-top: 20px;
   }
-  
+  .pagina-criar-projeto-error {
+    color:red;
+    margin-left: 170px;
+    font-size: 1.3rem;
+  }

@@ -3,7 +3,7 @@ import './PaginaCodin.css';
 import { Link } from 'react-router-dom';
 import Logo from "../assets/logo.site.tcc.png";
 import sonic from "../assets/sonic.png";
- 
+import esquerda from "../assets/esquerda.png"
  
 const PaginaCodin = () => {
   return (
@@ -34,6 +34,7 @@ const PaginaCodin = () => {
       <div className="bottom-right-character1">
         <img src={sonic} alt="Pixel art character" className="character-icon1" />
       </div>
+      <Link to={'/MandarEmail'}><img src={esquerda} alt="Seta" style={{position: 'absolute', left:'10.8%', marginTop: '80px'}}/></Link>
     </div>
     </div>
   );

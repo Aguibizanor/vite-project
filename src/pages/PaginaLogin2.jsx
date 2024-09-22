@@ -3,6 +3,7 @@ import "./PaginaLogin.css";
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.site.tcc.png";
 import stardew from "../assets/stardew.png";
+import esquerda from "../assets/esquerda.png";
 
 function PaginaLogin2() {
   return (
@@ -62,6 +63,7 @@ function PaginaLogin2() {
             </Link>
           </p>
         </div>
+        <Link to={'/Opcoes'}><img src={esquerda} alt="Seta" className="SetaLog" /></Link>
       </div>
 
       {/* Personagens pixelados no canto inferior esquerdo e direito */}

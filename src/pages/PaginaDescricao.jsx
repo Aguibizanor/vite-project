@@ -5,6 +5,7 @@ import Logo from "../assets/logo.site.tcc.png";
 import gato1 from "../assets/gato1.png";
 import gato2 from "../assets/gato2.png";
 import gato3 from "../assets/gato3.png";
+import esquerda from "../assets/esquerda.png"
 
 const PaginaDescricao = () => {
   return (
@@ -94,6 +95,7 @@ const PaginaDescricao = () => {
         <button className="Download-btn">Download</button>
       </div>
     </div>
+    <Link to={'/'}><img src={esquerda} alt="Seta" style={{position: 'absolute', left:'5.8%', marginTop: '-125px'}}/></Link>
     </div>
   );
 };
