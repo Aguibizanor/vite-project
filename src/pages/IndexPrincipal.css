@@ -65,11 +65,11 @@ body {
 
   }
   .carrossel .buttons button:first-child{
-    margin-left: -542px;
-    margin-top: 80px;
+    margin-left: -587px;
+    margin-top: 90px;
   }
   .carrossel .buttons button{
-    margin-right: 240px;
+    margin-right: 169px;
     margin-top: -48px;
   }
   .carrossel .carousel .item .info {
