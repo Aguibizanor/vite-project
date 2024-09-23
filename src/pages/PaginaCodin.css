@@ -26,8 +26,9 @@
   width: 150px;
 }
 .AAA{
-  width: 1070px;
-  margin-left: 185px;
+  width: 1470px;
+  margin-left: 215px;
+  margin-top: 170px;
 }
  .container .Titu {
   color: #000;
@@ -78,13 +79,13 @@ body {
 }
 
 .bottom-left-character1 {
-  left: 100px;
-  margin-bottom: 80px;
+  left: 250px;
+  margin-bottom: 240px;
 }
 
 .bottom-right-character1 {
-  right: 80px;
-  margin-bottom: 80px;
+  right: 250px;
+  margin-bottom: 240px;
   
 }
 .character-icon1 {

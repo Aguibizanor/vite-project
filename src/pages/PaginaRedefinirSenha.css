@@ -20,8 +20,9 @@
 }
 
 .AAA2 {
-  width: 1070px;
-  margin-left: 185px;
+  width: 1470px;
+  margin-left: 215px;
+  margin-top: 170px;
 }
 
 .container .MUMU {
@@ -97,13 +98,13 @@ body {
 }
 
 .bottom-left-character3 {
-  left: 160px;
-  margin-bottom: 150px;
+  left: 250px;
+  margin-bottom: 240px;
 }
 
 .bottom-right-character3 {
-  right: 160px;
-  margin-bottom: 150px;
+  right: 250px;
+  margin-bottom: 240px;
 }
 
 .character-icon3 {

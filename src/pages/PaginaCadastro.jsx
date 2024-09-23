@@ -1,7 +1,6 @@
 import React from "react";
 import Logo from "../assets/logo.site.tcc.png";
 import { Link } from 'react-router-dom';
-import esquerda from "../assets/esquerda.png";
 
 function PaginaCadastro() {
     return (
@@ -10,7 +9,7 @@ function PaginaCadastro() {
                     <img src={Logo} alt="Logo of Game Legends" className="logo"/>
             </div>
             <div className="formulario">
-                <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-4xl" style={{ marginLeft: '270px', marginTop: '60px' }}>
+                <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-4xl" style={{ marginLeft: '560px', marginTop: '100px' }}>
                     <h2 className="text-center text-2xl font-bold text-gradient mb-6 titulo ">CRIAR CONTA</h2>
                     <div className="grid grid-cols-2 gap-4">
                         <div className="input-single">
@@ -46,7 +45,6 @@ function PaginaCadastro() {
                         <span>Já tem uma conta? Faça login: <Link to={'/Opcoes'}><a href="#" className="text-blue-500">Login</a></Link></span>
                     </div>
                 </div>
-                <Link to={'/Login'}><img src={esquerda} alt="Seta" className="SetaLog" style={{position: 'absolute', left:'16.8%', marginTop: '-120px'}}/></Link>
             </div>
             <br />
         </div>

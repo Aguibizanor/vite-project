@@ -26,8 +26,9 @@ body {
     display:flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-    width: 270px;
+    width: 330px;
     height: 570px;
+    margin-top: 70px;
   }
   .carrossel .carousel::-webkit-scrollbar {
     display: none;
@@ -156,7 +157,7 @@ body {
     margin: 20px;
     padding: 20px;
     flex-direction: column;
-    margin-left: -270px;
+    margin-left: 10px;
   }
    
   .intro h1 {
@@ -164,6 +165,7 @@ body {
     color: #fff;
     margin-bottom: 10px;
     border-left: solid;
+    border-left-width: 8px;
   }
    
   .intro p {

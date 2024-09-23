@@ -61,7 +61,7 @@ const PaginaSuporte = () => {
 </header>
 <div className="faq-container">
 <div className="faq-content">
-<h1>Respostas para suas perguntas</h1>
+<h1>Perguntas Frequentes</h1>
 <div className="faq-list">
           {faqData.map((faq, index) => (
 <FAQItem key={index} question={faq.question} answer={faq.answer} />

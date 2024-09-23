@@ -57,8 +57,8 @@ const PaginaDescricao2 = () => {
               <h3>Créditos:</h3>
               <p>
                 <strong>Artista:</strong> Andy Hill (
-                <a href="https://twitter.com" target="_blank" rel="noreferrer">
-                  Twitter
+                <a href="https://www.instagram.com/gbpatchgames?igsh=MWZ1eThjeTd1M2JkdQ==" target="_blank" rel="noreferrer">
+                  Instagram
                 </a>{' '}
                 /{' '}
                 <a href="https://etsy.com" target="_blank" rel="noreferrer">

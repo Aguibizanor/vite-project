@@ -54,7 +54,8 @@ const IndexPrincipal = () => { //carrosel
   MUNDO<br />
   DOS JOGOS</h1>
 <p>Venha conhecer <br />
- nossa plataforma <br />onde você poderá <br />encontrar.</p>
+ nossa plataforma <br />onde você poderá <br />encontrar jogos <br /> 
+da nossa comunidade.</p>
 <Link to={'/Opcoes'}><button className="cta-button">Conheça <i className="fas fa-arrow-circle-right"></i></button></Link>
 </section>
  <section>

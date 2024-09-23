@@ -45,7 +45,7 @@ main {
   display: flex;
   align-items: center; 
   background: linear-gradient(to right, #5563DC, #2E3576);
-  width: 286px;
+  width: 383px;
   margin-left: -6px;
   color: #fff ;
 }
@@ -85,7 +85,7 @@ p {
 .games-section div {
   text-decoration: none;
   background-color: #fff;
-  height: 220px;
+  height: 320px;
 }
 .games-section1 {
   display: flex;
@@ -98,7 +98,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 250px; /* ajuste conforme necessário */
+  width: 350px; /* ajuste conforme necessário */
   text-align: center;
 }
 .S img {
