@@ -1,62 +1,94 @@
 .pagina-criar-projeto-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgb(160, 50, 145);
-    padding: 10px;
-    color: #fff;
-    z-index: 1000;
-    border-bottom: solid;
-  }
-  
-  .pagina-criar-projeto-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px;
-    background: linear-gradient(to bottom, #90017F, #6a11cb, #2575fc);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .pagina-criar-projeto-title {
-    text-align: center;
-    color: #fff;
-    margin-bottom: 30px;
-    font-size: 1.4rem;
-  }
-  
-  .pagina-criar-projeto-form {
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 30px;
-    margin-top: 30px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .pagina-criar-projeto-field {
-    margin-bottom: 20px;
-  }
-  
-  .pagina-criar-projeto-input {
-    padding: 20px;
-    border-radius: 9px;
-    border: 2px solid #000;
-    width: 100%;
-  }
-  
-  .pagina-criar-projeto-button {
-    padding: 15px;
-    background: #6b47dc;
-    color: #fff;
-    border: none;
-    border-radius: 9px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    margin-top: 20px;
-  }
-  .pagina-criar-projeto-error {
-    color:red;
-    margin-left: 170px;
-    font-size: 1.3rem;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(160, 50, 145);
+  padding: 10px;
+  color: #fff;
+  z-index: 1000;
+  border-bottom: solid;
+}
+ 
+.pagina-criar-projeto-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background: linear-gradient(to bottom, #90017F, #6a11cb, #2575fc);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+ 
+.pagina-criar-projeto-title {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 1.4rem;
+}
+ 
+.pagina-criar-projeto-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+ 
+.pagina-criar-projeto-field {
+  margin-bottom: 20px;
+}
+ 
+.pagina-criar-projeto-input {
+  padding: 20px;
+  border-radius: 9px;
+  border: 2px solid #000;
+  width: 100%;
+}
+ 
+.pagina-criar-projeto-button {
+  padding: 15px;
+  background: #6b47dc;
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+.pagina-criar-projeto-error {
+  color:red;
+  margin-left: 170px;
+  font-size: 1.3rem;
+}
+ 
+.image-upload-wrapper .pagina-criar-projeto-button {
+  width: auto; /* Define a largura automática para não ocupar 100% */
+  padding: 10px 20px; /* Ajusta o preenchimento para um tamanho menor */
+  background-color: #cccccc; /* Altera a cor do botão para cinza */
+  color: #000; /* Altera a cor do texto para preto */
+  border: 1px solid #999999; /* Adiciona uma borda mais sutil */
+  border-radius: 5px; /* Mantém uma borda arredondada menor */
+  cursor: pointer;
+}
+ 
+.image-upload-wrapper .pagina-criar-projeto-button:hover {
+  background-color: #b3b3b3; /* Adiciona um efeito hover com um cinza mais escuro */
+}
+ 
+ 
+.image-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #000;
+  padding: 10px;
+  width: 100%;
+  height: 200px;
+  border-radius: 9px;
+}
+ 
+.image-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
