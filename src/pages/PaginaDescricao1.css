@@ -15,7 +15,6 @@
     align-items: center;
     margin-bottom: 20px;
   }
-  
   .developer-profile {
     display: flex;
     align-items: center;
@@ -106,4 +105,110 @@
   
   .Download-btn {
     background-color: #6b47dc;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(160, 50, 145);
+    padding: 10px;
+    color: #fff;
+    z-index: 1000;
+  }
+ 
+  .nav {
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente */
+  }
+ 
+  /* Estilos padrão para links de texto */
+  .nav-text {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem; /* Tamanho da fonte para texto */
+  }
+ 
+  /* Estilos para os ícones */
+  .nav-icon {
+    display: none; /* Oculta os ícones por padrão */
+  }
+ 
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .nav-text {
+        display: none; /* Oculta o texto em telas menores */
+    }
+    .nav-icon {
+        display: inline-block; /* Mostra os ícones em telas menores */
+        font-size: 30px; /* Ajusta o tamanho dos ícones */
+        margin: 0 10px; /* Margem entre os ícones */
+        margin-right: -50px ;
+    }
+    .logo img {
+      width: 40px; /* Ajusta o tamanho da logo em telas menores */
+  }
+ 
+  .search input {
+      width: 100px; /* Largura da barra de pesquisa em telas menores */
+  }
+  .D{
+    display: none;
+  }
+  }
+ 
+ 
+  .search {
+    display: flex;
+    align-items: center; /* Alinha o ícone de pesquisa e o input verticalmente */
+  }
+ 
+  .search input {
+    padding: 5px;
+    border-radius: 50px;
+    border: none;
+    color: #000;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(160, 50, 145);
+    padding: 10px;
+    color: #fff;
+    z-index: 1000;
+  }
+ 
+  .logo img {
+    width: 50px; /* Ajuste o tamanho da logo */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+ 
+  .search {
+    display: flex;
+    align-items: center;
+  }
+ 
+  .search input {
+    padding: 5px;
+    border-radius: 25px; /* Tornar a pesquisa mais arredondada */
+    border: none;
+    color: #000;
+    width: 150px; /* Define uma largura fixa para a barra de pesquisa */
+    margin-right: 10px; /* Espaço entre a barra de pesquisa e o ícone do perfil */
+  }
+ 
+  .search i {
+    font-size: 20px; /* Ajusta o tamanho do ícone de pesquisa */
+  }
+ 
+  .login-btn {
+    background-color: #00bfa5;
+    color: white;
+    border: none;
+    padding: 8px 12px; /* Tamanho do botão de login */
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
   }

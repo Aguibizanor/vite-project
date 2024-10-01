@@ -63,3 +63,8 @@
   border-radius:30px;
   height:65px;
   }
+  @media (max-width: 768px) {
+    .pixel-art{
+      display: none;
+    }
+  }

@@ -47,21 +47,30 @@ const PaginaPerfDesenvolvedor = () => {
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
       </head>
       <header className="pagina-perfil-header">
-        <div className="pagina-perfil-logo">
-          <img src={Logo} alt="Logo" />
-        </div>
-        <nav className="pagina-perfil-nav">
-          <Link to={'/Index'}><a href="" style={{ fontSize: '40px' }}>Início</a></Link>
-          <Link to={'/'}><a href="" style={{ fontSize: '40px', marginLeft: '50px' }}>Games</a></Link>
-          <Link to={'/Suporte'}><a href="" style={{ fontSize: '40px', marginLeft: '10px' }}>Suporte</a></Link>
-        </nav>
-        <div className="pagina-perfil-search">
-          <i className="fas fa-search"></i>
-          <input type="text" placeholder="Buscar..." />
-          <Link to={'/Perfil1'}>
-            <button className="pagina-perfil-login-btn"><i className="fas fa-user-circle"></i> Perfil</button>
-          </Link>
-        </div>
+      <div className="logo"><img src={Logo} alt="Logo" /></div>
+                <nav className="nav">
+                    <Link to={'/Index'} className="nav-text"><span style={{ fontSize: '39px'}}>Início</span></Link>
+                    <Link to={'/'} className="nav-text"><span style={{ fontSize: '39px'}}>Games</span></Link>
+                    <Link to={'/Suporte'} className="nav-text"><span style={{ fontSize: '39px'}}>Suporte</span></Link>
+                    <Link to={'/Index'} className="nav-icon">
+                        <i className="fas fa-home fa-2x" aria-hidden="true"></i>
+                    </Link>
+                    <Link to={'/'} className="nav-icon">
+                        <i className="fas fa-gamepad fa-2x" aria-hidden="true"></i>
+                    </Link>
+                    <Link to={'/Suporte'} className="nav-icon">
+                        <i className="fas fa-headset fa-2x" aria-hidden="true"></i>
+                    </Link>
+                </nav>
+                <div className="search">
+                    <i className="fas fa-search" style={{ fontSize: '20px', margin: '0 10px' }}></i>
+                    <input type="text" placeholder="Search..." />
+                    <Link to={'/Perfil1'}>
+                        <button className="login-btn">
+                            <i className="fas fa-user-circle"></i>
+                        </button>
+                    </Link>
+                </div>
       </header>
       <div className="pagina-perfil-container">
         <h2 className="pagina-perfil-title">MEU PERFIL</h2>

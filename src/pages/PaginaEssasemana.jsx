@@ -26,16 +26,30 @@ const PaginaEssasemana = () => {
                                 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
                         </head>
                         <header className="header">
-                                <div className="logo"><img src={Logo} /></div>
-                                <nav className="nav">
-                                        <Link to={'/Index'}><a href="" style={{ fontSize: '40px' }}>Início</a></Link>
-                                        <Link to={'/'}><a href="" style={{ fontSize: '40px', marginLeft: '50px' }}>Games</a></Link>
-                                        <Link to={'/Suporte'}><a href="" style={{ fontSize: '40px', marginLeft: '10px'  }}>Suporte</a></Link>
-                                </nav>
-                                <div className="search"><i className="fas fa-search"></i>
-                                        <input type="text" placeholder="Search..." />
-                                        <Link to={'/Opcoes'}><button className="login-btn"><i className="fas fa-user-circle"></i> Log In</button></Link>
-                                </div>
+                        <div className="logo"><img src={Logo} alt="Logo" /></div>
+                <nav className="nav">
+                    <Link to={'/Index'} className="nav-text"><span style={{ fontSize: '39px'}}>Início</span></Link>
+                    <Link to={'/'} className="nav-text"><span style={{ fontSize: '39px'}}>Games</span></Link>
+                    <Link to={'/Suporte'} className="nav-text"><span style={{ fontSize: '39px'}}>Suporte</span></Link>
+                    <Link to={'/Index'} className="nav-icon">
+                        <i className="fas fa-home fa-2x" aria-hidden="true"></i>
+                    </Link>
+                    <Link to={'/'} className="nav-icon">
+                        <i className="fas fa-gamepad fa-2x" aria-hidden="true"></i>
+                    </Link>
+                    <Link to={'/Suporte'} className="nav-icon">
+                        <i className="fas fa-headset fa-2x" aria-hidden="true"></i>
+                    </Link>
+                </nav>
+                <div className="search">
+                    <i className="fas fa-search" style={{ fontSize: '20px', margin: '0 10px' }}></i>
+                    <input type="text" placeholder="Search..." />
+                    <Link to={'/Opcoes'}>
+                        <button className="login-btn">
+                            <i className="fas fa-user-circle"></i>
+                        </button>
+                    </Link>
+                </div>
                         </header>
 
 

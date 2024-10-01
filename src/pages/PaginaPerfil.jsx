@@ -57,23 +57,30 @@ function PaginaPerfil() {
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
       </head>
       <header className="perfil-header">
-        <div className="perfil-logo">
-          <img src={Logo} alt="Logo" />
-        </div>
-        <nav className="perfil-nav">
-          <Link to={'/Index'} className="perfil-nav-link">Início</Link>
-          <Link to={'/'} className="perfil-nav-link">Games</Link>
-          <Link to={'/Suporte'} className="perfil-nav-link">Suporte</Link>
-        </nav>
-        <div className="perfil-search">
-          <i className="fas fa-search"></i>
-          <input type="text" placeholder="Buscar..." className="perfil-search-input" />
-          <Link to={'/Perfil'}>
-            <button className="perfil-login-btn">
-              <i className="fas fa-user-circle"></i> Perfil
-            </button>
-          </Link>
-        </div>
+      <div className="logo"><img src={Logo} alt="Logo" /></div>
+                <nav className="nav">
+                    <Link to={'/Index'} className="nav-text"><span style={{ fontSize: '39px'}}>Início</span></Link>
+                    <Link to={'/'} className="nav-text"><span style={{ fontSize: '39px'}}>Games</span></Link>
+                    <Link to={'/Suporte'} className="nav-text"><span style={{ fontSize: '39px'}}>Suporte</span></Link>
+                    <Link to={'/Index'} className="nav-icon">
+                        <i className="fas fa-home fa-2x" aria-hidden="true"></i>
+                    </Link>
+                    <Link to={'/'} className="nav-icon">
+                        <i className="fas fa-gamepad fa-2x" aria-hidden="true"></i>
+                    </Link>
+                    <Link to={'/Suporte'} className="nav-icon">
+                        <i className="fas fa-headset fa-2x" aria-hidden="true"></i>
+                    </Link>
+                </nav>
+                <div className="search">
+                    <i className="fas fa-search" style={{ fontSize: '20px', margin: '0 10px' }}></i>
+                    <input type="text" placeholder="Search..." />
+                    <Link to={'/Perfil'}>
+                        <button className="login-btn">
+                            <i className="fas fa-user-circle"></i>
+                        </button>
+                    </Link>
+                </div>
       </header>
 
       <div className="perfil-form-container">
