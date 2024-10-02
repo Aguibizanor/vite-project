@@ -19,8 +19,9 @@ body {
    
   }
   .carrossel{
-    margin-left: 500px;
-    width: 100px
+    margin-left: 300px;
+    width: 10%
+    
   }
   .carrossel .carousel{
     display:flex;
@@ -50,7 +51,7 @@ body {
     object-fit: cover;
   }  
   .carrossel .buttons {
-    width: 100%;
+    width: 55%;
     align-items: center;
     margin-top: -400px;
   }
@@ -58,19 +59,19 @@ body {
     background-color: #8e24aa;
     border: solid;
     border-width: 1px;
-    border-color:#fff;
-    width: 40px;
-    height: 40px;
+    border-color:#757575;
+    width: 100%;
+    height: 46px;
     border-radius: 50px;
 
   }
   .carrossel .buttons button:first-child{
-    margin-left: -587px;
+    margin-left: -1599%;
     margin-top: 90px;
   }
   .carrossel .buttons button{
-    margin-right: 169px;
-    margin-top: -48px;
+    margin-right: 280%;
+    margin-top: -57px;
   }
   .carrossel .carousel .item .info {
     height: 140px;
@@ -148,6 +149,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     padding: 10px;
+    margin-left: 20%;
   }
    
   .intro {
@@ -157,7 +159,7 @@ body {
     margin: 20px;
     padding: 20px;
     flex-direction: column;
-    margin-left: 10px;
+    margin-left: 40%;
   }
    
   .intro h1 {
@@ -255,14 +257,17 @@ body {
         margin-right: -50px ;
     }
     .logo img {
-      width: 40px; /* Ajusta o tamanho da logo em telas menores */
+      width: 10px; /* Ajusta o tamanho da logo em telas menores */
   }
  
   .search input {
       width: 100px; /* Largura da barra de pesquisa em telas menores */
   }
-  .D{
+  .carrossel {
     display: none;
+  }
+  .intro{
+    margin-right: -60%;
   }
   }
  

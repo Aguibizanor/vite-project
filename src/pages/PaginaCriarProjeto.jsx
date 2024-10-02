@@ -66,8 +66,8 @@ function PaginaCriarProjeto() {
                     <i className="fas fa-search" style={{ fontSize: '20px', margin: '0 10px' }}></i>
                     <input type="text" placeholder="Search..." />
                     <Link to={'/Opcoes'}>
-                        <button className="login-btn">
-                            <i className="fas fa-user-circle"></i>
+                    <button className="login-btn">
+                            <i className="fas fa-user-circle"></i> Perfil
                         </button>
                     </Link>
                 </div>

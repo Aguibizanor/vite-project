@@ -51,21 +51,21 @@ const PaginaSuporte = () => {
                     <Link to={'/'} className="nav-text"><span style={{ fontSize: '39px'}}>Games</span></Link>
                     <Link to={'/Suporte'} className="nav-text"><span style={{ fontSize: '39px'}}>Suporte</span></Link>
                     <Link to={'/Index'} className="nav-icon">
-                        <i className="fas fa-home" aria-hidden="true"></i>
+                        <i className="fas fa-home fa-2x" aria-hidden="true"></i>
                     </Link>
                     <Link to={'/'} className="nav-icon">
-                        <i className="fas fa-gamepad" aria-hidden="true"></i>
+                        <i className="fas fa-gamepad fa-2x" aria-hidden="true"></i>
                     </Link>
                     <Link to={'/Suporte'} className="nav-icon">
-                        <i className="fas fa-headset" aria-hidden="true"></i>
+                        <i className="fas fa-headset fa-2x" aria-hidden="true"></i>
                     </Link>
                 </nav>
                 <div className="search">
                     <i className="fas fa-search" style={{ fontSize: '20px', margin: '0 10px' }}></i>
                     <input type="text" placeholder="Search..." />
                     <Link to={'/Opcoes'}>
-                        <button className="login-btn">
-                            <i className="fas fa-user-circle"></i>
+                    <button className="login-btn">
+                            <i className="fas fa-user-circle"></i> Perfil
                         </button>
                     </Link>
                 </div>

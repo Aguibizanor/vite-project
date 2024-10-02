@@ -9,9 +9,9 @@
 }
 .Lo{
   position: absolute;
-  width: 190px;
-  margin-top: -160px;
-  margin-left: -950px;
+  width: 9%;
+  margin-top: -4%;
+  margin-left: -50%;
 }
 .App .SetaOp{
   position: absolute;
@@ -36,7 +36,7 @@
   transform: translateX(-50%);
   z-index: 1;
   margin-top: 110px;
-  width: 350px;
+  width: 27%;
   }
   .ENTRE{
     font-size: 40px;
@@ -64,7 +64,33 @@
   height:65px;
   }
   @media (max-width: 768px) {
-    .pixel-art{
-      display: none;
+    .App .pixel-art{
+      margin-top: 79%;
+      width: 34%;
+      margin-left: 17%;
     }
+    .buttons{
+      margin-top: -14%;
+      margin-right: 99%;
+    }
+    .App-div{
+      width: 90%;
+    }
+    .App{
+      
+      margin-top: 10%;
+      Height: 0%
+    }
+    .OI{
+      width: 129%;
+      height: 50px;
+    }
+    .ENTRE{
+      margin-left: 8%;
+    }
+    .Lo{
+      width: 20%;
+      margin-top: -10%;
+    }
+    
   }
