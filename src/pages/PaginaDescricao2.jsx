@@ -58,6 +58,19 @@ const PaginaDescricao2 = () => {
             alt="Our Life"
             className="main-game-img"
           />
+          {/* Imagens de descrição */}
+        <div className="extra-images1">
+          <img
+            src={our1}
+            alt="Descrição 1"
+            className="desc-img"
+          />
+          <img
+            src={our2}
+            alt="Descrição 2"
+            className="desc-img"
+          />
+        </div>
           {/* Descrição */}
           <div className="description">
             <h1>Our Life: Now & Forever</h1>

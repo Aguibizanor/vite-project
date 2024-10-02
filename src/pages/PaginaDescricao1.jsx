@@ -55,9 +55,22 @@ const PaginaDescricao1 = () => {
           {/* Imagem principal do jogo */}
           <img
             src={clap}
-            alt="Happy Cat Tavern"
+            alt="Clap"
             className="main-game-img"
           />
+          {/* Imagens de descrição */}
+        <div className="extra-images1">
+          <img
+            src={hum}
+            alt="Descrição 1"
+            className="desc2-img"
+          />
+          <img
+            src={casin}
+            alt="Descrição 2"
+            className="desc2-img"
+          />
+        </div>
           {/* Descrição */}
           <div className="description">
             <h1>[Nightmare Files] CLAP CLAP</h1>

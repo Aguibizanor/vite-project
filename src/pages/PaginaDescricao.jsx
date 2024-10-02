@@ -58,6 +58,19 @@ const PaginaDescricao = () => {
             alt="Happy Cat Tavern"
             className="main-game-img"
           />
+          {/* Imagens de descrição */}
+        <div className="extra-images1">
+          <img
+            src={gato1}
+            alt="Descrição 1"
+            className="desc1-img"
+          />
+          <img
+            src={gato2}
+            alt="Descrição 2"
+            className="desc1-img"
+          />
+        </div>
           {/* Descrição */}
           <div className="description">
             <h1>Happy Cat Tavern: Typing Challenge</h1>

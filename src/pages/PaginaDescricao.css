@@ -133,7 +133,11 @@
   .nav-icon {
     display: none; /* Oculta os ícones por padrão */
   }
- 
+  @media (min-width: 769px) {
+    .game-profile-content .extra-images1{
+      display:none
+    }
+  }
   /* Responsividade */
   @media (max-width: 768px) {
     .nav-text {
@@ -152,7 +156,47 @@
   .search input {
       width: 100px; /* Largura da barra de pesquisa em telas menores */
   }
-  
+  .game-profile-content .extra-images1 img{
+    display: inline;
+    background: none;
+    
+    max-width:800%;
+    width: 290%;
+    height: 160px;
+    margin-top: -10%;
+  }
+  .game-profile-content .extra-images1 img:first-child{
+    display: inline;
+    background: none;
+    margin-right: 0%;
+    max-width:800%;
+    width:290%;
+    margin-top: 4%;
+    margin-left: 40%;
+  }
+  .main-content .main-game-img{
+    height: 30%;
+    width: fit-content;
+    margin-left: 0%;
+    max-width: 800%;
+    width: 143%;
+  }
+  .game-profile-content .extra-images{
+    display: none;
+  }
+  .game-profile-content .extra-images1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .description{
+    width: 150%;
+  }
+  .description h1{
+    margin-top: -8%;
+    
+  }
   }
  
  

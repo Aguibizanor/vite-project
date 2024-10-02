@@ -153,7 +153,26 @@
   .search input {
       width: 100px; /* Largura da barra de pesquisa em telas menores */
   }
-  
+  .extra-images{
+    background: none;
+  }
+  .game-profile-content .extra-images1 img{
+    display: inline;
+    background: none;
+    max-width:800%;
+    width: 290%;
+    height: 160px;
+    margin-top: -6%;
+  }
+  .game-profile-content .extra-images1 img:first-child{
+    display: inline;
+    background: none;
+    margin-right: 0%;
+    max-width:800%;
+    width:290%;
+    margin-top: 4%;
+    margin-left: 40%;
+  }
   }
  
  
