@@ -1,51 +1,50 @@
-/* Mantendo o CSS fornecido */
 .container {
   background-color: #fff;
-  padding: 20px;
+  padding: 5%;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  margin: 80px auto;
+  width: 80%;
+  margin: 5% auto;
   text-align: center;
 }
 
 .logo-container3 {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 2%;
+  left: 2%;
 }
 
 .logo2 {
-  width: 150px;
+  width: 15%;
 }
 
 .AAA2 {
-  width: 1470px;
-  margin-left: 215px;
-  margin-top: 170px;
+  width: 100%;
+  margin-left: 15%;
+  margin-top: 10%;
 }
 
 .container .MUMU {
   color: #000;
-  font-size: 22px;
+  font-size: 1.5rem;
   width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
+  padding: 2%;
+  margin-bottom: 2%;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
-  font-size: 16px;
-  margin-top: 10px;
+  font-size: 1rem;
+  margin-top: 2%;
 }
 
 .container .LOLO {
   display: flex;
   flex-direction: column;
-  padding: 15px;
+  padding: 4%;
   border-radius: 9px;
   border: 1px solid #6d6a6a;
-  width: 380px;
-  margin-bottom: 50px;
+  width: 90%;
+  margin-bottom: 5%;
 }
 
 .container .BABA {
@@ -58,33 +57,31 @@
 
 .KAKA {
   display: flex;
-  flex-direction: column; /* Empilhando os inputs verticalmente */
+  flex-direction: column;
   align-items: center;
-  gap: 20px; /* Espaçamento entre os inputs */
+  gap: 5%;
 }
 
 .KAKA input {
-  font-size: 16px; /* Aumentando o tamanho da fonte */
-  margin-right: 9px;
-  margin-left: 9px;
+  font-size: 1rem;
+  margin-right: 2%;
+  margin-left: 2%;
   border: 1px solid #ccc;
   border-radius: 4px;
   display: inline-block;
-  max-width: 300px;
-  width: 100%; /* Tornando os inputs do mesmo tamanho do formulário */
-  padding: 10px; /* Espaçamento interno maior */
+  width: 100%;
+  padding: 3%;
 }
 
 .FRUFRU {
   background: linear-gradient(to left, #90017f, #6a11cb, #2575fc);
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 3%;
   border-radius: 12px;
   cursor: pointer;
   font-size: 2rem;
-  width: 100%; /* O botão vai ocupar 100% da largura */
-  max-width: 300px; /* Max largura do botão */
+  width: 100%;
 }
 
 body {
@@ -94,32 +91,51 @@ body {
 
 .bottom-left-character3, .bottom-right-character3 {
   position: absolute;
-  bottom: 20px;
+  bottom: 5%;
 }
 
 .bottom-left-character3 {
-  left: 250px;
-  margin-bottom: 240px;
+  left: 5%;
+  margin-bottom: 15%;
 }
 
 .bottom-right-character3 {
-  right: 250px;
-  margin-bottom: 240px;
+  right: 5%;
+  margin-bottom: 15%;
 }
 
 .character-icon3 {
-  width: 340px;
+  width: 25%;
 }
 
 .H {
   color: #000;
-  font-size: 40px;
-  margin-bottom: 500px;
+  font-size: 2.5rem;
   position: absolute;
+  margin-bottom: 25%;
 }
 
 .container .VIVI {
   color: #000;
-  font-size: 22px;
-  margin-bottom: 70px;
+  font-size: 1.5rem;
+  margin-bottom: 10%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-left: -10%;
+    max-width: 90%;
+    width: 50%;
+    height: 0%;
+  }
+  .H {
+    color: #000;
+    font-size: 40px;
+    margin-bottom: 100px; /* Aumentei o margin-bottom para descer mais */
+    position: relative; /* Removi a propriedade absolute */
+  }
+  
+  .bottom-left-character3, .bottom-right-character3 {
+    display: none; /* Escondendo as imagens */
+  }
 }

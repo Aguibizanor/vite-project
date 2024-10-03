@@ -2,7 +2,7 @@
   text-align: center;
   background: #fff;
   height: 590px;
-  width: 100px;
+  width: 100%;
   display: flex;
   margin-left: 290px;
   flex-direction: column;
@@ -127,4 +127,22 @@ height: 50px; /* Ajuste aqui para controlar a altura */
   color:#000;
   font-size: 22px;
   margin-bottom: 70px;
+}
+@media (max-width: 768px) {
+  .container {
+  
+    max-width: 50%;
+    width: 50%;
+    height: 0%;
+  }
+  .H {
+    color: #000;
+    font-size: 40px;
+  
+   
+  }
+  
+  .bottom-left-character2, .bottom-right-character2 {
+    display: none; /* Escondendo as imagens */
+  }
 }

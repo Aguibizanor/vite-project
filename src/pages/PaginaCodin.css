@@ -134,3 +134,21 @@ margin-top: 50px; /* Ajuste o valor conforme necessário */
 width:  40px;  /* Ajuste aqui para controlar a largura */
 height: 50px; /* Ajuste aqui para controlar a altura */  
 }
+@media (max-width: 768px) {
+  .container {
+    margin-left: -13%;
+    max-width: 30%;
+    width: 50%;
+    height: 0%;
+  }
+  .H {
+    color: #000;
+    font-size: 40px;
+    margin-bottom: 100px; /* Aumentei o margin-bottom para descer mais */
+    position: relative; /* Removi a propriedade absolute */
+  }
+  
+  .bottom-left-character1, .bottom-right-character1 {
+    display: none; /* Escondendo as imagens */
+  }
+}
