@@ -1,0 +1,28 @@
+/* App.css */ 
+.container3 { 
+    text-align: center; 
+    font-family: Arial, sans-serif; 
+}
+
+.content4 { 
+    display: flex; 
+    justify-content: space-around; 
+} 
+
+.box5 { 
+    background-color: #fff; 
+    border: 1px solid #ddd; 
+    padding: 20px; width: 30%; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+} 
+@media (max-width: 768px) {
+    .nav-text {
+        display: none; /* Oculta o texto em telas menores */
+    }
+    .nav-icon {
+        display: inline-block; /* Mostra os ícones em telas menores */
+        font-size: 30px; /* Ajusta o tamanho dos ícones */
+        margin: 0 10px; /* Margem entre os ícones */
+        margin-right: -50px ;
+    }
+}

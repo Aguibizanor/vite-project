@@ -34,6 +34,7 @@ import PaginaCriarProjeto from "./PaginaCriarProjeto";
 import PaginaDescricao from "./PaginaDescricao";
 import PaginaDescricao1 from "./PaginaDescricao1";
 import PaginaDescricao2 from "./PaginaDescricao2";
+import PaginaQuem from "./PaginaQuem";
 
 
 const AppRoutes = () => {
@@ -74,6 +75,7 @@ const AppRoutes = () => {
         <Route path="/Descricao" element={<PaginaDescricao/>} />
         <Route path="/Descricao1" element={<PaginaDescricao1/>} />
         <Route path="/Descricao2" element={<PaginaDescricao2/>} />
+        <Route path="/Que" element={<PaginaQuem/>} />
       </Routes>
     </Router>
   );

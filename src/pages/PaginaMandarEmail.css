@@ -30,7 +30,7 @@
     padding: 15px;
     border-radius: 9px;
     border: 1px solid #6d6a6a;
-    width: 380px;
+    width: 390px;
     margin-bottom: 50px;
 }
 .container .KI{
@@ -140,9 +140,5 @@ height: 50px; /* Ajuste aqui para controlar a altura */
     font-size: 40px;
   
    
-  }
-  
-  .bottom-left-character2, .bottom-right-character2 {
-    display: none; /* Escondendo as imagens */
   }
 }

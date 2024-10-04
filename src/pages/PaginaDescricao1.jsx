@@ -16,10 +16,13 @@ const PaginaDescricao1 = () => {
                         </head>
                         <header className="header">
                         <div className="logo"><img src={Logo} alt="Logo" /></div>
-                <nav className="nav">
+                        <nav className="nav">
                     <Link to={'/Index'} className="nav-text"><span style={{ fontSize: '39px'}}>Início</span></Link>
                     <Link to={'/'} className="nav-text"><span style={{ fontSize: '39px'}}>Games</span></Link>
+                    <Link to={'/Que'} className="nav-text"><span style={{ fontSize: '40px' }}>Sobre</span></Link>
                     <Link to={'/Suporte'} className="nav-text"><span style={{ fontSize: '39px'}}>Suporte</span></Link>
+                    <Link to={'/Que'} className="nav-icon">
+                    <i className="fas fa-id-badge fa-2x" aria-hidden="true"></i></Link>
                     <Link to={'/Index'} className="nav-icon">
                         <i className="fas fa-home fa-2x" aria-hidden="true"></i>
                     </Link>
