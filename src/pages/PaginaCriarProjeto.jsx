@@ -129,13 +129,13 @@ function PaginaCriarProjeto() {
             />
           </div>
           <div className="pagina-criar-projeto-field">
-            <label>Tecnologias Utilizadas:</label>
+            <label>Contato:</label>
             <input
               type="text"
               value={tecnologias}
               onChange={(e) => setTecnologias(e.target.value)}
               className="pagina-criar-projeto-input"
-              placeholder="Ex: React, Node.js, MySQL"
+              placeholder="Ex: Instagram, email"
             />
           </div>
           {error && <div className="pagina-criar-projeto-error">{error}</div>}
