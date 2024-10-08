@@ -1,11 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "./PaginaLogin.css";
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.site.tcc.png";
 import stardew from "../assets/stardew.png";
 import esquerda from "../assets/esquerda.png";
+import axios from "axios"; // Certifique-se de que Axios está importado
 
 function PaginaLogin() {
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleLogin = async (e) => {
+    e.preventDefault(); // Previne o comportamento padrão do formulário
+
+    try {
+      const response = await axios.get("http://localhost:8080/login", { // Altere para a URL do seu endpoint de login
+        email,
+        senha,
+      });
+      console.log(response.data); // Exibe a resposta no console
+
+      // Se o login for bem-sucedido, você pode redirecionar o usuário
+      // window.location.href = '/pagina-desejada'; // Use isso para redirecionar
+    } catch (error) {
+      setErrorMessage("Email ou senha incorretos."); // Define a mensagem de erro
+      console.error(error); // Exibe o erro no console
+    }
+  };
+
   return (
     <div className="login-container">
       {/* Logo no canto superior esquerdo */}
@@ -16,11 +39,11 @@ function PaginaLogin() {
       {/* Formulário centralizado */}
       <div className="form-container">
         <div className="header text-center mb-6">
-          <h1 className="titulo text-2xl font-bold text-transparent bg-clip-text gradient-button" style={{marginLeft: '78px'}}>
+          <h1 className="titulo text-2xl font-bold text-transparent bg-clip-text gradient-button" style={{ marginLeft: '78px' }}>
             Login Cliente
           </h1>
         </div>
-        <form>
+        <form onSubmit={handleLogin}>
           <div className="input-single mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
               Email:
@@ -30,6 +53,9 @@ function PaginaLogin() {
               id="email"
               type="email"
               placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)} // Atualiza o estado do email
+              required
             />
           </div>
           <div className="input-single mb-6">
@@ -41,12 +67,16 @@ function PaginaLogin() {
               id="password"
               type="password"
               placeholder="Senha"
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)} // Atualiza o estado da senha
+              required
             />
           </div>
+          {errorMessage && <p className="text-red-500">{errorMessage}</p>} {/* Exibe a mensagem de erro */}
           <div className="flex items-center justify-between">
-          <Link to={'/1'}><button className="login-button" type="button">
+            <button className="login-button" type="submit">
               LOGIN
-            </button></Link>
+            </button>
           </div>
         </form>
         <div className="text-center mt-4">
@@ -63,7 +93,9 @@ function PaginaLogin() {
             </Link>
           </p>
         </div>
-        <Link to={'/Opcoes'}><img src={esquerda} alt="Seta" className="SetaLog" /></Link>
+        <Link to={'/Opcoes'}>
+          <img src={esquerda} alt="Seta" className="SetaLog" />
+        </Link>
       </div>
 
       {/* Personagens pixelados no canto inferior esquerdo e direito */}
