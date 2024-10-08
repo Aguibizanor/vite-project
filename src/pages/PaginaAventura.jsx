@@ -10,7 +10,7 @@ import goiaba from '../assets/goiaba.png';
 import framboesa from '../assets/framboesa.png';
 import damasco from '../assets/damasco.png';
 
-const PaginaAventura = () => {
+const PaginaAventura = () => { 
         const [isOpen, setIsOpen] = useState({
                 genero: true,
                 plataformas: true,
