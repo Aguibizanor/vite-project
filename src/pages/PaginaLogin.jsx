@@ -1,31 +1,35 @@
 import React, { useState } from "react";
 import "./PaginaLogin.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // Importa useNavigate
 import Logo from "../assets/logo.site.tcc.png";
 import stardew from "../assets/stardew.png";
 import esquerda from "../assets/esquerda.png";
-import axios from "axios"; // Certifique-se de que Axios está importado
+import axios from "axios";
 
 function PaginaLogin() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const navigate = useNavigate(); // Hook para navegação
 
   const handleLogin = async (e) => {
-    e.preventDefault(); // Previne o comportamento padrão do formulário
+    e.preventDefault();
 
     try {
-      const response = await axios.get("http://localhost:8080/login", { // Altere para a URL do seu endpoint de login
-        email,
-        senha,
+      const response = await axios.post("http://localhost:8080/login", {  // Mudança de GET para POST
+        email: email,
+        senha: senha,
       });
-      console.log(response.data); // Exibe a resposta no console
+      console.log(response.data);
 
-      // Se o login for bem-sucedido, você pode redirecionar o usuário
-      // window.location.href = '/pagina-desejada'; // Use isso para redirecionar
+      // Se o login for bem-sucedido, redireciona para a página desejada
+      if (response.status === 200) {
+        alert("Login realizado com sucesso!");
+        navigate('/pagina-desejada'); // Redireciona após o login
+      }
     } catch (error) {
-      setErrorMessage("Email ou senha incorretos."); // Define a mensagem de erro
-      console.error(error); // Exibe o erro no console
+      setErrorMessage("Email ou senha incorretos.");
+      console.error(error);
     }
   };
 
@@ -109,4 +113,4 @@ function PaginaLogin() {
   );
 }
 
-export default PaginaLogin;
+export default PaginaLogin;

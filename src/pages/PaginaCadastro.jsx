@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Logo from "../assets/logo.site.tcc.png";
-import { Link, useNavigate } from 'react-router-dom'; // Importa useNavigate
+import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
 
 function PaginaCadastro() {
@@ -25,45 +25,36 @@ function PaginaCadastro() {
         });
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+    
         if (formData.senha !== formData.confirmarSenha) {
-            setMessage('As senhas não correspondem.');
+            setMessage('As senhas não correspondem!');
             return;
         }
-
+    
+        const cadastroData = { ...formData, datanascimento: formData.dataNascimento }; // Prepare os dados para o envio
+    
         try {
-            const response = await axios.post('http://localhost:8080/cliente', {
-                nome: formData.nome,
-                sobrenome: formData.sobrenome,
-                cpf: formData.cpf,
-                dataNascimento: formData.dataNascimento,
-                email: formData.email,
-                senha: formData.senha,
-                telefone: formData.telefone,
+            const response = await axios.post('http://localhost:8080/cadastro', cadastroData, {
+                headers: {
+                    'Content-Type': 'application/json',
+                },
             });
-
-            // Supondo que o backend retorne um objeto com a propriedade 'success'
-            if (response.data.success) {
-                setMessage('Cadastro efetuado! Vá para a página de Login!');
-                // Redireciona para a página de login após o cadastro
-                setTimeout(() => {
-                    navigate("/Login"); // Altere para a rota do seu login
-                }, 2000); // Redireciona após 2 segundos
+    
+            if (response.status === 201) { // Verifica se o cadastro foi bem-sucedido
+                alert("Cadastro realizado com sucesso!");
+                navigate('/Login'); // Redireciona após sucesso
             } else {
-                setMessage('Cadastro efetuado! Vá para a página de Login!');
+                const errorResponse = response.data;
+                setMessage(errorResponse.message || 'Erro no cadastro.');
             }
         } catch (error) {
-            console.error('Error:', error);
-            // Verifica se a resposta do servidor contém uma mensagem de erro
-            if (error.response && error.response.data && error.response.data.message) {
-                setMessage(error.response.data.message);
-            } else {
-                setMessage('Cadastro efetuado! Vá para a página de Login!');
-            }
-        }        
+            console.error("Erro na requisição:", error);
+            setMessage('Erro ao se conectar ao servidor. Tente novamente.');
+        }
     };
+    
 
     return (
         <div className="Cadastro">
@@ -113,4 +104,4 @@ function PaginaCadastro() {
     );
 }
 
-export default PaginaCadastro;
+export default PaginaCadastro;
