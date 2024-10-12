@@ -124,7 +124,7 @@ body {
   margin-bottom: 15%;
   text-align: center;
   width: 100%;
-  margin-top: 10%; /* Adiciona um espaço extra acima para movê-lo para baixo */
+  margin-top: -19%; /* Adiciona um espaço extra acima para movê-lo para baixo */
 }
  
 @media (min-width: 1024px) {

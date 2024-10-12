@@ -36,9 +36,6 @@
 .container .KI{
   color:#000
 }
-.container .KI a{
-  color: #2575fc
-}
 .confirmar {
   background: linear-gradient(to left, #90017f, #6a11cb, #2575fc);
   color: white;
@@ -117,13 +114,13 @@ height: 50px; /* Ajuste aqui para controlar a altura */
 .W {
   color: #000;
   font-size: 40px;
-  margin-bottom: 500px;
+  margin-bottom: 250px;
   position: absolute;
 }
 .container .Redef {
   color:#000;
   font-size: 22px;
-  margin-bottom: 70px;
+  margin-top: 26%;
 }
 @media (max-width: 1720px) {
 .bottom-left-character2,

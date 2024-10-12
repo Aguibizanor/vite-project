@@ -23,7 +23,7 @@
   color: #2575fc
 }
 .logo1 {
-  width: 150px;
+  width: 50px;
 }
 .AAA{
   width: 1470px;
@@ -33,12 +33,13 @@
  .container .Titu {
   color: #000;
   font-size: 40px;
-  margin-bottom: 500px;
+  margin-bottom: 260px;
   position: absolute;
 }
 .container .OP {
   color:#000;
   font-size: 22px;
+  margin-top: 15%;
 }
 .code-inputs input {
   width: 30px;  /* Ajuste aqui para controlar a largura */
