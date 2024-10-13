@@ -31,7 +31,7 @@ const PaginaRedefinirSenha = () => {
       <div className="bottom-right-character3">
         <img src={mario} alt="Pixel art character" className="character-icon3" />
       </div>
-      <Link to={'/MandarCodin'}><img src={esquerda} alt="Seta" className="SetaLog" style={{position: 'absolute', left:'11%', marginTop: '-60px'}}/></Link>
+      <Link to={'/MandarCodin'}><img src={esquerda} alt="Seta" className="SetaLog" style={{position: 'absolute', left:'1.8%', marginTop: '80px'}}/></Link>
 </div>
 </div>
 </div>

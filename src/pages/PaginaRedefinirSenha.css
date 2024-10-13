@@ -1,13 +1,15 @@
 /* Mantendo o CSS fornecido */
-.container {
+.OIA .container {
   background-color: #fff;
   padding: 5%;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 90%;
-  margin: 5% 0 5% 1%; /* Aumenta o espaço à direita */
+  width: 87%;
+  margin-left: 4.5%; /* Aumenta o espaço à direita */
   text-align: center;
-  max-width: 600px;
+  max-width: 1500px;
+  margin-top: 9%;
+  overflow: hidden;
 }
  
 .logo-container3 {
@@ -100,20 +102,21 @@ body {
 .bottom-left-character3, .bottom-right-character3 {
   position: absolute;
   bottom: 5%;
+  width: 20%;
 }
  
 .bottom-left-character3 {
-  left: 5%;
-  margin-bottom: 15%;
+  left: 11%;
+  margin-bottom: 10%;
 }
  
 .bottom-right-character3 {
-  right: 5%;
-  margin-bottom: 15%;
+  right: 14%;
+  margin-bottom: 10%;
 }
  
 .character-icon3 {
-  width: 25%;
+  width: 100%;
 }
  
 .H {
@@ -129,7 +132,7 @@ body {
   margin-bottom: 15%;
   text-align: center;
   width: 100%;
-  margin-top: -19%; /* Adiciona um espaço extra acima para movê-lo para baixo */
+  margin-top: 0; /* Adiciona um espaço extra acima para movê-lo para baixo */
 }
  
 @media (min-width: 1024px) {
@@ -174,7 +177,7 @@ body {
   }  
   .bottom-left-character3,
 .bottom-right-character3 {
-    width: 16%;
+    width: 80%;
     max-width: 500px; /* largura máxima */
     height: auto; /* altura automática para manter a proporção */
     display: block; /* exibe por padrão */
