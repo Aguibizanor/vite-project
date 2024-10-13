@@ -1,7 +1,4 @@
 /* Container principal */
-.app7{
-  height: 92vh;
-}
 .game-profile-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -104,7 +101,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-left: 40px;
+    margin-left: 80px;
   }
   
   .Download-btn {

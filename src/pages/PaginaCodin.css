@@ -11,7 +11,9 @@
   border-radius: 15px;
 }
 .ÇUCA{
-  height: 82.7vh;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(144, 1, 127, 1) 0%, rgba(5, 183, 231, 1) 100%);
 }
 .logo-container1 {
   position: absolute;
@@ -189,6 +191,13 @@ height: 50px; /* Ajuste aqui para controlar a altura */
         width: 8%;
         transform: translate(-10%, 10%) scale(1.1);
         display: none; /* oculta os elementos em telas menores que 768px */
+    }
+    .ÇUCA .container {
+      height: 40vh;
+      width: 644px;
+      margin-left: -14%;
+      margin-top: 44%;
+      
     }
 }
   }

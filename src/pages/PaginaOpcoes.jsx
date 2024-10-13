@@ -7,6 +7,7 @@ import esquerda from "../assets/esquerda.png";
  
 const PaginaOpcoes = () => {
   return (
+    
 <div className="App9">
   <header><img src={Logo} className='Lo'/></header>
       <div className="App-div">

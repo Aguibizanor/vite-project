@@ -34,7 +34,7 @@ const PaginaQuem = () => {
                     <input type="text" placeholder="Search..." />
                     <Link to={'/Opcoes'}>
                     <button className="login-btn">
-                            <i className="fas fa-user-circle"></i> Perfil
+                            <i className="fas fa-user-circle"></i> Log in
                         </button>
                     </Link>
                 </div>

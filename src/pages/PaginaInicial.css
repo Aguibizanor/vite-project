@@ -236,6 +236,9 @@ p {
   .nav-text {
       display: none; /* Oculta o texto em telas menores */
   }
+  .app{
+    height: 228vh;
+  }
   .nav-icon {
       display: inline-block; /* Mostra os ícones em telas menores */
       font-size: 30px; /* Ajusta o tamanho dos ícones */

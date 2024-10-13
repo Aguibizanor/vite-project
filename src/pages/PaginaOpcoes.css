@@ -16,7 +16,7 @@
 }
 .App9 .SetaOp {
   position: absolute;
-  left: 50%; /* Reduzido de 13.4% para 5% */
+  left: 10%; /* Reduzido de 13.4% para 5% */
   margin-top: 10px;
   height: 193px;
 }
@@ -67,46 +67,47 @@
   height:65px;
   }
   @media (max-width: 1100px) {
-    .App .pixel-art{
-      margin-top: 79%;
+    .App9 .App-div .pixel-art{
+      margin-top: 55%;
       width: 34%;
-      margin-left: 17%;
+      margin-left: 30%;
+      
     }
-    .App .SetaOp{
-      margin-top: 40%;
-      margin-right: 50%;
-      height: 130%;
+    .App9 .App-div .SetaOp{
+      margin-top: 50%;
+      margin-right: 90%;
+      height: 20%;
     }
     .buttons{
       margin-top: -14%;
       margin-right: 10%;
+      height: 10px;
     }
-    .App-div{
-      width: 70%;
+    .App9 .App-div{
+      width: 90%;
+      margin-top: 2%;
     }
-    .App{
-     
-      margin-top: 10%;
-      Height: 0%
-    }
-    .OI{
-      width: 129%;
-      height: 50px;
+  
+    .buttons .OI{
+      width: 150%;
+      height: 60px;
+      margin-left: -80%;
     }
     .ENTRE{
       margin-left: 8%;
     }
-    .Lo{
+    .App9 .Lo{
       width: 20%;
-      margin-top: -10%;
+      margin-top: -14%;
     }
    
   }
   @media (max-width: 710px) {
-    .App .pixel-art {
-      margin-top: 70%;
-      width: 40%; /* Ajusta a largura para se adequar melhor à tela do tablet */
-      margin-left: 10%; /* Centraliza um pouco mais */
+    .App9 .App-div .pixel-art {
+      margin-top: 55%;
+      width: 34%;
+      margin-left: 22%;
+      
     }
  
     .buttons {
@@ -118,9 +119,9 @@
       width: 130%; /* Aumenta a largura do container para se adaptar melhor */
     }
  
-    .App {
-      margin-top: 15%; /* Ajusta a margem superior para melhor espaçamento */
-      height: auto; /* Muda a altura para auto, permitindo que o conteúdo ajuste */
+    .App9 {
+     
+      height: 100vh; /* Muda a altura para auto, permitindo que o conteúdo ajuste */
     }
  
     .OI {

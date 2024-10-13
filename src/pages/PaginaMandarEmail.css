@@ -1,18 +1,21 @@
- .container {
+ .MINERIO .container {
   text-align: center;
   background: #fff;
-  height: 100vh;
+  height: 60vh;
   width: 100%;
+  width: 1500px;
   display: flex;
-  margin-left: 290px;
+  margin-left: 6%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 70px;
+  margin-top: 9%;
   border-radius: 15px;
 }
 .MINERIO{
-  height: 96vh;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(144, 1, 127, 1) 0%, rgba(5, 183, 231, 1) 100%);
 }
 .logo-container2 {
   position: absolute;
@@ -153,6 +156,13 @@ height: 50px; /* Ajuste aqui para controlar a altura */
       width: 8%;
       transform: translate(-10%, 10%) scale(1.1);
       display: none; /* oculta os elementos em telas menores que 768px */
+  }
+  .MINERIO .container {
+    height: 40vh;
+    width: 700px;
+    margin-left: -35.5%;
+    margin-top: 59%;
+    
   }
 }
 }

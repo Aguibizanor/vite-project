@@ -35,7 +35,7 @@ const PaginaCodin = () => {
       <div className="bottom-right-character1">
         <img src={sonic} alt="Pixel art character" className="character-icon1" />
       </div>
-      <Link to={'/MandarEmail'}><img src={esquerda} alt="Seta" style={{position: 'absolute', left:'10.8%', marginTop: '80px'}}/></Link>
+      <Link to={'/MandarEmail'}><img src={esquerda} alt="Seta" style={{position: 'absolute', left:'1.8%', marginTop: '80px'}}/></Link>
     </div>
     </div>
     </div>
