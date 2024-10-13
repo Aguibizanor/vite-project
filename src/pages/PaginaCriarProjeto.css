@@ -8,7 +8,9 @@
   z-index: 1000;
   border-bottom: solid;
 }
- 
+.Run{
+  height: 100vh;
+}
 .pagina-criar-projeto-container {
   max-width: 800px;
   margin: 0 auto;

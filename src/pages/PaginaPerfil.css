@@ -1,6 +1,7 @@
 .perfil-container {
     background: linear-gradient(to bottom, #90017F, #6a11cb, #2575fc);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
   }
   
   .perfil-title {

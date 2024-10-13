@@ -2,6 +2,7 @@
   text-align: center;
   background: linear-gradient(180deg, rgba(144, 1, 127, 1) 30%, rgba(5, 183, 231, 1) 100%);
   height: 100vh;
+  nav-down: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,33 +11,35 @@
 .Lo{
   position: absolute;
   width: 9%;
-  margin-top: -4%;
+  margin-top: -10%;
   margin-left: -50%;
 }
-.App .SetaOp{
+.App9 .SetaOp {
   position: absolute;
-  left:13.4%;
+  left: 50%; /* Reduzido de 13.4% para 5% */
   margin-top: 10px;
+  height: 193px;
 }
+ 
 .App-div {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: white;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 1200px;
-  height: 600px;
-  margin-top: 10px;
+  width: 1300px;
+  height: 69vh;
+  margin-top: -5%;
 }
-.App .pixel-art {
+.pixel-art {
   position: absolute;
   left: 30%;
   transform: translateX(-50%);
   z-index: 1;
-  margin-top: 20px;
-  width: 27%;
+  margin-top: 90px;
+  width: 24%;
   }
   .ENTRE{
     font-size: 40px;
@@ -50,7 +53,7 @@
     flex-direction: column;
     gap: 10px;
     margin-top: 10px;
-    margin-left: 340px;
+    margin-left: 594px;
   }
    
   .OI {
@@ -63,21 +66,26 @@
   border-radius:30px;
   height:65px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1100px) {
     .App .pixel-art{
       margin-top: 79%;
       width: 34%;
       margin-left: 17%;
     }
+    .App .SetaOp{
+      margin-top: 40%;
+      margin-right: 50%;
+      height: 130%;
+    }
     .buttons{
       margin-top: -14%;
-      margin-right: 99%;
+      margin-right: 10%;
     }
     .App-div{
-      width: 90%;
+      width: 70%;
     }
     .App{
-      
+     
       margin-top: 10%;
       Height: 0%
     }
@@ -92,5 +100,46 @@
       width: 20%;
       margin-top: -10%;
     }
-    
+   
   }
+  @media (max-width: 710px) {
+    .App .pixel-art {
+      margin-top: 70%;
+      width: 40%; /* Ajusta a largura para se adequar melhor à tela do tablet */
+      margin-left: 10%; /* Centraliza um pouco mais */
+    }
+ 
+    .buttons {
+      margin-top: -10%; /* Ajusta a margem para manter os botões em uma posição adequada */
+      margin-right: 70%; /* Ajusta a margem à direita */
+    }
+ 
+    .App-div {
+      width: 130%; /* Aumenta a largura do container para se adaptar melhor */
+    }
+ 
+    .App {
+      margin-top: 15%; /* Ajusta a margem superior para melhor espaçamento */
+      height: auto; /* Muda a altura para auto, permitindo que o conteúdo ajuste */
+    }
+ 
+    .OI {
+      width: 100%; /* Faz com que os botões ocupem 100% da largura do container */
+      height: 550px; /* Ajusta a altura dos botões */
+    }
+ 
+    .ENTRE {
+      font-size: 30px; /* Reduz o tamanho da fonte para melhor ajuste em telas menores */
+      margin-left: 5%; /* Ajusta a margem à esquerda */
+    }
+ 
+    .Lo {
+      width: 25%; /* Aumenta a largura do elemento */
+      margin-top: -5%; /* Ajusta a margem superior */
+    }
+  }
+ 
+
+ 
+ 
+ 

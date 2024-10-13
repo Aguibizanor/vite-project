@@ -5,7 +5,5 @@
 :root {
   background: rgb(144, 1, 127);
   background: linear-gradient(180deg, rgba(144, 1, 127, 1) 0%, rgba(5, 183, 231, 1) 100%);
-  width: 100%;
-  
   background-repeat:repeat-x;
 }

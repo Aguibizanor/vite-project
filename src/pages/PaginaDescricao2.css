@@ -1,4 +1,7 @@
 /* Container principal */
+.app7{
+  height: 92vh;
+}
 .game-profile-container {
     max-width: 1200px;
     margin: 0 auto;

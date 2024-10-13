@@ -9,10 +9,10 @@ const PaginaCodin = () => {
   return (
     <div className='ÇUCA'>
     <div className='AAA'>
-      <div className="logo-container1">
+      <div className="logo-container1" >
         <img src={Logo} alt="Logo with text 'GL Game Legends'" className="logo1" />
       </div>
-    <div className="container">
+    <div className="container" style={{right:'10%'}}>
       <h1 className='Titu'>Redefinir Senha</h1>
       <p className='OP'>Coloque o código enviado para sua conta de Email:</p>
       <form className='Form'>

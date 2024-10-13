@@ -12,7 +12,7 @@ const PaginaRedefinirSenha = () => {
       <div className="logo-container2">
         <img src={Logo} alt="Logo with text 'GL Game Legends'" className="logo2" />
       </div>
-<div className="container">
+<div className="container" >
 <h1 className='H'>Redefinir Senha</h1>
 <p className='VIVI'>Pronto! Agora coloque sua senha nova:</p>
 <form className='KAKA'>

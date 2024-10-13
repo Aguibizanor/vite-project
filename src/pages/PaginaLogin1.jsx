@@ -79,7 +79,7 @@ function PaginaLogin() {
           
           {errorMessage && <p className="text-red-500">{errorMessage}</p>} {/* Exibe a mensagem de erro */}
           <div className="flex items-center justify-between">
-            <Link to={"/perfil1"}><button className="login-button" type="submit">
+            <Link to={"/2"}><button className="login-button" type="submit">
               LOGIN
             </button></Link> 
           </div>

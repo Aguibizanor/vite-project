@@ -57,11 +57,11 @@ function PaginaCadastro() {
     
 
     return (
-        <div className="Cadastro">
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div className="Cadastro" style={{ height:'100vh'}}>
+            <div style={{ display: 'flex', justifyContent: 'left' }}>
                 <img src={Logo} alt="Logo do Game Legends" className="logo" />
             </div>
-            <div className="formulario">
+            <div className="formulario" style={{ marginTop: '11%'}}>
                 <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-4xl" style={{ margin: '0 auto', marginTop: '50px', padding: '20px', maxWidth: '90%' }}>
                     <h2 className="text-center text-2xl font-bold text-gradient mb-6 titulo ">CRIAR CONTA</h2>
                     <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4">

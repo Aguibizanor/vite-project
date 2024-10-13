@@ -1,10 +1,9 @@
 .container {
   text-align: center;
   background: #fff;
-  height: 50px;
+  height: 590px;
   width: 100px;
   display: flex;
-  margin-left: 290px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -26,7 +25,7 @@
   color: #2575fc
 }
 .logo1 {
-  width: 50px;
+  width: 150px;
 }
 .AAA{
   width: 1470px;
