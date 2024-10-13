@@ -10,7 +10,7 @@ body {
   display: flex;
   flex-direction: column;
  
-  height: 240vh;
+  height: 100vh;
 }
 .header {
   display: flex;
