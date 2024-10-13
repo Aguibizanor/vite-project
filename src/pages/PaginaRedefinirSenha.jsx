@@ -7,6 +7,7 @@ import esquerda from "../assets/esquerda.png";
 
 const PaginaRedefinirSenha = () => {
   return (
+    <div className='OIA'>
     <div className='AAA1'>
       <div className="logo-container2">
         <img src={Logo} alt="Logo with text 'GL Game Legends'" className="logo2" />
@@ -31,6 +32,7 @@ const PaginaRedefinirSenha = () => {
         <img src={mario} alt="Pixel art character" className="character-icon2" />
       </div>
       <Link to={'/MandarCodin'}><img src={esquerda} alt="Seta" className="SetaLog" style={{position: 'absolute', left:'11%', marginTop: '-60px'}}/></Link>
+</div>
 </div>
 </div>
   );

@@ -80,7 +80,7 @@ function PaginaLogin() {
           <div className="flex items-center justify-between">
             <button className="login-button" type="submit">
               LOGIN
-            </button>
+            </button> 
           </div>
         </form>
         <div className="text-center mt-4">

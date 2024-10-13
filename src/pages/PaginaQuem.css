@@ -3,7 +3,9 @@
     text-align: center;
     font-family: Arial, sans-serif;
 }
-
+.app1{
+    height: 99vh;
+}
 
 .content4 { /*a localidade dos quadrados*/
     display: flex;
@@ -36,13 +38,14 @@
         margin: 0 10px; /* Margem entre os ícones */
         margin-right: -50px ;
     }
-    .box5 { /*caixa de texto e letra */
+    .container3 .content4 .box5 { /*caixa de texto e letra */
         background-color: #fff;
         border: 1px solid #ddd;  
         padding: 20px; width: 30%;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         margin-right: 26%;
         margin-top: 10%;
+        height: 10%;
        
     }
 }

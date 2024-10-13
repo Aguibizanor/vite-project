@@ -4,13 +4,13 @@ body {
   background: rgb(144, 1, 127);
   background: linear-gradient(180deg, rgba(144, 1, 127, 1) 0%, rgba(5, 183, 231, 1) 100%);
   width: 100%;
-  height: 100vh;
   background-repeat: none;
 }
 .app {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Garantir que a altura ocupe toda a visualização da tela */
+ 
+  height: 240vh;
 }
 .header {
   display: flex;

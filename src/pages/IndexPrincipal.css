@@ -3,10 +3,10 @@ body {
     font-family: Arial, sans-serif;
     background: linear-gradient(to bottom,#90017F, #6a11cb, #2575fc);
   }
-  .app {
+  .app4 {
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Garantir que a altura ocupe toda a visualização da tela */
+    height: 97vh;
   }
   .header {
     display: flex;

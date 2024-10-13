@@ -75,12 +75,13 @@ function PaginaLogin() {
               onChange={(e) => setSenha(e.target.value)} // Atualiza o estado da senha
               required
             />
-          </div>
+          </div> 
+          
           {errorMessage && <p className="text-red-500">{errorMessage}</p>} {/* Exibe a mensagem de erro */}
           <div className="flex items-center justify-between">
-            <button className="login-button" type="submit">
+            <Link to={"/perfil1"}><button className="login-button" type="submit">
               LOGIN
-            </button>
+            </button></Link> 
           </div>
         </form>
         <div className="text-center mt-4">

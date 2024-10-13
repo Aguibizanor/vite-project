@@ -7,6 +7,7 @@ import esquerda from "../assets/esquerda.png"
  
 const PaginaCodin = () => {
   return (
+    <div className='ÇUCA'>
     <div className='AAA'>
       <div className="logo-container1">
         <img src={Logo} alt="Logo with text 'GL Game Legends'" className="logo1" />
@@ -35,6 +36,7 @@ const PaginaCodin = () => {
         <img src={sonic} alt="Pixel art character" className="character-icon1" />
       </div>
       <Link to={'/MandarEmail'}><img src={esquerda} alt="Seta" style={{position: 'absolute', left:'10.8%', marginTop: '80px'}}/></Link>
+    </div>
     </div>
     </div>
   );
