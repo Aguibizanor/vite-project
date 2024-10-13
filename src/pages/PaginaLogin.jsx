@@ -78,9 +78,9 @@ function PaginaLogin() {
           </div>
           {errorMessage && <p className="text-red-500">{errorMessage}</p>} {/* Exibe a mensagem de erro */}
           <div className="flex items-center justify-between">
-            <Link to={"/1"}><button className="login-button" type="submit">
+            <button className="login-button" type="submit">
               LOGIN
-            </button></Link>
+            </button>
           </div>
         </form>
         <div className="text-center mt-4">
