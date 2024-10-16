@@ -4,7 +4,7 @@
     font-family: Arial, sans-serif;
 }
 .app1{
-    height: 100vh;
+    height: 97vh;
 }
 
 .content4 { /*a localidade dos quadrados*/
@@ -22,12 +22,6 @@
     margin-top: 10%;
    
 }
-.MM {  /* quem somos nos */
-    position: absolute;
-    margin-right: 21%;
-    font-size: 2.4rem;
-    color: #ddd;
-}
 @media (max-width: 768px) {
     .nav-text {
         display: none; /* Oculta o texto em telas menores */
@@ -38,14 +32,19 @@
         margin: 0 10px; /* Margem entre os ícones */
         margin-right: -50px ;
     }
-    .container3 .content4 .box5 { /*caixa de texto e letra */
+    .box5 { /*caixa de texto e letra */
         background-color: #fff;
         border: 1px solid #ddd;  
         padding: 20px; width: 30%;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin-right: 26%;
+        margin-right: 0%;
         margin-top: 10%;
-        height: 10%;
-       
+        width: 56%;
+    }
+    .box5 p{
+        width: 100%;
+    }
+    .box5:first-child{
+        margin-left: -25%;
     }
 }

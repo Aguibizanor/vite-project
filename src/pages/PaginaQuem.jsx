@@ -44,7 +44,7 @@ const PaginaQuem = () => {
  <section>
  <div className="container3">
       <div className="content4">
-        <h1 className='MM'>Quem Somos Nós</h1>
+ 
         <div className="box5">
           <h2>QUEM SOMOS?</h2>
           <p> Somos a Game Legends, uma plataforma de jogos dedicada a promover a inclusão e o apoio aos desenvolvedores independentes, especialmente aqueles que estão começando a produzir seus primeiros jogos. Nosso objetivo é criar um ecossistema de jogos mais saudável, criativo e inclusivo, onde gamers e desenvolvedores possam se unir e colaborar. </p>
@@ -62,3 +62,4 @@ const PaginaQuem = () => {
 };
  
 export default PaginaQuem;
+ 
