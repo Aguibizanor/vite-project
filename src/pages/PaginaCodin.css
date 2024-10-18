@@ -4,12 +4,16 @@
   height: 590px;
   width: 100px;
   display: flex;
-  margin-left: 290px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 70px;
   border-radius: 15px;
+}
+.ÇUCA{
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(144, 1, 127, 1) 0%, rgba(5, 183, 231, 1) 100%);
 }
 .logo-container1 {
   position: absolute;
@@ -33,12 +37,13 @@
  .container .Titu {
   color: #000;
   font-size: 40px;
-  margin-bottom: 500px;
+  margin-bottom: 260px;
   position: absolute;
 }
 .container .OP {
   color:#000;
   font-size: 22px;
+  margin-top: 15%;
 }
 .code-inputs input {
   width: 30px;  /* Ajuste aqui para controlar a largura */
@@ -60,10 +65,7 @@
   cursor: pointer;
   font-size: 2rem;
 }
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom,#90017F, #6a11cb, #2575fc);
-}
+
 /* Inputs do código */
 .Form .code-inputs input {
   width: 30px;
@@ -134,12 +136,24 @@ margin-top: 50px; /* Ajuste o valor conforme necessário */
 width:  40px;  /* Ajuste aqui para controlar a largura */
 height: 50px; /* Ajuste aqui para controlar a altura */  
 }
-@media (max-width: 768px) {
+@media (max-width: 1720px) {
   .AAA{
     width: 80%;
-    margin-left: 18%;
-      }
- 
+    margin-left: 13%;
+    
+  }
+     
+  .container {
+    
+    max-width: 150%;
+    width: 8%;
+    height: 0%;
+    text-align: center;
+  }
+  .Form{
+    flex-direction: column;
+      gap: 3%; /* Reduzindo o espaço entre elementos */
+  }
   .AAA .container {
    
     max-width: 150%;
@@ -150,35 +164,40 @@ height: 50px; /* Ajuste aqui para controlar a altura */
   .Titu {
     color: #000;
     font-size: 40px;
-    margin-top: 30%;
+    margin-bottom: 100px; /* Aumentei o margin-bottom para descer mais */
     position: relative; /* Removi a propriedade absolute */
   }
-  .OP{
-    margin-top: 20%;
+  .bottom-left-character1,
+  .bottom-right-character1 {
+      width: 16%;
+      max-width: 500px; /* largura máxima */
+      height: auto; /* altura automática para manter a proporção */
+      display: block; /* exibe por padrão */
+      position: absolute;
   }
- 
-  .bottom-left-character1, .bottom-right-character1 {
-    display: none; /* Escondendo as imagens */
- 
+  .bottom-left-character1 {
+    bottom: 30%; /* posicione no canto inferior esquerdo */
+    left: 12%; /* ajusta conforme necessário */
+   
   }
-  .container .Form{
-    font-size: 1.9rem;
+   
+  .bottom-right-character1 {
+    bottom: 30%; /* posicione no canto inferior direito */
+    right: 12%; /* ajusta conforme necessário */
   }
-  .Form{
-    
-    height: 30%;
-    margin-top: -29%;
-  }
-  .botãoconfirmar{
-    margin-top: 20%;
-  }
-  .code-inputs{
-    margin-top: 60%;
-    
-  }
-  .KAKA{
-      margin-bottom: 10%;
-      flex-direction: column;
-      gap: 3%; /* Reduzindo o espaço entre elementos */
-  }
+  @media (max-width: 768px) {
+    .bottom-left-character1,
+    .bottom-right-character1 {
+        width: 8%;
+        transform: translate(-10%, 10%) scale(1.1);
+        display: none; /* oculta os elementos em telas menores que 768px */
+    }
+    .ÇUCA .container {
+      height: 40vh;
+      width: 644px;
+      margin-left: -14%;
+      margin-top: 44%;
+      
+    }
 }
+  }

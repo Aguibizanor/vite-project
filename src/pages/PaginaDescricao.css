@@ -1,12 +1,13 @@
 /* Container principal */
+.app7{
+  height: 99vh;
+}
 .game-profile-container {
     max-width: 1200px;
-    margin: 0 auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    margin-top: -800px;
   }
   
   /* Header com o perfil do desenvolvedor */
@@ -66,7 +67,6 @@
   .credits a:hover {
     text-decoration: underline;
   }
-  
   /* Imagens extras de descrição */
   .extra-images {
     width: 28%;
@@ -100,7 +100,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-left: 40px;
+    margin-left: 80px;
   }
   
   .Download-btn {

@@ -6,7 +6,7 @@ import Logo from "../assets/logo.site.tcc.png";
 const PaginaQuem = () => {
  
   return (
-                     <div className="app">
+                     <div className="app1">
                         <head>
                                 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
                         </head>
@@ -34,7 +34,7 @@ const PaginaQuem = () => {
                     <input type="text" placeholder="Search..." />
                     <Link to={'/Opcoes'}>
                     <button className="login-btn">
-                            <i className="fas fa-user-circle"></i> Perfil
+                            <i className="fas fa-user-circle"></i> Log in
                         </button>
                     </Link>
                 </div>
@@ -44,6 +44,7 @@ const PaginaQuem = () => {
  <section>
  <div className="container3">
       <div className="content4">
+ 
         <div className="box5">
           <h2>QUEM SOMOS?</h2>
           <p> Somos a Game Legends, uma plataforma de jogos dedicada a promover a inclusão e o apoio aos desenvolvedores independentes, especialmente aqueles que estão começando a produzir seus primeiros jogos. Nosso objetivo é criar um ecossistema de jogos mais saudável, criativo e inclusivo, onde gamers e desenvolvedores possam se unir e colaborar. </p>
@@ -61,3 +62,4 @@ const PaginaQuem = () => {
 };
  
 export default PaginaQuem;
+ 

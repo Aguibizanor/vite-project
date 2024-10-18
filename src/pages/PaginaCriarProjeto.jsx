@@ -42,7 +42,7 @@ function PaginaCriarProjeto() {
   };
  
   return (
-    <div>
+    <div className="Run">
       <head>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
       </head>
@@ -70,7 +70,7 @@ function PaginaCriarProjeto() {
                     <input type="text" placeholder="Search..." />
                     <Link to={'/Opcoes'}>
                     <button className="login-btn">
-                            <i className="fas fa-user-circle"></i> Perfil
+                            <i className="fas fa-user-circle"></i> Log in
                         </button>
                     </Link>
                 </div>
@@ -129,13 +129,13 @@ function PaginaCriarProjeto() {
             />
           </div>
           <div className="pagina-criar-projeto-field">
-            <label>Tecnologias Utilizadas:</label>
+            <label>Contato:</label>
             <input
               type="text"
               value={tecnologias}
               onChange={(e) => setTecnologias(e.target.value)}
               className="pagina-criar-projeto-input"
-              placeholder="Ex: React, Node.js, MySQL"
+              placeholder="Ex: Instagram, email"
             />
           </div>
           {error && <div className="pagina-criar-projeto-error">{error}</div>}

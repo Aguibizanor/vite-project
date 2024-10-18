@@ -20,6 +20,18 @@ const PaginaEducacional = () => {
         const toggleList = (section) => {
                 setIsOpen({ ...isOpen, [section]: !isOpen[section] });
         };
+        const [isMobileOpen, setIsMobileOpen] = useState(false); // controla o menu no mobile
+
+        const toggleLis = (key) => {
+            setIsOpen((prevState) => ({
+                ...prevState,
+                [key]: !prevState[key],
+            }));
+        };
+    
+        const toggleMobileMenu = () => {
+            setIsMobileOpen(!isMobileOpen);
+        };
         return (
                 <div className="app">
                         <head>
@@ -49,7 +61,7 @@ const PaginaEducacional = () => {
                     <input type="text" placeholder="Search..." />
                     <Link to={'/Opcoes'}>
                     <button className="login-btn">
-                            <i className="fas fa-user-circle"></i> Perfil
+                            <i className="fas fa-user-circle"></i> Log in
                         </button>
                     </Link>
                 </div>
@@ -57,7 +69,13 @@ const PaginaEducacional = () => {
 
 
                         <main>
-                        <section className="D">
+                        {/* Ícone de hambúrguer para mobile */}
+            <div className="hamburger" onClick={toggleMobileMenu}>
+                <i  className="fas fa-bars fa-2x"></i>
+            </div>
+
+            {/* Barra lateral */}
+                        <section className={`D ${isMobileOpen ? 'open' : ''}`}>
                                         <div>
                                                 <h1 onClick={() => toggleList('genero')}>
                                                         <span className={`triangle ${isOpen.genero ? 'open' : ''}`}></span>

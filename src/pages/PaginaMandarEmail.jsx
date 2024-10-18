@@ -6,6 +6,7 @@ import viva from "../assets/viva.png";
 
 const PaginaMandarEmail = () => {
   return (
+    <div className='MINERIO'>
     <div className='AAA1'>
       <div className="logo-container2">
         <img src={Logo} alt="Logo with text 'GL Game Legends'" className="logo1" />
@@ -26,6 +27,7 @@ const PaginaMandarEmail = () => {
       <div className="bottom-right-character2">
         <img src={viva} alt="Pixel art character" className="character-icon2" />
       </div>
+</div>
 </div>
 </div>
   );

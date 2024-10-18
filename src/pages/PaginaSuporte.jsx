@@ -40,7 +40,7 @@ const PaginaSuporte = () => {
     },
   ];
   return (
-<div>
+<div className="GAGA">
 <head>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
 </head>
@@ -68,7 +68,7 @@ const PaginaSuporte = () => {
                     <input type="text" placeholder="Search..." />
                     <Link to={'/Opcoes'}>
                     <button className="login-btn">
-                            <i className="fas fa-user-circle"></i> Perfil
+                            <i className="fas fa-user-circle"></i> Log in
                         </button>
                     </Link>
                 </div>

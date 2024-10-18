@@ -9,8 +9,8 @@ import esquerda from "../assets/esquerda.png"
 
 const PaginaDescricao2 = () => {
   return (
-    <div>
-        <div className="app">
+    <div className='GIT'>
+        <div className="app7">
                         <head>
                                 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
                         </head>
@@ -38,7 +38,7 @@ const PaginaDescricao2 = () => {
                     <input type="text" placeholder="Search..." />
                     <Link to={'/Opcoes'}>
                     <button className="login-btn">
-                            <i className="fas fa-user-circle"></i> Perfil
+                            <i className="fas fa-user-circle"></i> Log in
                         </button>
                     </Link>
                 </div>
@@ -124,7 +124,7 @@ const PaginaDescricao2 = () => {
         <button className="Download-btn">Download</button>
       </div>
     </div>
-    <Link to={'/'}><img src={esquerda} alt="Seta" className="SetaLog" style={{position: 'absolute', left:'5.8%', marginTop: '-125px'}}/></Link>
+    <Link to={'/'}><img src={esquerda} alt="Seta" className="SetaLog" style={{position: 'absolute', left:'5.8%', marginTop: '-195px'}}/></Link>
     </div>
   );
 };

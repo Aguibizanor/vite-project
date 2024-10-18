@@ -1,20 +1,29 @@
- .container {
+ .MINERIO .container {
   text-align: center;
   background: #fff;
-  height: 590px;
+  height: 60vh;
   width: 100%;
+  width: 1500px;
   display: flex;
-  margin-left: 290px;
+  margin-left: 6%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 70px;
+  margin-top: 9%;
   border-radius: 15px;
+}
+.MINERIO{
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(144, 1, 127, 1) 0%, rgba(5, 183, 231, 1) 100%);
 }
 .logo-container2 {
   position: absolute;
   top: 20px;
   left: 20px;
+}
+.KI a{
+  color: #2575fc;
 }
 .logo1 {
   width: 150px;
@@ -36,9 +45,6 @@
 .container .KI{
   color:#000
 }
-.container .KI a{
-  color: #2575fc
-}
 .confirmar {
   background: linear-gradient(to left, #90017f, #6a11cb, #2575fc);
   color: white;
@@ -48,10 +54,7 @@
   cursor: pointer;
   font-size: 2rem;
 }
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom,#90017F, #6a11cb, #2575fc);
-}
+
 /* Inputs do código */
 .For input {
   width: 30px;
@@ -120,55 +123,46 @@ height: 50px; /* Ajuste aqui para controlar a altura */
 .W {
   color: #000;
   font-size: 40px;
-  margin-bottom: 500px;
+  margin-bottom: 250px;
   position: absolute;
 }
 .container .Redef {
   color:#000;
   font-size: 22px;
-  margin-bottom: 70px;
+  margin-top: 26%;
+}
+@media (max-width: 1720px) {
+.bottom-left-character2,
+.bottom-right-character2 {
+    width: 16%;
+    max-width: 500px; /* largura máxima */
+    height: auto; /* altura automática para manter a proporção */
+    display: block; /* exibe por padrão */
+    position: absolute;
+}
+.bottom-left-character2 {
+  bottom: 30%; /* posicione no canto inferior esquerdo */
+  left: 12%; /* ajusta conforme necessário */
+ 
+}
+ 
+.bottom-right-character2 {
+  bottom: 30%; /* posicione no canto inferior direito */
+  right: 12%; /* ajusta conforme necessário */
 }
 @media (max-width: 768px) {
-  .AAA1{
-    width: 80%;
-    margin-left: 18%;
-    height: 0%;
-      }
- 
-  .AAA1 .container {
-   
-    max-width: 150%;
-    width: 100%;
-    height: 10%;
-    text-align: center;
+  .bottom-left-character2,
+  .bottom-right-character2 {
+      width: 8%;
+      transform: translate(-10%, 10%) scale(1.1);
+      display: none; /* oculta os elementos em telas menores que 768px */
   }
-  .W {
-    color: #000;
-    font-size: 40px;
-    position: relative; /* Removi a propriedade absolute */
-  }
-  .Redef{
-    margin-top: -100%;
-  }
- 
-  .bottom-left-character2, .bottom-right-character2 {
-    display: none; /* Escondendo as imagens */
- 
-  }
-  .container .For{
-    font-size: 1.9rem;
-    margin-top: 0%;
-  }
-  .For{
-    margin-top: 0%;
-   
+  .MINERIO .container {
+    height: 40vh;
+    width: 700px;
+    margin-left: -35.5%;
+    margin-top: 59%;
     
   }
-  .mandar_email{
-    margin-top: 10%;
-  }
-  .For .LOLO{
-    margin-left: 6%;
-    margin-top: -10%;
-  }
+}
 }

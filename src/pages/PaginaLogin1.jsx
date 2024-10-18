@@ -1,11 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import "./PaginaLogin.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // Importa useNavigate
 import Logo from "../assets/logo.site.tcc.png";
 import stardew from "../assets/stardew.png";
 import esquerda from "../assets/esquerda.png";
+import axios from "axios";
 
-function PaginaLogin1() {
+function PaginaLogin() {
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const navigate = useNavigate(); // Hook para navegação
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post("http://localhost:8080/login", {  // Mudança de GET para POST
+        email: email,
+        senha: senha,
+      });
+      console.log(response.data);
+
+      // Se o login for bem-sucedido, redireciona para a página desejada
+      if (response.status === 200) {
+        alert("Login realizado com sucesso!");
+        navigate('/pagina-desejada'); // Redireciona após o login
+      }
+    } catch (error) {
+      setErrorMessage("Email ou senha incorretos.");
+      console.error(error);
+    }
+  };
+
   return (
     <div className="login-container">
       {/* Logo no canto superior esquerdo */}
@@ -16,11 +43,11 @@ function PaginaLogin1() {
       {/* Formulário centralizado */}
       <div className="form-container">
         <div className="header text-center mb-6">
-          <h1 className="titulo text-2xl font-bold text-transparent bg-clip-text gradient-button" style={{marginLeft: '24px'}}>
-            Login Desenvolvedor
+          <h1 className="titulo text-2xl font-bold text-transparent bg-clip-text gradient-button" style={{ marginLeft: '78px' }}>
+            Login Cliente
           </h1>
         </div>
-        <form>
+        <form onSubmit={handleLogin}>
           <div className="input-single mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
               Email:
@@ -30,6 +57,9 @@ function PaginaLogin1() {
               id="email"
               type="email"
               placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)} // Atualiza o estado do email
+              required
             />
           </div>
           <div className="input-single mb-6">
@@ -41,12 +71,17 @@ function PaginaLogin1() {
               id="password"
               type="password"
               placeholder="Senha"
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)} // Atualiza o estado da senha
+              required
             />
-          </div>
+          </div> 
+          
+          {errorMessage && <p className="text-red-500">{errorMessage}</p>} {/* Exibe a mensagem de erro */}
           <div className="flex items-center justify-between">
-          <Link to={'/2'}><button className="login-button" type="button">
+            <button className="login-button" type="submit">
               LOGIN
-            </button></Link>
+            </button> 
           </div>
         </form>
         <div className="text-center mt-4">
@@ -63,7 +98,9 @@ function PaginaLogin1() {
             </Link>
           </p>
         </div>
-        <Link to={'/Opcoes'}><img src={esquerda} alt="Seta" className="SetaLog" /></Link>
+        <Link to={'/Opcoes'}>
+          <img src={esquerda} alt="Seta" className="SetaLog" />
+        </Link>
       </div>
 
       {/* Personagens pixelados no canto inferior esquerdo e direito */}
@@ -77,4 +114,4 @@ function PaginaLogin1() {
   );
 }
 
-export default PaginaLogin1;
+export default PaginaLogin;
