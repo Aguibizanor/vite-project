@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import './PaginaPerfil.css'; // Importando o CSS
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import './PaginaPerfil.css';
+import { Link, useNavigate } from 'react-router-dom';
 import Logo from "../assets/logo.site.tcc.png";
+import moment from "moment";
 
 function PaginaPerfil() {
   const [formData, setFormData] = useState({
@@ -9,156 +10,193 @@ function PaginaPerfil() {
     cpf: "",
     dataNascimento: "",
     email: "",
-    telefone: "",
-    senha: "",
+    telefone: ""
   });
-  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [modalVisible, setModalVisible] = useState(false);
+  const navigate = useNavigate();
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
+  useEffect(() => {
+    const usuarioData = JSON.parse(localStorage.getItem('usuario'));
+    if (usuarioData) {
+      setFormData({
+        nome: usuarioData.nome,
+        cpf: usuarioData.cpf,
+        dataNascimento: usuarioData.datanascimento,
+        email: usuarioData.email,
+        telefone: usuarioData.telefone,
+      });
+      setLoading(false);
+    } else {
+      navigate('/Login');
+    }
+  }, [navigate]);
+
+  const handleDelete = () => {
+    if (window.confirm("Tem certeza que deseja excluir seu perfil?")) {
+      const usuarioData = JSON.parse(localStorage.getItem('usuario'));
+      const idUsuario = usuarioData.id;
+
+      fetch(`http://localhost:8080/cadastro/${idUsuario}`, {
+        method: "DELETE",
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Erro ao deletar o perfil.");
+        }
+        alert("Perfil deletado com sucesso!");
+        localStorage.removeItem('usuario');
+        navigate('/Login');
+      })
+      .catch(error => {
+        console.error("Erro ao deletar o perfil:", error);
+        alert("Erro ao deletar o perfil.");
+      });
+    }
+  };
+
+  const handleEdit = () => {
+    setModalVisible(true);
+  };
+
+  const handleSave = (updatedData) => {
+    const usuarioData = JSON.parse(localStorage.getItem('usuario'));
+    const idUsuario = usuarioData.id;
+
+    fetch(`http://localhost:8080/cadastro/${idUsuario}`, {
+      method: "PUT",
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(updatedData),
+    })
+    .then(response => {
+      if (!response.ok) {
+        return response.text().then(text => {
+          throw new Error(`Erro ao atualizar o perfil: ${text}`);
+        });
+      }
+      return response.json();
+    })
+    .then(() => {
+      setFormData(updatedData);
+      localStorage.setItem('usuario', JSON.stringify(updatedData));
+      alert("Perfil atualizado com sucesso!");
+      setModalVisible(false);
+    })
+    .catch(error => {
+      console.error("Erro ao atualizar o perfil:", error);
+      alert("Erro ao atualizar o perfil.");
     });
   };
 
-  const validateForm = () => {
-    let newErrors = {};
-    const cpfRegex = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
-    if (!cpfRegex.test(formData.cpf)) {
-      newErrors.cpf = "CPF inválido. Formato correto: xxx.xxx.xxx-xx";
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      newErrors.email = "Email inválido";
-    }
-
-    const telefoneRegex = /^\(\d{2}\)\s\d{4,5}-\d{4}$/;
-    if (!telefoneRegex.test(formData.telefone)) {
-      newErrors.telefone = "Telefone inválido. Formato correto: (xx) xxxx-xxxx";
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (validateForm()) {
-      alert("Perfil atualizado com sucesso!");
-    } else {
-      alert("Por favor, corrija os erros no formulário.");
-    }
-  };
+  if (loading) {
+    return <div>Carregando...</div>;
+  }
 
   return (
-    <div className="perfil-container"> 
-    <head>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
-      </head>
+    <div className="perfil-container">
       <header className="perfil-header">
-      <div className="logo"><img src={Logo} alt="Logo" /></div>
-      <nav className="nav">
-                    <Link to={'/Index'} className="nav-text"><span style={{ fontSize: '39px'}}>Início</span></Link>
-                    <Link to={'/'} className="nav-text"><span style={{ fontSize: '39px'}}>Games</span></Link>
-                    <Link to={'/Que'} className="nav-text"><span style={{ fontSize: '40px' }}>Sobre</span></Link>
-                    <Link to={'/Suporte'} className="nav-text"><span style={{ fontSize: '39px'}}>Suporte</span></Link>
-                    <Link to={'/Que'} className="nav-icon">
-                    <i className="fas fa-id-badge fa-2x" aria-hidden="true"></i></Link>
-                    <Link to={'/Index'} className="nav-icon">
-                        <i className="fas fa-home fa-2x" aria-hidden="true"></i>
-                    </Link>
-                    <Link to={'/'} className="nav-icon">
-                        <i className="fas fa-gamepad fa-2x" aria-hidden="true"></i>
-                    </Link>
-                    <Link to={'/Suporte'} className="nav-icon">
-                        <i className="fas fa-headset fa-2x" aria-hidden="true"></i>
-                    </Link>
-                </nav>
-                <div className="search">
-                    <i className="fas fa-search" style={{ fontSize: '20px', margin: '0 10px' }}></i>
-                    <input type="text" placeholder="Search..." />
-                    <Link to={'/Perfil'}>
-                    <button className="login-btn">
-                            <i className="fas fa-user-circle"></i> Perfil
-                        </button>
-                    </Link>
-                </div>
+        <div className="logo"><img src={Logo} alt="Logo" /></div>
+        <nav className="nav">
+          <Link to='/Index' className="nav-text">Início</Link>
+          <Link to='/' className="nav-text">Games</Link>
+          <Link to='/Que' className="nav-text">Sobre</Link>
+          <Link to='/Suporte' className="nav-text">Suporte</Link>
+        </nav>
       </header>
 
-      <div className="perfil-form-container">
+      <div className="perfil-info-container">
         <h2 className="perfil-title">MEU PERFIL</h2>
-        <form onSubmit={handleSubmit} className="perfil-form">
-          <div className="perfil-field">
-            <label>Nome:</label>
-            <input
-              type="text"
-              name="nome"
-              value={formData.nome}
-              onChange={handleChange}
-              className="perfil-input"
-            />
-          </div>
-          <div className="perfil-field">
-            <label>CPF:</label>
-            <input
-              type="text"
-              name="cpf"
-              value={formData.cpf}
-              onChange={handleChange}
-              className="perfil-input"
-            />
-            {errors.cpf && <p className="perfil-error">{errors.cpf}</p>}
-          </div>
-          <div className="perfil-field">
-            <label>Data de Nascimento:</label>
-            <input
-              type="date"
-              name="dataNascimento"
-              value={formData.dataNascimento}
-              onChange={handleChange}
-              className="perfil-input"
-            />
-          </div>
-          <div className="perfil-field">
-            <label>Email:</label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="perfil-input"
-            />
-            {errors.email && <p className="perfil-error">{errors.email}</p>}
-          </div>
-          <div className="perfil-field">
-            <label>Telefone:</label>
-            <input
-              type="text"
-              name="telefone"
-              value={formData.telefone}
-              onChange={handleChange}
-              className="perfil-input"
-            />
-            {errors.telefone && <p className="perfil-error">{errors.telefone}</p>}
-          </div>
-          <div className="perfil-field">
-            <label>Senha:</label>
-            <input
-              type="password"
-              name="senha"
-              value={formData.senha}
-              onChange={handleChange}
-              className="perfil-input"
-            />
-          </div>
-          <button type="submit" className="perfil-button">
-            Atualizar Perfil
-          </button>
-        </form>
+        <div className="perfil-info">
+          <p><strong>Nome:</strong> {formData.nome}</p>
+          <p><strong>CPF:</strong> {formData.cpf}</p>
+          <p><strong>Data de Nascimento:</strong> {formData.dataNascimento}</p>
+          <p><strong>Email:</strong> {formData.email}</p>
+          <p><strong>Telefone:</strong> {formData.telefone}</p>
+        </div>
+        <button onClick={handleEdit} className="perfil-button">Editar Perfil</button>
+        <button onClick={handleDelete} className="perfil-button perfil-delete">Excluir Perfil</button>
       </div>
+
+      {modalVisible && (
+        <Modal
+          formData={formData}
+          onClose={() => setModalVisible(false)}
+          onSave={handleSave}
+        />
+      )}
     </div>
   );
 }
+
+const Modal = ({ formData, onClose, onSave }) => {
+  const [nome, setNome] = useState(formData.nome);
+  const [cpf, setCpf] = useState(formData.cpf);
+  const [dataNascimento, setDataNascimento] = useState(formData.dataNascimento || ""); 
+  const [email, setEmail] = useState(formData.email);
+  const [telefone, setTelefone] = useState(formData.telefone);
+
+  useEffect(() => {
+    setNome(formData.nome);
+    setCpf(formData.cpf);
+    setDataNascimento(formData.dataNascimento || ""); 
+    setEmail(formData.email);
+    setTelefone(formData.telefone);
+  }, [formData]);
+
+  const handleSubmit = () => {
+    if (!dataNascimento) {
+      alert("A data de nascimento é obrigatória.");
+      return;
+    } else if (!moment(dataNascimento, 'YYYY-MM-DD', true).isValid()) {
+      alert("A data de nascimento está em um formato inválido. Utilize o formato AAAA-MM-DD.");
+      return;
+    }
+
+    const formattedDate = moment(dataNascimento).format('YYYY-MM-DD');
+
+    const updatedData = {
+      nome,
+      cpf,
+      dataNascimento: formattedDate,
+      email,
+      telefone
+    };
+
+    console.log("Dados antes de enviar:", updatedData);
+    onSave(updatedData);
+  };
+
+  return (
+    <div className="modal">
+      <div className="modal-content">
+        <h2>Editar Perfil</h2>
+        <label>
+          Nome:
+          <input type="text" value={nome} onChange={(e) => setNome(e.target.value)} />
+        </label>
+        <label>
+          CPF:
+          <input type="text" value={cpf} onChange={(e) => setCpf(e.target.value)} />
+        </label>
+        <label>
+          Data de Nascimento:
+          <input type="date" value={dataNascimento} onChange={(e) => setDataNascimento(e.target.value)} />
+        </label>
+        <label>
+          Email:
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        </label>
+        <label>
+          Telefone:
+          <input type="text" value={telefone} onChange={(e) => setTelefone(e.target.value)} />
+        </label>
+        <button onClick={handleSubmit}>Salvar</button>
+        <button onClick={onClose}>Cancelar</button>
+      </div>
+    </div>
+  );
+};
 
 export default PaginaPerfil;
