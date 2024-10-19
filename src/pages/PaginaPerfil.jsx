@@ -8,7 +8,7 @@ function PaginaPerfil() {
   const [formData, setFormData] = useState({
     nome: "",
     cpf: "",
-    dataNascimento: "",
+    dataNascimento: null, // Ou ""
     email: "",
     telefone: ""
   });
@@ -33,27 +33,35 @@ function PaginaPerfil() {
   }, [navigate]);
 
   const handleDelete = () => {
+    const usuarioData = JSON.parse(localStorage.getItem('usuario'));
+    const idUsuario = usuarioData?.id;
+  
+    console.log("ID do usuário para deletar:", idUsuario);
+  
+    if (!idUsuario) {
+      alert("Erro: ID do usuário não encontrado.");
+      return;
+    }
+  
     if (window.confirm("Tem certeza que deseja excluir seu perfil?")) {
-      const usuarioData = JSON.parse(localStorage.getItem('usuario'));
-      const idUsuario = usuarioData.id;
-
       fetch(`http://localhost:8080/cadastro/${idUsuario}`, {
         method: "DELETE",
       })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error("Erro ao deletar o perfil.");
-        }
-        alert("Perfil deletado com sucesso!");
-        localStorage.removeItem('usuario');
-        navigate('/Login');
-      })
-      .catch(error => {
-        console.error("Erro ao deletar o perfil:", error);
-        alert("Erro ao deletar o perfil.");
-      });
+        .then(response => {
+          if (!response.ok) {
+            throw new Error("Erro ao deletar o perfil.");
+          }
+          alert("Perfil deletado com sucesso!");
+          localStorage.removeItem('usuario');
+          navigate('/Login');
+        })
+        .catch(error => {
+          console.error("Erro ao deletar o perfil:", error);
+          alert("Erro ao deletar o perfil: " + error.message);
+        });
     }
   };
+  
 
   const handleEdit = () => {
     setModalVisible(true);
@@ -61,34 +69,38 @@ function PaginaPerfil() {
 
   const handleSave = (updatedData) => {
     const usuarioData = JSON.parse(localStorage.getItem('usuario'));
-    const idUsuario = usuarioData.id;
-
-    fetch(`http://localhost:8080/cadastro/${idUsuario}`, {
-      method: "PUT",
+  
+    fetch(`http://localhost:8080/cadastro`, {
+      method: "POST",
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(updatedData),
+      body: JSON.stringify({
+        ...usuarioData, // Mantém os dados antigos, incluindo o ID
+        ...updatedData, // Sobrescreve apenas os dados que foram alterados
+        dataNascimento: updatedData.dataNascimento || null // Envia null se estiver vazio
+      }),
     })
-    .then(response => {
-      if (!response.ok) {
-        return response.text().then(text => {
-          throw new Error(`Erro ao atualizar o perfil: ${text}`);
-        });
-      }
-      return response.json();
-    })
-    .then(() => {
-      setFormData(updatedData);
-      localStorage.setItem('usuario', JSON.stringify(updatedData));
-      alert("Perfil atualizado com sucesso!");
-      setModalVisible(false);
-    })
-    .catch(error => {
-      console.error("Erro ao atualizar o perfil:", error);
-      alert("Erro ao atualizar o perfil.");
-    });
+      .then(response => response.json())
+      .then(() => {
+        // Mantém o ID e atualiza apenas os campos necessários
+        const updatedUserData = {
+          ...usuarioData, // Mantém o ID
+          ...updatedData, // Atualiza os outros campos
+        };
+  
+        setFormData(updatedUserData);
+        localStorage.setItem('usuario', JSON.stringify(updatedUserData)); // Atualiza o localStorage com o ID
+        alert("Perfil atualizado com sucesso!");
+        setModalVisible(false);
+      })
+      .catch(error => {
+        console.error("Erro ao atualizar o perfil:", error);
+        alert("Erro ao atualizar o perfil.");
+      });
   };
+  
+
 
   if (loading) {
     return <div>Carregando...</div>;
@@ -133,14 +145,14 @@ function PaginaPerfil() {
 const Modal = ({ formData, onClose, onSave }) => {
   const [nome, setNome] = useState(formData.nome);
   const [cpf, setCpf] = useState(formData.cpf);
-  const [dataNascimento, setDataNascimento] = useState(formData.dataNascimento || ""); 
+  const [dataNascimento, setDataNascimento] = useState(formData.dataNascimento || "");
   const [email, setEmail] = useState(formData.email);
   const [telefone, setTelefone] = useState(formData.telefone);
 
   useEffect(() => {
     setNome(formData.nome);
     setCpf(formData.cpf);
-    setDataNascimento(formData.dataNascimento || ""); 
+    setDataNascimento(formData.dataNascimento || "");
     setEmail(formData.email);
     setTelefone(formData.telefone);
   }, [formData]);
@@ -182,7 +194,11 @@ const Modal = ({ formData, onClose, onSave }) => {
         </label>
         <label>
           Data de Nascimento:
-          <input type="date" value={dataNascimento} onChange={(e) => setDataNascimento(e.target.value)} />
+          <input
+            type="date"
+            value={dataNascimento || ""} // Exibe uma string vazia se o valor for null
+            onChange={(e) => setDataNascimento(e.target.value || null)} // Se vazio, define como null
+          />
         </label>
         <label>
           Email:

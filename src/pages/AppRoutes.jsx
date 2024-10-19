@@ -42,7 +42,7 @@ const AppRoutes = () => {
     <Router>
       <Routes>
         <Route path="/Index" element={<IndexPrincipal/>} />
-        <Route path="/" element={<PaginaInicial />} />
+        <Route path="/" element={<PaginaOpcoes />} />
         <Route path="/1" element={<PaginaInicial1 />} />
         <Route path="/2" element={<PaginaInicial2 />} />
         <Route path="/Sobrevivencia" element={<PaginaSobrevivencia />} />
@@ -66,7 +66,7 @@ const AppRoutes = () => {
         <Route path="/Desenvolvendo" element={<PaginaDesenvolvendo/>} />
         <Route path="/Suporte" element={<PaginaSuporte/>} />
         <Route path="/MandarEmail" element={<PaginaMandarEmail/>} />
-        <Route path="/Opcoes" element={<PaginaOpcoes/>} />
+        <Route path="/Inicio" element={<PaginaInicial/>} />
         <Route path="/MandarCodin" element={<PaginaCodin/>} />
         <Route path="/RedefinirSenha" element={<PaginaRedefinirSenha/>} />
         <Route path="/Perfil" element={<PaginaPerfil/>} />

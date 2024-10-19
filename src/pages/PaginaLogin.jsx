@@ -13,22 +13,27 @@ function PaginaLogin() {
   const navigate = useNavigate(); // Hook para navegação
 
   const handleLogin = async (e) => {
-    e.preventDefault(); // Previne o comportamento padrão do formulário
-
+    e.preventDefault();
+  
     try {
-      const response = await axios.get("http://localhost:8080/login", { // Altere para a URL do seu endpoint de login
-        email,
-        senha,
+      const response = await axios.post("http://localhost:8080/login", { 
+        email: email,
+        senha: senha,
       });
-      console.log(response.data); // Exibe a resposta no console
-
-      // Se o login for bem-sucedido, você pode redirecionar o usuário
-      // window.location.href = '/pagina-desejada'; // Use isso para redirecionar
+  
+      if (response.status === 200) {
+        // Salve os dados do usuário, incluindo o ID, no localStorage
+        localStorage.setItem('usuario', JSON.stringify(response.data));
+  
+        alert("Login realizado com sucesso!");
+        navigate('/Perfil');
+      }
     } catch (error) {
       setErrorMessage("Email ou senha incorretos.");
       console.error(error);
     }
   };
+  
   
 
   return (
