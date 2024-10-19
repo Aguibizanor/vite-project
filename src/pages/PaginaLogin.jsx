@@ -26,7 +26,7 @@ function PaginaLogin() {
         localStorage.setItem('usuario', JSON.stringify(response.data));
   
         alert("Login realizado com sucesso!");
-        navigate('/Perfil');
+        navigate('/1');
       }
     } catch (error) {
       setErrorMessage("Email ou senha incorretos.");
