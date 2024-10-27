@@ -25,7 +25,7 @@ function PaginaLogin() {
       // Se o login for bem-sucedido, redireciona para a página desejada
       if (response.status === 200) {
         alert("Login realizado com sucesso!");
-        navigate('/pagina-desejada'); // Redireciona após o login
+        navigate('/2'); // Redireciona após o login
       }
     } catch (error) {
       setErrorMessage("Email ou senha incorretos.");
@@ -44,7 +44,7 @@ function PaginaLogin() {
       <div className="form-container">
         <div className="header text-center mb-6">
           <h1 className="titulo text-2xl font-bold text-transparent bg-clip-text gradient-button" style={{ marginLeft: '78px' }}>
-            Login Cliente
+            Login Desenvolvedor
           </h1>
         </div>
         <form onSubmit={handleLogin}>
