@@ -4,7 +4,7 @@
     font-family: Arial, sans-serif;
 }
 .app1{
-    height: 97vh;
+    height: 100vh;
 }
 
 .content4 { /*a localidade dos quadrados*/
@@ -37,7 +37,7 @@
         border: 1px solid #ddd;  
         padding: 20px; width: 30%;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin-right: 0%;
+        margin-right: 10%;
         margin-top: 10%;
         width: 56%;
     }
