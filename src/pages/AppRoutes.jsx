@@ -8,7 +8,7 @@ import PaginaLogin from "./PaginaLogin";
 import PaginaCartas from "./PaginaCartas";
 import PaginaCadastro from "./PaginaCadastro";
 import PaginaWindows from "./PaginaWindows";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import  { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import PaginaTerror from "./PaginaTerror";
 import PaginaEsporte from "./PaginaEsporte";
 import PaginaAventura from "./PaginaAventura";
