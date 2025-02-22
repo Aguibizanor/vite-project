@@ -1,56 +1,169 @@
-body {
-  margin: 1px;
-  font-family: Arial, sans-serif;
-  background: rgb(144, 1, 127);
-  background: linear-gradient(180deg, rgba(144, 1, 127, 1) 0%, rgba(5, 183, 231, 1) 100%);
-  width: 100%;
-  background-repeat: none;
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
 .app {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
-.header {
+
+.cabecalho {
+  background: #90017F;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.conteudo-cabecalho {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgb(160, 50, 145);
-  padding: 10px;
-  color: #fff;
-  z-index: 1000;
-  border-bottom: solid
+  padding: 0 20px;
 }
-  
-  
-main {
+
+.logo {
+  margin: 0;
+}
+
+.logo img {
+  width: 120px;
+}
+
+.navegacao {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
 }
-.D {
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
+  margin: 0 5px;
+  background: #780069;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.nav-item i {
+  margin-right: 8px;
+}
+
+.nav-item:hover {
+  background: #A0008D;
+}
+
+.hamburguer {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.formulario-pesquisa {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.input-pesquisa {
+  padding: 5px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  outline: none;
+  width: 200px;
+  transition: width 0.3s ease;
+}
+
+.botao-pesquisa {
+  padding: 5px 10px;
+  border: none;
+  background: #780069;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
+.icone-pesquisa {
+  display: flex;
+  align-items: center;
+}
+
+.painel-usuario {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.link-usuario {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  margin: 0 8px;
+  background: #780069;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.link-usuario:hover {
+  background: #A0008D;
+}
+
+.principal {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+}
+
+.barra-lateral {
   width: 20%;
   padding: 5px;
   background-color: #fff;
-  margin-top: -5px;
+  margin-right: 20px;
 }
-.D a {
+
+.barra-lateral a {
   display: flex;
   align-items: center;
   margin: 5px 0;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  transition: background-color 0.3s ease;
 }
-.D a i {
-  margin-right: 2px; /* Espaçamento entre o ícone e o texto */
+
+.barra-lateral a:hover {
+  color: darkgray;
+  border-bottom: 2px solid;
 }
-.D h1 {
+
+.barra-lateral h1 {
   cursor: pointer;
   display: flex;
-  align-items: center; 
+  align-items: center;
   background: linear-gradient(to right, #5563DC, #2E3576);
-  width: 105%;
-  margin-left: -6px;
-  color: #fff ;
+  width: 100%;
+  color: #fff;
 }
-.triangle {
+
+.triangulo {
   width: 0;
   height: 0;
   border-left: 6px solid transparent;
@@ -60,308 +173,157 @@ main {
   margin-right: 12px;
   transition: transform 0.3s ease;
 }
-.triangle.open {
+
+.triangulo.aberta {
   transform: rotate(180deg);
 }
-p {
-  margin: 0;
-}
-.D p{
-  background-color:#fff;
-  padding: 10px;
-}
-.games-section {
+
+.secao-jogos {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  width: 70%;
-  padding: 14px;
-  margin: 20px;
-  margin-top: 20px;
+  width: 80%;
 }
-.games-section a {
-  text-decoration: none;
-  color: #000;
-}
-.games-section div {
-  text-decoration: none;
+
+.jogo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(33.333% - 20px);
   background-color: #fff;
-  height: 320px;
-}
-.games-section1 {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: px;
-  margin-top: 45px
-}
-.S {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 350px; /* ajuste conforme necessário */
   text-align: center;
-}
-.S img {
-  width: 90%;
-  height: auto;
-  margin-top: 15px;
-}
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-.nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #fff;
-  font-size: 1rem;
-  margin-left:90px;
-}
-/* Estilo padrão dos links */
-.D a {
-  font-size: 20px;
-  text-decoration: none; /* Remove o sublinhado padrão */
-  color: black; /* Cor padrão dos links */
-  transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
-}
- 
-/* Efeito ao passar o mouse */
-.D a:hover {
-  color: darkgray;/* Cor ao passar o mouse */
-  border-bottom: 2px solid;
-}
-/* Efeito ao clicar/selecionar o link */
-.D a:focus, .D a:active {
-  background-color: gray; /* Cor ao ser selecionado */
-  color: white; /* Cor do texto quando selecionado */
-  outline: none; /* Remove a borda de foco padrão */
-}
-.search {
-  display: flex;
-  align-items: center;
-}
-.search input {
-  padding: 5px;
-  border-radius: 50px;
-  border: none;
-  color:#000
-}
-.login-btn {
-  background-color: #00bfa5;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  margin-left: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.intro {
-  text-align: right;
-  display: flex;
-  align-items: flex-end; /* Alinha o conteúdo ao canto direito */
-  margin-left: -320px;
-  padding: 20px;
-  flex-direction: column;
-}
-.intro h1 {
-  font-size: 3rem;
-  color: #fff;
-  margin-bottom: 10px;
-}
-.intro p {
-  font-size: 2rem;
-  color: #cfcfcf;
-  margin-bottom: 20px;
-}
-.cta-button {
-  background-color: #8e24aa;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin-top: 20px;
-  border-radius: 50px;
-  cursor: pointer;
-  font-size: 1.5em;
-}
-
-.A {
-  width: 10px;
-  padding: 1px 5px; /* Aumenta o espaçamento interno do botão */
-  font-size: 1.2em; /* Aumenta o tamanho da fonte */
-  cursor: pointer; /* Muda o cursor para indicar que é clicável */
-  display: flex;
-  align-items: center; /* Alinha o ícone verticalmente */
-  border-radius: 5px; /* Adiciona bordas arredondadas */
-}
-.C{
-  width: 10px;
-  padding: 5px 10px; /* Aumenta o espaçamento interno do botão */
-  font-size: 1.2em; /* Aumenta o tamanho da fonte */
-  cursor: pointer; /* Muda o cursor para indicar que é clicável */
-  display: flex;
-  align-items: center; /* Alinha o ícone verticalmente */
-  border-radius: 5px;
-}
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgb(160, 50, 145);
   padding: 10px;
-  color: #fff;
-  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.nav {
-  display: flex;
-  align-items: center; /* Alinha os itens verticalmente */
-}
-
-/* Estilos padrão para links de texto */
-.nav-text {
-  margin: 0 15px;
-  text-decoration: none;
-  color: white;
-  font-size: 1rem; /* Tamanho da fonte para texto */
-}
-
-/* Estilos para os ícones */
-.nav-icon {
-  display: none; /* Oculta os ícones por padrão */
+.jogo-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
 }
 
 /* Responsividade */
+@media (max-width: 1024px) {
+  .jogo-card {
+      width: calc(50% - 20px);
+  }
+}
+
 @media (max-width: 768px) {
-  .nav-text {
-      display: none; /* Oculta o texto em telas menores */
+  .navegacao {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: #90017F;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      z-index: 1000;
   }
-  .app{
-    height: 228vh;
+
+  .nav-item {
+      width: 100%;
+      justify-content: center;
+      margin: 0;
+      border-bottom: 1px solid #A0008D;
   }
-  .nav-icon {
-      display: inline-block; /* Mostra os ícones em telas menores */
-      font-size: 30px; /* Ajusta o tamanho dos ícones */
-      margin: 0 10px; /* Margem entre os ícones */
-      margin-right: -50px ;
+
+  .navegacao.ativo {
+      display: flex;
   }
-  .logo img {
-    width: 40px; /* Ajusta o tamanho da logo em telas menores */
-}
 
-.search input {
-    width: 100px; /* Largura da barra de pesquisa em telas menores */
-}
-.D{
-  display: none;
-}
-}
+  .hamburguer {
+      display: block;
+  }
 
+  .principal {
+      flex-direction: column;
+  }
 
-.search {
-  display: flex;
-  align-items: center; /* Alinha o ícone de pesquisa e o input verticalmente */
-}
+  .secao-jogos {
+      width: 100%;
+  }
 
-.search input {
-  padding: 5px;
-  border-radius: 50px;
-  border: none;
-  color: #000;
-}
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgb(160, 50, 145);
-  padding: 10px;
-  color: #fff;
-  z-index: 1000;
-}
+  .jogo-card {
+      width: 100%;
+  }
 
-.logo img {
-  width: 50px; /* Ajuste o tamanho da logo */
-  height: auto; /* Mantém a proporção da imagem */
-}
-
-.search {
-  display: flex;
-  align-items: center;
-}
-
-.search input {
-  padding: 5px;
-  border-radius: 25px; /* Tornar a pesquisa mais arredondada */
-  border: none;
-  color: #000;
-  width: 150px; /* Define uma largura fixa para a barra de pesquisa */
-  margin-right: 10px; /* Espaço entre a barra de pesquisa e o ícone do perfil */
-}
-
-.search i {
-  font-size: 20px; /* Ajusta o tamanho do ícone de pesquisa */
-}
-
-.login-btn {
-  background-color: #00bfa5;
-  color: white;
-  border: none;
-  padding: 8px 12px; /* Tamanho do botão de login */
-  border-radius: 5px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-/* Ícone de hambúrguer */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 20px;
-  cursor: pointer;
-  z-index: 10; /* Para ficar acima do conteúdo */
-}
-
-.hamburger span {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: black;
-}
-
-/* Estilo para o mobile */
-@media (max-width: 768px) {
-  .D {
+  .barra-lateral {
       display: none;
   }
-  .D.open {
-      display: block; /* Mostra a barra lateral quando o menu hambúrguer estiver aberto */
-      position: absolute;
+
+  .barra-lateral.aberta {
+      display: block;
+      position: fixed;
+      top: 60px; /* Ajuste para ficar abaixo da navbar */
       left: 0;
-      top: 20;
       width: 250px;
-      height: 125%;
+      height: calc(100% - 60px); /* Ajuste para ocupar a altura correta */
       background-color: #fff;
       box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   }
-  .D h1:first-child{
-    margin-left: 13%;
-    width: 90%;
-  }
-
-  .hamburger {
-      display: flex; /* Exibe o ícone de hambúrguer no mobile */
-  }
 }
 
-/* Estilo para o PC */
-@media (min-width: 769px) {
-  .hamburger {
-      display: none; /* Esconde o ícone de hambúrguer no desktop */
-  }
-  
-  .D {
-      display: block; /* Exibe a barra lateral normalmente no desktop */
-  }
+/* Estilo do rodapé */
+.rodape {
+  background: #90017F;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.conteudo-rodape {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.secao-rodape {
+  flex: 1;
+  padding: 10px;
+  min-width: 200px;
+}
+
+.logo-rodape {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.contato-rodape span {
+  display: block;
+  margin: 10px 0;
+}
+
+.redes-sociais a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links ul a {
+  color: #fff;
+  text-decoration: none;
+  margin: 5px 0;
+  display: block;
+}
+
+.links ul a:hover {
+  color: #A0008D;
+}
+
+.rodape-inferior {
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #A0008D;
+  margin-top: 10px;
 }

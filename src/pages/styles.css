@@ -297,9 +297,13 @@ body {
         align-items: center;
         width: auto;
         height: auto;
-        padding: 12px 20px;
-        margin: 0 10px;
-        border-radius: 15px;
+        padding: 8px 10px; /* Ajustar o padding para versões menores */
+        margin: 0 5px;
+        border-radius: 10px;
+    }
+
+    .nav-text {
+        font-size: 1rem; /* Ajustar o tamanho da fonte para versões menores */
     }
 
     .hamburguer {

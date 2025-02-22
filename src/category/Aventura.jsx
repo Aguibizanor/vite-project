@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import Logo from "../assets/logo.site.tcc.png";
-import "./PaginaInicial.css";
+import "../pages/PaginaInicial.css"
 
-const PaginaInicial = () => {
+
+const Aventura = () => {
     const [isOpen, setIsOpen] = useState({
         genero: true,
         plataformas: true,
@@ -30,10 +31,6 @@ const PaginaInicial = () => {
         setMenuAberto(!menuAberto);
     };
 
-    const toggleMobileMenu = () => {
-        setIsMobileOpen(!isMobileOpen);
-    };
-
     return (
         <div className="app">
             <head>
@@ -47,11 +44,11 @@ const PaginaInicial = () => {
                         </a>
                     </h1>
                     <nav className={`navegacao ${menuAberto ? 'ativo' : ''}`}>
-                        <Link to={'/Index'} className="nav-text nav-item"><i className="fas fa-home"></i><span className="nav-label">Início</span></Link>
-                        <Link to={'/'} className="nav-text nav-item"><i className="fas fa-gamepad"></i><span className="nav-label">Games</span></Link>
-                        <Link to={'/Que'} className="nav-text nav-item"><i className="fas fa-question-circle"></i><span className="nav-label">Sobre</span></Link>
-                        <Link to={'/Suporte'} className="nav-text nav-item"><i className="fas fa-headset"></i><span className="nav-label">Suporte</span></Link>
-                    </nav>
+                                            <Link to={'/Index'} className="nav-text nav-item"><i className="fas fa-home"></i><span className="nav-label">Início</span></Link>
+                                            <Link to={'/'} className="nav-text nav-item"><i className="fas fa-gamepad"></i><span className="nav-label">Games</span></Link>
+                                            <Link to={'/Que'} className="nav-text nav-item"><i className="fas fa-question-circle"></i><span className="nav-label">Sobre</span></Link>
+                                            <Link to={'/Suporte'} className="nav-text nav-item"><i className="fas fa-headset"></i><span className="nav-label">Suporte</span></Link>
+                                        </nav>
                     <button className="hamburguer" onClick={toggleMenu}>
                         <i className="fas fa-bars"></i>
                     </button>
@@ -169,5 +166,4 @@ const PaginaInicial = () => {
         </div>
     );
 };
-
-export default PaginaInicial;
+export default Aventura;
