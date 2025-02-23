@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Logo from "../assets/logo.site.tcc.png";
 import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
-import './styles.css';
+import './PaginaCadastro.css';
 
 function PaginaCadastro() {
     const [formData, setFormData] = useState({
@@ -64,6 +64,9 @@ function PaginaCadastro() {
 
     return (
         <div className="pagina-cadastro">
+            <head>
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+            </head>
             <header className="cabecalho">
                 <div className="conteudo-cabecalho">
                     <h1 className="logo">
@@ -90,8 +93,8 @@ function PaginaCadastro() {
                         </button>
                     </form>
                     <div className="painel-usuario">
-                        <a className="link-usuario" href="/login">Log in</a>
-                        <a className="link-usuario" href="/register">Register</a>
+                        <a className="link-usuario" href="/login">Login</a>
+                        <a className="link-usuario" href="/Cadastro">Registre-se</a>
                     </div>
                 </div>
             </header>

@@ -15,49 +15,9 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  overflow-x: hidden; /* Evita que a tela fique maior do que deveria */
+  background: linear-gradient(180deg, rgba(144, 1, 127, 1) 0%, rgba(5, 183, 231, 1) 100%);
 }
 
-/* FAQ Container */
-.faq-container {
-  width: 80%; /* Reduz a largura para centralizar melhor */
-  margin: 50px auto; /* Mantém a margem superior e centraliza com margem automática */
-  padding: 20px;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.faq-content h1 {
-  text-align: center;
-  font-size: 36px;
-  color: #4b0082;
-  margin-bottom: 40px;
-}
-
-.GAGA {
-  height: 100vh;
-}
-
-.faq-item {
-  border-bottom: 1px solid #ddd;
-  padding: 15px 0;
-}
-
-.faq-question {
-  font-size: 24px;
-  color: #4b0082;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.faq-answer {
-  margin-top: 10px;
-  font-size: 18px;
-}
-
-/* Header */
 .cabecalho {
   background: #90017F;
   color: #fff;
@@ -160,12 +120,123 @@ body {
   background: #A0008D;
 }
 
-/* Footer */
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ÇUCA {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.AAA {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-container1 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.logo1 {
+  width: 150px;
+}
+
+.container {
+  text-align: center;
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 800px;
+  max-width: 90%;
+}
+
+.Titu {
+  color: #000;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.OP {
+  color: #000;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.side-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.character-icon1 {
+  width: 150px;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.code-inputs input {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  margin: 0 5px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.botãoconfirmar {
+  background: linear-gradient(to left, #90017f, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.Pe {
+  color: #000;
+}
+
+.Pe a {
+  color: #2575fc;
+}
+
+.SetaLog {
+  position: absolute;
+  left: 1.8%;
+  margin-top: 80px;
+}
+
 .rodape {
   background: #90017F;
   color: #fff;
   padding: 20px 0;
   text-align: center;
+  margin-top: auto;
 }
 
 .conteudo-rodape {
@@ -224,7 +295,6 @@ body {
   margin-top: 10px;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .navegacao {
     display: none;
@@ -265,11 +335,16 @@ body {
     width: 100%;
   }
 
-  .carrossel {
-    display: none; /* Desaparece na versão de celular */
+  .container {
+    width: 90%;
+    max-width: 100%;
   }
 
-  .intro {
-    margin-right: -60%;
+  .content {
+    flex-direction: column;
+  }
+
+  .side-image {
+    display: none;
   }
 }

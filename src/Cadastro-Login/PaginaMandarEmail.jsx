@@ -1,19 +1,14 @@
 import React from 'react';
-import './PaginaQuem.css';
-import { Link } from 'react-router-dom';
+import './PaginaMandarEmail.css';
+import { Link } from "react-router-dom";
 import Logo from "../assets/logo.site.tcc.png";
-import Pessoas from "../assets/Pessoas.png";
+import viva from "../assets/viva.png";
 
-const PaginaQuem = () => {
+const PaginaMandarEmail = () => {
   return (
-    <div className="app1" style={{
-      backgroundImage: `url(${Pessoas})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat'
-    }}>
+    <div className="app">
       <head>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
       </head>
       <header className="cabecalho">
         <div className="conteudo-cabecalho">
@@ -46,26 +41,35 @@ const PaginaQuem = () => {
           </div>
         </div>
       </header>
-      
+
       <main className="main">
-        <div>
-          <section>
-            <div className="container3">
-              <div className="content4">
-                <div className="box5">
-                  <h2>QUEM SOMOS?</h2>
-                  <p> Somos a Game Legends, uma plataforma de jogos dedicada a promover a inclusão e o apoio aos desenvolvedores independentes, especialmente aqueles que estão começando a produzir seus primeiros jogos. Nosso objetivo é criar um ecossistema de jogos mais saudável, criativo e inclusivo, onde gamers e desenvolvedores possam se unir e colaborar. </p>
+        <div className="MINERIO">
+          <div className="AAA1">
+            <div className="container">
+              <h1 className="W">Redefinir Senha</h1>
+              <p className="Redef">Para redefinir sua senha, coloque seu Email:</p>
+              <div className="content">
+                <div className="side-image">
+                  <img src={viva} alt="Pixel art character" className="character-icon2" />
                 </div>
-                <div className="box5">
-                  <h2>O QUE FAZEMOS?</h2>
-                  <p> Nós oferecemos uma plataforma onde desenvolvedores de jogos podem receber apoio financeiro diretamente de jogadores através de doações. Utilizamos tecnologias avançadas, como sistemas de pagamento integrados e inteligência artificial, para facilitar transações e personalizar recomendações de jogos. Isso não só ajuda a financiar e lançar novos jogos, mas também promove a diversidade e a inovação na indústria de games. Além disso, criamos uma comunidade onde jogadores podem se conectar com desenvolvedores, trocar ideias e contribuir para o sucesso de novos projetos.  </p>
+                <div className="form-content">
+                  <form className="For">
+                    <input type="email" required className="LOLO" />
+                    <Link to={'/MandarCodin'}><button type="submit" className="mandar_email">MANDE EMAIL</button></Link>
+                  </form>
+                  <p className="KI">
+                    Lembrou a senha? <Link to={'/Login'}><span className="text-blue-500">Faça login</span></Link>
+                  </p>
+                </div>
+                <div className="side-image">
+                  <img src={viva} alt="Pixel art character" className="character-icon2" />
                 </div>
               </div>
             </div>
-          </section>
+          </div>
         </div>
       </main>
-      
+
       <footer className="rodape">
         <div className="conteudo-rodape">
           <div className="secao-rodape sobre">
@@ -103,4 +107,4 @@ const PaginaQuem = () => {
   );
 };
 
-export default PaginaQuem;
+export default PaginaMandarEmail;

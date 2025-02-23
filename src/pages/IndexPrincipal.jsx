@@ -64,8 +64,8 @@ const IndexPrincipal = () => {
             </button>
           </form>
           <div className="painel-usuario">
-            <Link to={'/login'} className="link-usuario">Log in</Link>
-            <Link to={'/register'} className="link-usuario">Register</Link>
+            <Link to={'/login'} className="link-usuario">Login</Link>
+            <Link to={'/Cadastro'} className="link-usuario">Registre-se</Link>
           </div>
         </div>
       </header>

@@ -62,8 +62,8 @@ const Esporte = () => {
                         </button>
                     </form>
                     <div className="painel-usuario">
-                        <a className="link-usuario" href="/login">Log in</a>
-                        <a className="link-usuario" href="/register">Register</a>
+                        <a className="link-usuario" href="/login">Login</a>
+                        <a className="link-usuario" href="/Cadastro">Registre-se</a>
                     </div>
                 </div>
             </header>
