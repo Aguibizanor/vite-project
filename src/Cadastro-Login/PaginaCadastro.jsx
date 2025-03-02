@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
 import './PaginaCadastro.css';
 
-function PaginaCadastro() {
+function PaginaCadastro() { 
     const [formData, setFormData] = useState({
         nome: '',
         sobrenome: '',
