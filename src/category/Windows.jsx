@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import Logo from "../assets/logo.site.tcc.png";
-import "../pages/PaginaInicial.css"
+import "../Pages/PaginaInicial.css"
 
 
 const Windows = () => {
@@ -62,7 +62,7 @@ const Windows = () => {
                         </button>
                     </form>
                     <div className="painel-usuario">
-                        <a className="link-usuario" href="/login">Login</a>
+                        <a className="link-usuario" href="/Login">Login</a>
                         <a className="link-usuario" href="/Cadastro">Registre-se</a>
                     </div>
                 </div>

@@ -9,6 +9,7 @@ import axios from "axios";
 function PaginaLogin() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
+  const [tipoUsuario, setTipoUsuario] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
 
@@ -19,6 +20,7 @@ function PaginaLogin() {
       const response = await axios.post("http://localhost:8080/login", { 
         email: email,
         senha: senha,
+        tipoUsuario: tipoUsuario
       });
   
       if (response.status === 200) {
@@ -27,7 +29,7 @@ function PaginaLogin() {
         navigate('/1');
       }
     } catch (error) {
-      setErrorMessage("Email ou senha incorretos.");
+      setErrorMessage("Email, senha ou tipo de usuário incorretos.");
       console.error(error);
     }
   };
@@ -63,7 +65,7 @@ function PaginaLogin() {
             </button>
           </form>
           <div className="painel-usuario">
-            <Link className="link-usuario" to="/login">Login</Link>
+            <Link className="link-usuario" to="/Login">Login</Link>
             <Link className="link-usuario" to="/Cadastro">Registre-se</Link>
           </div>
         </div>
@@ -77,7 +79,7 @@ function PaginaLogin() {
           <div className="form-container">
             <div className="header text-center mb-6">
               <h1 className="titulo text-2xl font-bold text-transparent bg-clip-text gradient-button">
-                Login Cliente
+                Login
               </h1>
             </div>
             <form onSubmit={handleLogin}>
@@ -108,6 +110,38 @@ function PaginaLogin() {
                   onChange={(e) => setSenha(e.target.value)}
                   required
                 />
+              </div>
+              <div className="tipo-usuario">
+                <label>
+                  <input
+                    type="radio"
+                    name="tipoUsuario"
+                    value="cliente"
+                    checked={tipoUsuario === 'cliente'}
+                    onChange={(e) => setTipoUsuario(e.target.value)}
+                  />
+                  Cliente
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="tipoUsuario"
+                    value="desenvolvedor"
+                    checked={tipoUsuario === 'desenvolvedor'}
+                    onChange={(e) => setTipoUsuario(e.target.value)}
+                  />
+                  Desenvolvedor
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="tipoUsuario"
+                    value="administrador"
+                    checked={tipoUsuario === 'administrador'}
+                    onChange={(e) => setTipoUsuario(e.target.value)}
+                  />
+                  Administrador
+                </label>
               </div>
               {errorMessage && <p className="text-red-500">{errorMessage}</p>}
               <div className="flex items-center justify-between">
@@ -153,7 +187,7 @@ function PaginaLogin() {
             </div>
             <div className="redes-sociais">
               <a href="#"><i className="fab fa-facebook"></i></a>
-              <a href="#"><i className="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
               <a href="#"><i className="fab fa-instagram"></i></a>
               <a href="#"><i className="fab fa-linkedin"></i></a>
             </div>
@@ -170,7 +204,7 @@ function PaginaLogin() {
           </div>
         </div>
         <div className="rodape-inferior">
-          &copy; gamelegends.com | Feito pelo time do Game Legends 
+          &copy; gamelegends.com | Feito pelo time do Game Legends
         </div>
       </footer>
     </div>

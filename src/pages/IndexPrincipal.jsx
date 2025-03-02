@@ -64,7 +64,7 @@ const IndexPrincipal = () => {
             </button>
           </form>
           <div className="painel-usuario">
-            <Link to={'/login'} className="link-usuario">Login</Link>
+            <Link to={'/Login'} className="link-usuario">Login</Link>
             <Link to={'/Cadastro'} className="link-usuario">Registre-se</Link>
           </div>
         </div>
@@ -74,7 +74,7 @@ const IndexPrincipal = () => {
         <section className="intro">
           <h1>EXPLORE O <br /> MUNDO<br /> DOS JOGOS</h1>
           <p>Venha conhecer <br /> nossa plataforma <br />onde você poderá <br />encontrar jogos <br /> da nossa comunidade.</p>
-          <Link to={'/Opcoes'}><button className="cta-button">Conheça <i className="fas fa-arrow-circle-right"></i></button></Link>
+          <Link to={'/'}><button className="cta-button">Conheça <i className="fas fa-arrow-circle-right"></i></button></Link>
         </section>
         <section>
           <div className="carrossel-container">

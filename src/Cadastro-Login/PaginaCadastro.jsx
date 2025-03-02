@@ -93,7 +93,7 @@ function PaginaCadastro() {
                         </button>
                     </form>
                     <div className="painel-usuario">
-                        <a className="link-usuario" href="/login">Login</a>
+                        <a className="link-usuario" href="/Login">Login</a>
                         <a className="link-usuario" href="/Cadastro">Registre-se</a>
                     </div>
                 </div>

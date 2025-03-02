@@ -1,8 +1,6 @@
 import React from "react";
 import IndexPrincipal from "./IndexPrincipal";
 import PaginaInicial from "./PaginaInicial";
-import PaginaInicial1 from "./PaginaInicial1";
-import PaginaInicial2 from "./PaginaInicial2";
 import PaginaSobrevivencia from "../category/Sobrevivencia";
 import PaginaLogin from "../Cadastro-Login/PaginaLogin";
 import PaginaCartas from "../category/Cartas";
@@ -30,8 +28,6 @@ import PaginaPerfil from "../Perfil/PaginaPerfil";
 import PaginaPerfDesenvolvedor from "../Perfil/PaginaPerfDesenvolvedor";
 import PaginaCriarProjeto from "../Perfil/PaginaCriarProjeto";
 import PaginaDescricao from "./PaginaDescricao";
-import PaginaDescricao1 from "./PaginaDescricao1";
-import PaginaDescricao2 from "./PaginaDescricao2";
 import PaginaQuem from "./PaginaQuem";
 
 
@@ -41,8 +37,6 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/Index" element={<IndexPrincipal/>} />
         <Route path="/" element={<PaginaInicial />} />
-        <Route path="/1" element={<PaginaInicial1 />} />
-        <Route path="/2" element={<PaginaInicial2 />} />
         <Route path="/Sobrevivencia" element={<PaginaSobrevivencia />} />
         <Route path="/Login" element={<PaginaLogin />} />
         <Route path="/Cartas" element={<PaginaCartas />} />
@@ -69,8 +63,6 @@ const AppRoutes = () => {
         <Route path="/Perfil1" element={<PaginaPerfDesenvolvedor/>} />
         <Route path="/Criar" element={<PaginaCriarProjeto/>} />
         <Route path="/Descricao" element={<PaginaDescricao/>} />
-        <Route path="/Descricao1" element={<PaginaDescricao1/>} />
-        <Route path="/Descricao2" element={<PaginaDescricao2/>} />
         <Route path="/Que" element={<PaginaQuem/>} />
       </Routes>
     </Router>

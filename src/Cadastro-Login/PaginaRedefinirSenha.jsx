@@ -37,7 +37,7 @@ const PaginaRedefinirSenha = () => {
             </button>
           </form>
           <div className="pagina-redefinir-senha-painel-usuario">
-            <Link className="pagina-redefinir-senha-link-usuario" to="/login">Login</Link>
+            <Link className="pagina-redefinir-senha-link-usuario" to="/Login">Login</Link>
             <Link className="pagina-redefinir-senha-link-usuario" to="/Cadastro">Registre-se</Link>
           </div>
         </div>

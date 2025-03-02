@@ -37,7 +37,7 @@ const PaginaCodin = () => {
             </button>
           </form>
           <div className="painel-usuario">
-            <Link className="link-usuario" to="/login">Login</Link>
+            <Link className="link-usuario" to="/Login">Login</Link>
             <Link className="link-usuario" to="/Cadastro">Registre-se</Link>
           </div>
         </div>
