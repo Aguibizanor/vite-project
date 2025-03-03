@@ -120,7 +120,7 @@ body {
   background: #A0008D;
 }
 
-.main {
+.principal {
   display: flex;
   flex: 1;
   padding: 20px;
@@ -174,7 +174,7 @@ body {
   scroll-behavior: smooth;
   width: 100%;
   max-width: 400px; /* Ajusta largura máxima */
-  height: 700px; /* Aumenta altura */
+  height: calc(100vh - 300px); /* Ajusta altura */
 }
 
 .carrossel::-webkit-scrollbar {
@@ -283,11 +283,7 @@ body {
 /* Responsividade */
 @media (max-width: 1024px) {
   .carrossel {
-    height: 400px; /* Ajusta altura */
-  }
-
-  .carrossel .item .imag {
-    height: 50%; /* Ajusta altura da imagem */
+    height: calc(100vh - 300px); /* Ajusta altura */
   }
 }
 
@@ -331,7 +327,7 @@ body {
     width: 100%;
   }
 
-  .carrossel {
+  .carrossel-container {
     display: none; /* Desaparece na versão de celular */
   }
 

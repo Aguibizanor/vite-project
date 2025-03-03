@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './PaginaRedefinirSenha.css';
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.site.tcc.png";
@@ -6,6 +6,12 @@ import mario from "../assets/mario.png";
 import esquerda from "../assets/esquerda.png";
 
 const PaginaRedefinirSenha = () => {
+  const [menuAberto, setMenuAberto] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuAberto(!menuAberto);
+  };
+
   return (
     <div className="pagina-redefinir-senha-app">
       <head>
@@ -18,13 +24,13 @@ const PaginaRedefinirSenha = () => {
               <img src={Logo} alt="Logo do Game Legends" />
             </Link>
           </h1>
-          <nav className="pagina-redefinir-senha-navegacao">
+          <nav className={`pagina-redefinir-senha-navegacao ${menuAberto ? 'ativo' : ''}`}>
             <Link to={'/Index'} className="pagina-redefinir-senha-nav-text pagina-redefinir-senha-nav-item"><i className="fas fa-home"></i><span className="pagina-redefinir-senha-nav-label">Início</span></Link>
             <Link to={'/'} className="pagina-redefinir-senha-nav-text pagina-redefinir-senha-nav-item"><i className="fas fa-gamepad"></i><span className="pagina-redefinir-senha-nav-label">Games</span></Link>
             <Link to={'/Que'} className="pagina-redefinir-senha-nav-text pagina-redefinir-senha-nav-item"><i className="fas fa-question-circle"></i><span className="pagina-redefinir-senha-nav-label">Sobre</span></Link>
             <Link to={'/Suporte'} className="pagina-redefinir-senha-nav-text pagina-redefinir-senha-nav-item"><i className="fas fa-headset"></i><span className="pagina-redefinir-senha-nav-label">Suporte</span></Link>
           </nav>
-          <button className="pagina-redefinir-senha-hamburguer" onClick={() => setMenuAberto(!menuAberto)}>
+          <button className="pagina-redefinir-senha-hamburguer" onClick={toggleMenu}>
             <i className="fas fa-bars"></i>
           </button>
           <form className="pagina-redefinir-senha-formulario-pesquisa" action="/search">

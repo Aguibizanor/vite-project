@@ -140,7 +140,7 @@ function PaginaCadastro() {
                     </form>
                     {mensagem && <div className="mensagem-formulario">{mensagem}</div>}
                     <div className="rodape-formulario">
-                        <span>Já tem uma conta? Faça login: <Link to={'/Opcoes'} className="link-formulario">Login</Link></span>
+                        <span>Já tem uma conta? Faça login: <Link to={'/Login'} className="link-formulario">Login</Link></span>
                     </div>
                 </div>
             </main>

@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './PaginaCodin.css';
 import { Link } from 'react-router-dom';
 import Logo from "../assets/logo.site.tcc.png";
 import sonic from "../assets/sonic.png";
 import esquerda from "../assets/esquerda.png";
- 
+
 const PaginaCodin = () => {
+  const [menuAberto, setMenuAberto] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuAberto(!menuAberto);
+  };
+
   return (
     <div className="app">
       <head>
@@ -18,13 +24,13 @@ const PaginaCodin = () => {
               <img src={Logo} alt="Logo do Game Legends" />
             </Link>
           </h1>
-          <nav className="navegacao">
+          <nav className={`navegacao ${menuAberto ? 'ativo' : ''}`}>
             <Link to={'/Index'} className="nav-text nav-item"><i className="fas fa-home"></i><span className="nav-label">Início</span></Link>
             <Link to={'/'} className="nav-text nav-item"><i className="fas fa-gamepad"></i><span className="nav-label">Games</span></Link>
             <Link to={'/Que'} className="nav-text nav-item"><i className="fas fa-question-circle"></i><span className="nav-label">Sobre</span></Link>
             <Link to={'/Suporte'} className="nav-text nav-item"><i className="fas fa-headset"></i><span className="nav-label">Suporte</span></Link>
           </nav>
-          <button className="hamburguer" onClick={() => setMenuAberto(!menuAberto)}>
+          <button className="hamburguer" onClick={toggleMenu}>
             <i className="fas fa-bars"></i>
           </button>
           <form className="formulario-pesquisa" action="/search">
@@ -46,7 +52,6 @@ const PaginaCodin = () => {
       <main className="main">
         <div className="ÇUCA">
           <div className="AAA">
-            
             <div className="container">
               <h1 className="Titu">Redefinir Senha</h1>
               <p className="OP">Coloque o código enviado para sua conta de Email:</p>

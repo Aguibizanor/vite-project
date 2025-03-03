@@ -19,6 +19,8 @@ const FAQItem = ({ question, answer }) => {
 
 // Componente principal da página
 const PaginaSuporte = () => {
+  const [menuAberto, setMenuAberto] = useState(false);
+
   const faqData = [
     {
       question: "Como posso visualizar ou alterar minhas configurações de conta?",
@@ -42,6 +44,10 @@ const PaginaSuporte = () => {
     },
   ];
 
+  const toggleMenu = () => {
+    setMenuAberto(!menuAberto);
+  };
+
   return (
     <div className="app">
       <head>
@@ -54,13 +60,13 @@ const PaginaSuporte = () => {
               <img src={Logo} alt="Logo do Game Legends" />
             </Link>
           </h1>
-          <nav className="navegacao">
+          <nav className={`navegacao ${menuAberto ? 'ativo' : ''}`}>
             <Link to={'/Index'} className="nav-text nav-item"><i className="fas fa-home"></i><span className="nav-label">Início</span></Link>
             <Link to={'/'} className="nav-text nav-item"><i className="fas fa-gamepad"></i><span className="nav-label">Games</span></Link>
             <Link to={'/Que'} className="nav-text nav-item"><i className="fas fa-question-circle"></i><span className="nav-label">Sobre</span></Link>
             <Link to={'/Suporte'} className="nav-text nav-item"><i className="fas fa-headset"></i><span className="nav-label">Suporte</span></Link>
           </nav>
-          <button className="hamburguer" onClick={() => setMenuAberto(!menuAberto)}>
+          <button className="hamburguer" onClick={toggleMenu}>
             <i className="fas fa-bars"></i>
           </button>
           <form className="formulario-pesquisa" action="/search">
@@ -104,7 +110,7 @@ const PaginaSuporte = () => {
             <div className="redes-sociais">
               <a href="#"><i className="fab fa-facebook"></i></a>
               <a href="#"><i className="fab fa-twitter"></i></a>
-              <a href="#"><i className="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
               <a href="#"><i className="fab fa-linkedin"></i></a>
             </div>
           </div>

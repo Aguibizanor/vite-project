@@ -11,6 +11,7 @@ function PaginaLogin() {
   const [senha, setSenha] = useState('');
   const [tipoUsuario, setTipoUsuario] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [menuAberto, setMenuAberto] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -34,6 +35,10 @@ function PaginaLogin() {
     }
   };
 
+  const toggleMenu = () => {
+    setMenuAberto(!menuAberto);
+  };
+
   return (
     <div className="app">
       <head>
@@ -46,13 +51,13 @@ function PaginaLogin() {
               <img src={Logo} alt="Logo do Game Legends" />
             </Link>
           </h1>
-          <nav className="navegacao">
+          <nav className={`navegacao ${menuAberto ? 'ativo' : ''}`}>
             <Link to={'/Index'} className="nav-text nav-item"><i className="fas fa-home"></i><span className="nav-label">Início</span></Link>
             <Link to={'/'} className="nav-text nav-item"><i className="fas fa-gamepad"></i><span className="nav-label">Games</span></Link>
             <Link to={'/Que'} className="nav-text nav-item"><i className="fas fa-question-circle"></i><span className="nav-label">Sobre</span></Link>
             <Link to={'/Suporte'} className="nav-text nav-item"><i className="fas fa-headset"></i><span className="nav-label">Suporte</span></Link>
           </nav>
-          <button className="hamburguer" onClick={() => setMenuAberto(!menuAberto)}>
+          <button className="hamburguer" onClick={toggleMenu}>
             <i className="fas fa-bars"></i>
           </button>
           <form className="formulario-pesquisa" action="/search">

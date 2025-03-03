@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './PaginaQuem.css';
 import { Link } from 'react-router-dom';
 import Logo from "../assets/logo.site.tcc.png";
 import Pessoas from "../assets/Pessoas.png";
 
 const PaginaQuem = () => {
+  const [menuAberto, setMenuAberto] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuAberto(!menuAberto);
+  };
+
   return (
     <div className="app1" style={{
       backgroundImage: `url(${Pessoas})`,
@@ -22,13 +28,13 @@ const PaginaQuem = () => {
               <img src={Logo} alt="Logo do Game Legends" />
             </Link>
           </h1>
-          <nav className="navegacao">
+          <nav className={`navegacao ${menuAberto ? 'ativo' : ''}`}>
             <Link to={'/Index'} className="nav-text nav-item"><i className="fas fa-home"></i><span className="nav-label">Início</span></Link>
             <Link to={'/'} className="nav-text nav-item"><i className="fas fa-gamepad"></i><span className="nav-label">Games</span></Link>
             <Link to={'/Que'} className="nav-text nav-item"><i className="fas fa-question-circle"></i><span className="nav-label">Sobre</span></Link>
             <Link to={'/Suporte'} className="nav-text nav-item"><i className="fas fa-headset"></i><span className="nav-label">Suporte</span></Link>
           </nav>
-          <button className="hamburguer" onClick={() => setMenuAberto(!menuAberto)}>
+          <button className="hamburguer" onClick={toggleMenu}>
             <i className="fas fa-bars"></i>
           </button>
           <form className="formulario-pesquisa" action="/search">
@@ -80,7 +86,7 @@ const PaginaQuem = () => {
             <div className="redes-sociais">
               <a href="#"><i className="fab fa-facebook"></i></a>
               <a href="#"><i className="fab fa-twitter"></i></a>
-              <a href="#"><i className="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
               <a href="#"><i className="fab fa-linkedin"></i></a>
             </div>
           </div>

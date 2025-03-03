@@ -21,7 +21,6 @@ import Desenvolvido from "../category/Desenvolvido";
 import Desenvolvendo from "../category/Desenvolvendo";
 import PaginaSuporte from "./PaginaSuporte";
 import PaginaMandarEmail from "../Cadastro-Login/PaginaMandarEmail";
-import PaginaOpcoes from "./PaginaOpcoes";
 import PaginaCodin from "../Cadastro-Login/PaginaCodin";
 import PaginaRedefinirSenha from "../Cadastro-Login/PaginaRedefinirSenha";
 import PaginaPerfil from "../Perfil/PaginaPerfil";
@@ -56,7 +55,6 @@ const AppRoutes = () => {
         <Route path="/Desenvolvendo" element={<Desenvolvendo/>} />
         <Route path="/Suporte" element={<PaginaSuporte/>} />
         <Route path="/MandarEmail" element={<PaginaMandarEmail/>} />
-        <Route path="/Opcoes" element={<PaginaOpcoes/>} />
         <Route path="/MandarCodin" element={<PaginaCodin/>} />
         <Route path="/RedefinirSenha" element={<PaginaRedefinirSenha/>} />
         <Route path="/Perfil" element={<PaginaPerfil/>} />

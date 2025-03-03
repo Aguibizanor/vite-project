@@ -281,6 +281,11 @@ body {
         display: none;
         flex-direction: column;
         width: 100%;
+        background: #90017F;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
     }
 
     .navegacao.ativo {
@@ -292,14 +297,10 @@ body {
     }
 
     .nav-item {
-        display: flex;
+        width: 100%;
         justify-content: center;
-        align-items: center;
-        width: auto;
-        height: auto;
-        padding: 8px 10px; /* Ajustar o padding para versões menores */
-        margin: 0 5px;
-        border-radius: 10px;
+        margin: 0;
+        border-bottom: 1px solid #A0008D;
     }
 
     .nav-text {

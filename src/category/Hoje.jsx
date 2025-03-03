@@ -17,7 +17,7 @@ const Hoje = () => {
 
     useEffect(() => {
         // Simulação de busca de dados do banco de dados
-        fetch('/api/produtos')
+        fetch('/api/produtos?data=hoje')
             .then(response => response.json())
             .then(data => setProdutos(data));
     }, []);
@@ -28,6 +28,10 @@ const Hoje = () => {
 
     const toggleMenu = () => {
         setMenuAberto(!menuAberto);
+    };
+
+    const toggleMobileMenu = () => {
+        setIsMobileOpen(!isMobileOpen);
     };
 
     return (
@@ -43,11 +47,11 @@ const Hoje = () => {
                         </a>
                     </h1>
                     <nav className={`navegacao ${menuAberto ? 'ativo' : ''}`}>
-                                           <Link to={'/Index'} className="nav-text nav-item"><i className="fas fa-home"></i><span className="nav-label">Início</span></Link>
-                                           <Link to={'/'} className="nav-text nav-item"><i className="fas fa-gamepad"></i><span className="nav-label">Games</span></Link>
-                                           <Link to={'/Que'} className="nav-text nav-item"><i className="fas fa-question-circle"></i><span className="nav-label">Sobre</span></Link>
-                                           <Link to={'/Suporte'} className="nav-text nav-item"><i className="fas fa-headset"></i><span className="nav-label">Suporte</span></Link>
-                                       </nav>
+                        <Link to={'/Index'} className="nav-text nav-item"><i className="fas fa-home"></i><span className="nav-label">Início</span></Link>
+                        <Link to={'/'} className="nav-text nav-item"><i className="fas fa-gamepad"></i><span className="nav-label">Games</span></Link>
+                        <Link to={'/Que'} className="nav-text nav-item"><i className="fas fa-question-circle"></i><span className="nav-label">Sobre</span></Link>
+                        <Link to={'/Suporte'} className="nav-text nav-item"><i className="fas fa-headset"></i><span className="nav-label">Suporte</span></Link>
+                    </nav>
                     <button className="hamburguer" onClick={toggleMenu}>
                         <i className="fas fa-bars"></i>
                     </button>
@@ -67,6 +71,9 @@ const Hoje = () => {
                 </div>
             </header>
             <main className="principal">
+                <button className={`hamburguer-principal ${isMobileOpen ? 'aberto' : ''}`} onClick={toggleMobileMenu}>
+                    <i className={`fas ${isMobileOpen ? 'fa-chevron-left' : 'fa-chevron-right'}`}></i>
+                </button>
                 <section className={`barra-lateral ${isMobileOpen ? 'aberta' : ''}`}>
                     <div>
                         <h1 onClick={() => toggleList('genero')}>

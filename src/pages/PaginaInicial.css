@@ -132,6 +132,27 @@ body {
   padding: 20px;
 }
 
+.hamburguer-principal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #90017F;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.hamburguer-principal.aberto {
+  left: 250px;
+}
+
 .barra-lateral {
   width: 20%;
   padding: 5px;
@@ -240,6 +261,14 @@ body {
       flex-direction: column;
   }
 
+  .hamburguer-principal {
+      display: block;
+  }
+
+  .hamburguer-principal.aberto {
+      left: 250px;
+  }
+
   .secao-jogos {
       width: 100%;
   }
@@ -255,12 +284,14 @@ body {
   .barra-lateral.aberta {
       display: block;
       position: fixed;
-      top: 60px; /* Ajuste para ficar abaixo da navbar */
+      top: 0;
       left: 0;
       width: 250px;
-      height: calc(100% - 60px); /* Ajuste para ocupar a altura correta */
+      height: 100%;
       background-color: #fff;
       box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      padding-top: 60px; /* Ajuste para ficar abaixo da navbar */
   }
 }
 
